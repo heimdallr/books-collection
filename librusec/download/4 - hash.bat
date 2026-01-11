@@ -1,1 +1,3 @@
-D:\user\Sasha\repo\books-tools\build\Release\bin\flihasher.exe --library LibRusEc "%1" -o T:\output\hash
+D:\user\Sasha\repo\books-tools\build\Release\bin\flihasher.exe "%1" ^
+-o T:\output\hash ^
+--library LibRusEc
