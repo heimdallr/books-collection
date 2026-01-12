@@ -1,4 +1,4 @@
-D:\user\Sasha\repo\books-tools\build\Release\bin\fb2cut.exe "%1" ^
+fb2cut.exe "%1" ^
 -o t:\output ^
 -q 69 ^
 --max-size 1440 ^
