@@ -1,0 +1,19 @@
+﻿{
+"language": "en",
+"items": [
+{
+	"q": "what?",
+	"a": "that!",
+	"items": [
+	{
+		"q": "and?",
+		"a": "nothing"
+	}
+	]
+},
+{
+	"q": "what else?",
+	"a": "ho ho ho"
+}
+]
+}
