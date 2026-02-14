@@ -5,9 +5,19 @@
     "title": "",
     "x": [
         {
-            "q": "New question",
+            "q": "How is this distribution different from the original?",
             "t": [
-                ""
+                "First of all, what's different about this giveaway is the selection of books. The likelihood that a book isn't included here, but is in the \"original\" giveaways, is minimal. If you find such a book, it's an emergency, please contact me.",
+                "Now about the differences.",
+                "The main difference is the size. That's what this giveaway is all about.",
+                "Additional benefits:",
+                "<ul>",
+                "<li>Books with XML structure errors have been repaired.</li>",
+                "<li>Broken illustrations have been repaired or removed.</li>",
+                "<li>Annoying duplicates have been eliminated (not all, of course).</li>",
+                "<li>There are also reader comments from the Flibusta website and brief information about some authors.</li>",
+                "<li>Also, the FLibrary cataloger is being given away here; it's better, better than the <s>dog</s> MyHomeLib.</li>",
+                "</ul>"
             ],
             "v": false,
             "x": [
