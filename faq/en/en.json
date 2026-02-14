@@ -1,8 +1,8 @@
 {
-    "head": "",
+    "head": "Frequently Asked Questions",
     "language": "en",
     "tail": "",
-    "title": "",
+    "title": "FLibrary FAQ",
     "x": [
         {
             "q": "How is this distribution different from the original?",
@@ -19,37 +19,21 @@
                 "<li>Also, the FLibrary cataloger is being given away here; it's better, better than the <s>dog</s> MyHomeLib.</li>",
                 "</ul>"
             ],
-            "v": false,
             "x": [
                 {
-                    "q": "New question",
-                    "t": [
-                        ""
-                    ],
-                    "v": false
+                    "q": "New question"
                 },
                 {
-                    "q": "New question",
-                    "t": [
-                        ""
-                    ],
-                    "v": false
+                    "q": "New question"
                 }
             ]
         },
         {
             "q": "New question",
-            "t": [
-                ""
-            ],
             "v": true,
             "x": [
                 {
-                    "q": "New question",
-                    "t": [
-                        ""
-                    ],
-                    "v": false
+                    "q": "New question"
                 }
             ]
         }
