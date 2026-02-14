@@ -1,19 +1,47 @@
 {
-    "items": [
+    "head": "",
+    "language": "en",
+    "tail": "",
+    "title": "",
+    "x": [
         {
-            "a": "that!",
-            "items": [
-                {
-                    "a": "nothing",
-                    "q": "and?"
-                }
+            "q": "New question",
+            "t": [
+                ""
             ],
-            "q": "what?"
+            "v": false,
+            "x": [
+                {
+                    "q": "New question",
+                    "t": [
+                        ""
+                    ],
+                    "v": false
+                },
+                {
+                    "q": "New question",
+                    "t": [
+                        ""
+                    ],
+                    "v": false
+                }
+            ]
         },
         {
-            "a": "ho ho ho",
-            "q": "what else?"
+            "q": "New question",
+            "t": [
+                ""
+            ],
+            "v": true,
+            "x": [
+                {
+                    "q": "New question",
+                    "t": [
+                        ""
+                    ],
+                    "v": false
+                }
+            ]
         }
-    ],
-    "language": "en"
+    ]
 }
