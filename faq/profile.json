@@ -1,0 +1,47 @@
+{
+	"outputFileExtension": "htm",
+	"head": [
+		"<!DOCTYPE html>",
+		"<html lang=\"#LANGUAGE#\">",
+		"<head>",
+		"<title>#TITLE#</title>",
+		"<link rel=\"icon\" type=\"image/x-icon\" href=\"img/FLibrary.ico\" />",
+		"</head>",
+		"<body bgcolor=\"#FFFAF0\">",
+		"<div style=\"padding-inline: 5% 30%; font-size: 18px; font-family: 'Tahoma';\">",
+		"<h1 style=\"padding-left: 30px;\">#HEAD#</h1>"
+	],
+	"tail": [
+		"<br><p>",
+		"<br><p>",
+		"<br><p>",
+		"<footer>",
+		"<div style=\"color: #000000; font-size: 0.7em; font-weight: bold;\">",
+		"    <p align=\"center\"> <i>#TAIL#</i></p>",
+		"</div>",
+		"</footer>",
+		"</div>",
+		"</body>",
+		"</html>"
+	],
+	"question": [
+		{
+			"before": [
+				"<details>",
+				"    <summary style=\"color: #000080; font-size: 1.4em; font-weight: bold;\"><spаn style=\" font-size: 26px; \">&#128211;</spаn>#QUESTION#</summary>"
+			],
+			"after": "<hr></details>"
+		},
+		{
+			"before": [
+				"<details>",
+				"<summary style=\"padding-left: 20px; color: #000080; font-size: 1.2em; font-weight: bold;\">#QUESTION#</summary>"
+			],
+			"after": "</details>"
+		}
+	],
+	"answer": {
+		"simple": "<BR>#ANSWER#",
+		"tagged": "#ANSWER#"
+	}
+}
