@@ -21,7 +21,15 @@
             ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "Why does the number of books differ?",
+                    "t": [
+                        "[ul top10]",
+                        "[*] Duplicates removed",
+                        "[*] Zero-size files are discarded",
+                        "[*] Files that were cut off in the middle were thrown out",
+                        "[*] Added unindexed files, i.e. those that are in the archives but not in the Flibusta/Librusec dumps",
+                        "[/ul]"
+                    ]
                 },
                 {
                     "q": "New question"
