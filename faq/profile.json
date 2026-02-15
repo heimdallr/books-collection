@@ -4,12 +4,26 @@
 		"<!DOCTYPE html>",
 		"<html lang=\"#LANGUAGE#\">",
 		"<head>",
-		"<title>#TITLE#</title>",
-		"<link rel=\"icon\" type=\"image/x-icon\" href=\"img/FLibrary.ico\" />",
+		"\t<title>FAQ FLibrary</title>",
+		"\t<meta charset=\"UTF-8\">",
+		"\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../img/FLibrary.ico\">",
+		"\t<link id=\"theme\" rel=\"stylesheet\" href=\"../css/style2.css\">",
 		"</head>",
-		"<body bgcolor=\"#FFFAF0\">",
-		"<div style=\"padding-inline: 5% 30%; font-size: 18px; font-family: 'Tahoma';\">",
-		"<h1 style=\"padding-left: 30px;\">#HEAD#</h1>"
+		"<body>",
+		"<div id=\"content\">",
+		"<button id=\"styles\" onclick=\"toggleTheme()\">Style</button>",
+		"\t<script>",
+		"\t\tfunction toggleTheme() {",
+		"\t\t\tlet theme = document.getElementById('theme');",
+		"\t\t\tif (theme.getAttribute('href') == '../css/style2.css') {",
+		"\t\t\t\ttheme.setAttribute('href', '../css/style1.css');",
+		"\t\t\t} ",
+		"\t\t\telse {",
+		"\t\t\t\ttheme.setAttribute('href', '../css/style2.css');",
+		"\t\t\t}",
+		"\t\t}",
+		"\t</script>",
+		"<h1 id=\"header\">#HEAD#</h1>"
 	],
 	"tail": [
 		"<br><p>",
@@ -17,7 +31,7 @@
 		"<br><p>",
 		"<footer>",
 		"<div style=\"color: #000000; font-size: 0.7em; font-weight: bold;\">",
-		"    <p align=\"center\"> <i>#TAIL#</i></p>",
+		"\t<p align=\"center\"> <i>#TAIL#</i></p>",
 		"</div>",
 		"</footer>",
 		"</div>",
@@ -28,20 +42,53 @@
 		{
 			"before": [
 				"<details>",
-				"    <summary style=\"color: #000080; font-size: 1.4em; font-weight: bold;\"><spаn style=\" font-size: 26px; \">&#128211;</spаn>#QUESTION#</summary>"
+				"\t<summary> &#128211; #QUESTION#</summary>\n"
 			],
-			"after": "<hr></details>"
+			"after": "<hr>\n</details>\n\n"
 		},
 		{
 			"before": [
 				"<details>",
-				"<summary style=\"padding-left: 20px; color: #000080; font-size: 1.2em; font-weight: bold;\">#QUESTION#</summary>"
+				"\t<summary class=\"subtitle\">#QUESTION#</summary>\n"
 			],
-			"after": "</details>"
+			"after": "</details>\n"
+		},
+		{
+			"before": [
+				"<details>",
+				"\t<summary class=\"subtitle\">#QUESTION#</summary>\n"
+			],
+			"after": "</details>\n"
+		},
+		{
+			"before": [
+				"<details>",
+				"\t<summary class=\"sub_subtitle\">#QUESTION#</summary>\n"
+			],
+			"after": "</details>\n"
 		}
 	],
 	"answer": {
-		"simple": "<BR>#ANSWER#",
-		"tagged": "#ANSWER#"
+		"simple": "<br>#ANSWER#\n",
+		"tagged": "#ANSWER#\n",
+		"tags": {
+			"ul": "<ul>\n",
+			"ul top10": "<ul class=\"top10\">\n",
+			"ul nd": "<ul class=\"none_dot\">\n",
+			"/ul": "</ul>\n",
+			"ol": "<ol>\n",
+			"ol top10": "<ol class=\"top10\">\n",
+			"/ol": "</ol>\n",
+			"hr": "<hr>\n",
+			"hr lite": "<hr class=\"lite\">\n",
+			"p": "<p>#ANSWER#\n",
+			"p null": "<p class=\"null\">#ANSWER#\n",
+			"p code": "<p class=\"code\">#ANSWER#\n",
+			"p note": "<p class=\"note\">#ANSWER#\n",
+			"/p": "</p>\n",
+			"p s": "<p class=\"subtitle\">#ANSWER#</p>\n",
+			"p ss": "<p class=\"sub_subtitle\">#ANSWER#</p>\n",
+			"*": "<li>#ANSWER#</li>\n"
+		}
 	}
 }
