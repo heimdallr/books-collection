@@ -11,6 +11,11 @@
 		"</head>",
 		"<body>",
 		"<div id=\"content\">",
+		"<h1 id=\"header\">#HEAD#</h1>"
+	],
+	"tail": [
+		"<h2 id=\"footer\">",
+		"#TAIL#",
 		"<button id=\"styles\" onclick=\"toggleTheme()\">Style</button>",
 		"\t<script>",
 		"\t\tfunction toggleTheme() {",
@@ -23,11 +28,6 @@
 		"\t\t\t}",
 		"\t\t}",
 		"\t</script>",
-		"<h1 id=\"header\">#HEAD#</h1>"
-	],
-	"tail": [
-		"<h2 id=\"footer\">",
-		"#TAIL#",
 		"</h2>",
 		"</div>",
 		"</body>",

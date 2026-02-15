@@ -5,8 +5,10 @@ body    {
 		 
 button#styles {z-index: 200;  
          position: fixed;
-		 margin-top: -60px;
-         margin-left: 10px; 
+		 overflow: auto;
+		 margin-top: -2px;
+         margin-left: 5px; 
+		 /*margin-left: 360px; на правый край*/
          border-radius: 5px;
          background-color: #fff8dc;
          color: #4b0082;
@@ -15,9 +17,9 @@ button#styles {z-index: 200;
 h1#header     {
 	     z-index: 100;  
          position: fixed;
-		 margin-top: 0;
+		 margin: 0 auto;
 		 top: 0;
-	     width: 100%; 
+		 width: calc(100% - 18px);
 	     max-width: 1200px; 
 	     min-width: 370px; 
 		 height: 60px;
@@ -249,9 +251,9 @@ hr.lite   {
  h2#footer     {
 	     z-index: 200;  
          position: fixed;
-		 margin-bottom: 0;
+		 margin: 0 auto;
 		 bottom: 0;
-	     width: 100%; 
+         width: calc(100% - 18px);
 	     max-width: 1200px; 
 	     min-width: 370px; 
 		 height: 24px;
