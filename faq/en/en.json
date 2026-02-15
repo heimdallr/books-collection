@@ -32,7 +32,19 @@
                     ]
                 },
                 {
-                    "q": "New question"
+                    "q": "Why then is this distribution so much smaller in size?",
+                    "t": [
+                        "[p s] The size reduction is achieved as follows:",
+                        "[ul]",
+                        "[*] The text of books and illustrations are stored separately.",
+                        "[*] The texts are compressed in 7z, which is much more efficient than zip.",
+                        "[*] Images are re-encoded to JPEG XL, which is more efficient than JPEG and PNG.",
+                        "[*] Reviews and information about the authors are small in size, ~1 GB.",
+                        "[*] Removed duplicates also provide 5% savings.",
+                        "[*] Broken and unrepairable images have been removed.",
+                        "[/ul]",
+                        "[p s] Bonus: you don't even need to download pictures, reviews, and information about the authors, which will make the files even <b>three times</b> smaller."
+                    ]
                 }
             ]
         },
