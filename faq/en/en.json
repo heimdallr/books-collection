@@ -7,7 +7,7 @@
         {
             "q": "How is this distribution different from the original?",
             "t": [
-                "First of all, what's different about this giveaway is the selection of books. The likelihood that a book isn't included here, but is in the \"original\" giveaways, is minimal. If you find such a book, it's an emergency, please contact me.",
+                "First of all, what's different about this distribution is the selection of books. The likelihood that a book isn't included here, but is in the \"original\" giveaways, is minimal. If you find such a book, it's an emergency, please contact me.",
                 "Now about the differences.",
                 "The main difference is the size. That's what this giveaway is all about.",
                 "Additional benefits:",
@@ -16,7 +16,7 @@
                 "<li>Broken illustrations have been repaired or removed.</li>",
                 "<li>Annoying duplicates have been eliminated (not all, of course).</li>",
                 "<li>There are also reader comments from the Flibusta website and brief information about some authors.</li>",
-                "<li>Also, the FLibrary cataloger is being given away here; it's better, better than the <s>dog</s> MyHomeLib.</li>",
+                "<li>Also, the FLibrary cataloger is being given away here; it's better, better than MyHomeLib.</li>",
                 "</ul>"
             ],
             "x": [
@@ -49,7 +49,22 @@
             ]
         },
         {
-            "q": "New question",
+            "q": "How will the distribution be updated?",
+            "t": [
+                "I will try to update the distribution at the beginning of the month.",
+                "[p s] Updates include:",
+                "[ul]",
+                "[*] A couple of new 7z archives with books in fb2 format, without pictures",
+                "[*] 4 new zip archives with images: covers and illustrations",
+                "[*] Updating the index file *.inpx",
+                "[*] Replacing FLibrary distributions with current ones, if a release has occurred",
+                "[*] Update of the latest archive with reader reviews + new (monthly) archive with reader reviews",
+                "[*] Update of the latest archive with information about authors + new archive, if enough new entries about authors have accumulated",
+                "[/ul]",
+                "Thus, each monthly update should affect previously downloaded files as little as possible.",
+                "",
+                "Unfortunately, this approach is not ideal for reader reviews and author information due to regular editing of old entries on the website. Therefore, these files will sometimes be re-uploaded in bulk as edits to old entries accumulate. Or for purely technical reasons."
+            ],
             "x": [
                 {
                     "q": "New question",

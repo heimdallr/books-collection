@@ -165,15 +165,6 @@ details>summary.sub_subtitle {
                   border: none;	
                   list-style: none;	}	
 				  
-details>summary.subtitle_ul {
-                  margin-top: 10px;
-				  padding-left: 0; 
-		          color: navy ;                                    
-				  text-shadow: none;
-		          font-size: 1.2em; 
-		          font-weight: bold;
-                  border: none;	
-                  list-style: none;	}	
 summary.subtitle_ul:before {
                          content: "+";
                          margin: -5px 5px 0 0; }
