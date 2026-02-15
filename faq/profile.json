@@ -26,14 +26,9 @@
 		"<h1 id=\"header\">#HEAD#</h1>"
 	],
 	"tail": [
-		"<br><p>",
-		"<br><p>",
-		"<br><p>",
-		"<footer>",
-		"<div style=\"color: #000000; font-size: 0.7em; font-weight: bold;\">",
-		"\t<p align=\"center\"> <i>#TAIL#</i></p>",
-		"</div>",
-		"</footer>",
+		"<h2 id=\"footer\">",
+		"#TAIL#",
+		"</h2>",
 		"</div>",
 		"</body>",
 		"</html>"
