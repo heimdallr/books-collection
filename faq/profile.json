@@ -16,7 +16,7 @@
 	"tail": [
 		"<h2 id=\"footer\">",
 		"#TAIL#",
-		"<button id=\"styles\" onclick=\"toggleTheme()\">Style</button>",
+		"<span id=\"button\"><button id=\"styles\" onclick=\"toggleTheme()\">Style</button>",
 		"\t<script>",
 		"\t\tfunction toggleTheme() {",
 		"\t\t\tlet theme = document.getElementById('theme');",
@@ -27,7 +27,7 @@
 		"\t\t\t\ttheme.setAttribute('href', '../css/style2.css');",
 		"\t\t\t}",
 		"\t\t}",
-		"\t</script>",
+		"\t</script></span>",
 		"</h2>",
 		"</div>",
 		"</body>",

@@ -2,12 +2,13 @@
 
 body    {
 	     background-color: #fffaf0;} 
-
+span#button {
+	         float: right;}	
+	
 button#styles {z-index: 300;  
          position: absolute;
 		 margin-top: -2px;
-         margin-left: 5px; 
-		 /*margin-left: 360px; на правый край*/
+         margin-left: -54px; 
 		 border-radius: 5px;
          background-color: #d3d3d3;
          color: #800000;
