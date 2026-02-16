@@ -131,7 +131,14 @@
                             ],
                             "x": [
                                 {
-                                    "q": "New question"
+                                    "q": "what it can do=>",
+                                    "t": [
+                                        "[ul nd]",
+                                        "[*] search by author",
+                                        "[*] search by book title",
+                                        "[*] extracting a book with images in fb2 format",
+                                        "[/ul]"
+                                    ]
                                 }
                             ]
                         },
@@ -512,91 +519,295 @@
             ]
         },
         {
-            "q": "New question",
+            "q": "I have five computers and three laptops at home. Do I need to download the distribution and install FLibrary on all of these devices?",
+            "t": [
+                "[p s] Not necessarily. FLibrary provides some networking capabilities in the form of several HTTP services. To access them, you need to run the HTTP server included in FLibrary. Select the menu item",
+                "[img http 0 900]",
+                "[p s] In the dialog box that opens => Click Start and that's it, the server is running, you can see how it works. To do this, you can click on the labels that have become clickable.",
+                "[img http 1 600]",
+                "[ol top10]",
+                "[*] <b>Web interface ReactApp.</b> The browser will open a website developed by the respected alloroc2. Here you can search for books by title/author/series, download them, and even read them right there on the website. It's very convenient. The website interface is quite intuitive, and its functionality is constantly expanding.",
+                "[*] <b>Simplified web interface.</b> A page will open in your browser, reflecting my knowledge of HTML. There you will also find search, navigation through the collection, downloading, and reading. But it has absolutely no design, just extreme minimalism. It's very niche, but it's enough for me.",
+                "[*] <b>OPDS</b> A page with some JSON will open in your browser. Actually, you should access this address not with a browser, but with a reader that supports the OPDS protocol.",
+                "[/ol]",
+                "[p s] When the HTTP server is running, these addresses are accessible from any device on the same local network, i.e., you can access two versions of the web interface on another computer/smartphone/tablet, as well as connect to the OPDS catalog with a reader."
+            ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "ReactApp. By the Author",
+                    "t": [
+                        "You can work via the web in a browser from any device.",
+                        "Search by entering text, with results immediately sorted by title, author, and series.",
+                        "View groups of books pre-selected in the program.",
+                        "For the selected book, statistics + cover, table of contents with chapters and their location in the book.",
+                        "You can read the selected book without leaving the cataloguer's web interface.",
+                        "For ease of reading, switch to full screen and scroll through the text.",
+                        "Control the font and scrolling speed with hotkeys.",
+                        "Reading progress is saved in the browser.",
+                        "Opened the site, found a book, and lost touch with reality."
+                    ]
                 },
                 {
-                    "q": "New question",
+                    "q": "Will it only work at home? Can't it be done online?",
+                    "t": [
+                        "[p s] It is possible, but you will have to forward the specified ports to the outside world yourself. I am not knowledgeable enough in this area to even be sure that the previous statement makes sense. Please search for “white IP” and “CloudFlare.com tunnels.” I would appreciate any insightful comments about this in a private message."
+                    ],
                     "x": [
                         {
-                            "q": "New question"
+                            "q": "smart people say=>",
+                            "t": [
+                                "[p ss] (⊙_⊙) I set up external access through nginx—I just added the subdomain book.xxx.xx, obtained a certificate for it, and now I can access it via https, and nginx redirects to http on the internal network.",
+                                "[p ss] © SoloMen",
+                                "[hr lite]",
+                                "[p ss] (⊙_⊙) <br>I managed to do it with Tilescale. Here's what I did to use it:",
+                                "[ol top10]",
+                                "[*] I downloaded TileScale (somewhere on the Internet they say there is an open source equivalent) onto my phone and computer;",
+                                "[*] Connected them (the phone and the computer) to the general network using Tilescale;",
+                                "[*] I enabled the server in FLibrary according to the FAQ and entered the address specified in Tilescale, which in my case was the attached address 100.84.44.127 (those who want to try this method may find a different address; check the control panel on the website or the task manager by clicking on the Tilescale column; the IPv4 address column below the graph will show the address that we attach). I specifically left opds mode enabled for myself, entered its address for AlReader;",
+                                "[*] Profit, actually;",
+                                "[/ol]",
+                                "",
+                                "[p ss] © AncientSUS</li>",
+                                "",
+                                "[p ss] UPD In the HTTP server address settings, you can specify “Any,” in which case the services will be accessible via all available interfaces: localhost, 127.0.0.1, local IP address, etc."
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "q": "New question",
+            "q": "What's with all the mess with authors and series?",
+            "t": [
+                "[p s] This is the result of merging Flibusta and Librusec into a single distribution. Indeed, the inconsistency in the naming of authors and series on Flibusta and Librusec is a serious problem. Plus, libraries have different approaches to resolving conflicts between authors with the same name. Because of this, some names here may either “split” or “collapse,” resulting in books by the same author in a distribution being “linked” to different authors, and vice versa, books by different authors being attributed to the same author. The same applies to series."
+            ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "So, there's nothing we can do about it?",
+                    "t": [
+                        "[p s] Unfortunately, it is unlikely that we will be able to coordinate this distribution at the level of network libraries that are sources of books. We can only make minor corrections. If you notice that any author or series has been “split” or “merged,” please let me know. I will make a local edit, and the next monthly update will correct the situation."
+                    ]
                 }
             ]
         },
         {
-            "q": "New question"
+            "q": "Is it okay that my antivirus software is complaining about the distribution?",
+            "t": [
+                "[p] It is ok. Currently, there are several known reasons why antivirus software may trigger alerts for this distribution.",
+                "[/p]",
+                "[p s] 1. FLibrary_setup.exe installer. The file is generated by one of the most popular installer creation tools, Inno Setup. It can be assumed that virus writers use the same tool, which is why Inno Setup signatures regularly appear in antivirus databases. What can be done about this? In similar cases, reputable software companies contact vendors, who tweak their databases, and antivirus programs stop generating false positives. Unfortunately, I am not a reputable company, so in the case of FLibrary, all you can do is take my word for it and ignore the antivirus. That's what I do. You can also use the msi installer or an archive with a “portable” version; virustotal.com has never complained about them. Or you can carefully examine the source code for malware and compile the project yourself.",
+                "[p s] 2. The library has a book by Oleg Mikhailovich Boitsov called “Protect Your Computer 100% from Viruses and Hackers,” file 166093.fb2 in the archive fb2-166043-168102.7z. It seems that some antivirus programs don't like the examples of malicious code contained therein. In my opinion, this is clearly overkill and paranoia. If your reader does not attempt to interpret and run scripts from book pages, there is nothing to worry about, and you can safely add *.fb2 to your antivirus exceptions.",
+                "[p s] 3. There is also a book by Timofey Chadov called “Using ListView in Virtual List Mode,” file 170704.fb2 in the archive fb2-168103-172702.7z. The author included an executable exe file in it, which at least one vendor from virustotal complained about. But as far as I know, antivirus programs are not yet trying to parse fb2 in order to decode binary attachments from base64, unpack the resulting archive, and analyze its contents. If your reader does not attempt to examine binary attachments of books that are not linked from its pages in order to run programs suddenly found there, then again, there is nothing to worry about."
+            ]
         },
         {
-            "q": "New question"
+            "q": "I found a bug in the program, what should I do?",
+            "t": [
+                "[ol top10]",
+                "[*] Ensure that the bug is present in the latest release of FLibrary. This is especially true for typos, many of which were found and fixed while writing these instructions.",
+                "[*] Post the bug report <a href=\"https://github.com/heimdallr/books/issues\" target=\"_blank\">here></a>, describing the issue if possible, attaching a screenshot, etc.",
+                "[/ol]",
+                "[p s] If you don't have a GitHub account and don't feel like registering, you can send me a private message. Or leave a message in the thread. I would appreciate any feedback. But anyone who posts a bug report (or feature request that will be taken for implementation) on GitHub will receive a personal pre-release build of FLibrary. With a mention in About."
+            ]
         },
         {
-            "q": "New question"
+            "q": "They promise fast FLibrary performance, but in reality it's slow. Are they lying?",
+            "t": [
+                "[p s] At least one user experienced interference with the program from Microsoft Defender, which manifested itself in slow performance and increased RAM consumption. Configuring Defender helped.",
+                "[p s] Try adding it to your antivirus exceptions",
+                "[ul]",
+                "[*] The folder with the program",
+                "[*] The folder containing the collection database",
+                "[*] Folder with book archives",
+                "[*] Folder with temporary files (%TEMP%)",
+                "[/ul]"
+            ]
         },
         {
-            "q": "New question",
+            "q": "There are some ‘entertainment’ options in the menu. I checked all the boxes, what next?",
+            "t": [
+                "[p s] Entertainment content is displayed instead of an empty annotation when no books are selected in the books window."
+            ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "For example",
+                    "t": [
+                        "[img entertainment 0 800]",
+                        "[img entertainment 1 800]",
+                        "[img entertainment 2 800]"
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "I see an empty annotation, where are the jokes?",
+                    "t": [
+                        "[p s] For this to work, you need access to a) the internet, and b) services that provide content. Keep in mind that some services may stop working. And some are not accessible from your location without a VPN.",
+                        "[p s] To diagnose the problem, you can enable the display of errors in receiving entertainment content using a hidden setting."
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "Why is everything in English?",
+                    "t": [
+                        "[p s] If you find (or set up your own) a similar public service (without registration or SMS) in another language, let me know and I'll add it."
+                    ]
                 }
             ]
         },
         {
-            "q": "New question",
+            "q": "Why are there so many FLibrary installers in the distribution?",
+            "t": [
+                "<p class=\"subtitle\" style=\"text-align:right\"><i>",
+                "Three Rings for the Elven-kings under the sky",
+                "<br>Seven for the Dwarf-lords in their halls of stone",
+                "<br>Nine for Mortal Men doomed to die",
+                "</i></p>"
+            ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "I FLibrary_setup.exe",
+                    "t": [
+                        "[p s] Generated by InnoSetup. The main installer, the most convenient and functional. Allows you to",
+                        "[ul]",
+                        "[*] Select the installer language",
+                        "[*] Select installation mode for me only/for everyone",
+                        "[*] Run the program immediately after installation",
+                        "[/ul]",
+                        "[p s] There is one caveat: some antivirus programs don't like it. Who should you believe, the antivirus program or me, Jordan Russell and Martijn Laan? Decide for yourself..."
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "II FLibrary_setup.msi",
+                    "t": [
+                        "[p s] Microsoft Windows Installer. Most likely, I just don't know how to cook it, but",
+                        "[ul]",
+                        "[*] The installer language is English for universality.",
+                        "[*] The program is installed only for everyone, in `C:\\Program Files`",
+                        "[*] After the installer finishes, nothing starts automatically.",
+                        "[/ul]",
+                        "[p s] I would be grateful if someone could teach me how to make msi smooth and silky."
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "III FLibrary_portable.7z",
+                    "t": [
+                        "[p s] This is not an installer at all, but simply an archive with binaries. You will have to unpack and configure the launch shortcuts yourself, manually. A program installed in this way does not store its settings in the registry, but in a nearby ini file, like a portable one. Therefore, you need to unpack it where you have write access."
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "So which one should I choose?",
+                    "t": [
+                        "[p s] The contents of all installers are identical, so you can choose any one based on your preferences and experience. However, I recommend the first option, as that is the one I use myself. The other two are tested rarely."
+                    ]
                 }
             ]
         },
         {
-            "q": "New question",
+            "q": "Where does the program store ...?",
+            "t": [
+                " "
+            ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "settings",
+                    "t": [
+                        "[id offlink2]",
+                        "[ul]",
+                        "[*] Standard version (installed by the installer) - registry branch HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary",
+                        "[*] Portable version (from archive) - FLibrary.ini file in the program folder",
+                        "[/ul]"
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "work log",
+                    "t": [
+                        "[p s] File %TEMP%\\HomeCompa.FLibrary.log",
+                        "[p s] The latest log entries can be viewed directly in the program by pressing Esc. Or via the Settings/View/Log/Show menu."
+                    ]
                 }
             ]
         },
         {
-            "q": "New question",
+            "q": "Can I have a complete list of FLibrary's hidden settings?",
+            "t": [
+                "[id offlink1]",
+                "[p s] This section describes features that few people need, so they are not included in the interface in order to avoid clutter.",
+                "[p s] <b>(⊙_⊙) ATTENTION!!!</b> These settings should be added as needed; they are not included in the settings storage by default.",
+                "[p s] Where to find the settings - see <a href=\"#offlink2\">“Where does the program store ...?”.</a>",
+                "[ul top10]",
+                "[*] v2.0.0 `Preferences/LibRate/symbol`, number, 11088 by default - ASCII or UTF-8 code for the star symbol ⭐ for the rating column in the source library. The codes for different characters can be found <a href=\"https://www.w3schools.com/charsets\" target=\"_blank\">here</a>. You can use those that have no more than four characters in Hex.",
+                "[*] v2.1.2 `Preferences/hideScrollBars`, string (true | false) true by default - controls the visibility of scrollbars. If set to ‘false’, scrollbars will not be hidden.",
+                "[*] v2.1.4 `Preferences/GenresSortMode`, string (SortByCode | SortByName | SortByChildCount | SortByCodeDesc | SortByNameDesc | SortByChildCountDesc), SortByCode by default - genre sorting mode",
+                "[*] v2.1.4 `Preferences/opds/BookEntryLimit`, DWORD number, 25 y default - limit on the number of books returned by a single list via http.",
+                "[*] v2.2.0 Not a setting, but a hidden feature. Pressing Alt+Shift+Q will bring up a window where you can run SQL queries on the collection database. The results of the queries are recorded in the logs.",
+                "[*] v2.2.1 `Preferences/opds/transliterate`, string (true | false), false by default - transliteration of the name of a file downloaded via http.",
+                "[*] v2.2.1 `Preferences/LibRate/precision`, DWORD number, -1 by default - replaces the book rating stars in the library with a number with the precision specified by this parameter. For a true average rating on Flibusta, you will need the reviews\\additional.zip file. If this setting is missing or set to -1, stars are displayed.",
+                "[*] v2.2.1 `Preferences/LibRate/colors/2.0`, `ui/Books/LibRate/colors/3.0`, `ui/Books/LibRate/colors/4.5`и т.п. DWORD number, corresponding to the color in RRGGBB format. For gradient coloring of the rating digits from the previous point.",
+                "[*] v2.2.2 `Preferences/AnnotationJokes/Visible`, string (true | false) true  by default - when set to ‘false’, disables entertainment content functionality in empty annotations.",
+                "[*] v2.2.2 `Preferences/AnnotationJokes/%ApiName%Visible`, string (true | false) true by default - when set to ‘false’, disables %ApiName%, hides the corresponding menu item `Settings/View/Annotation/Entertainment/%ApiNameTitle%`. It makes sense to disable those APIs that are not available in your area. Or those that have stopped working.",
+                "[*] v2.3.0 `Preferences/opds/ReadUrlTemplate` Template for linking to a reader from the Web. For example, if you set it to `http://127.0.0.1:44080/#/reader?url=http://%HTTP_HOST%:%HTTP_PORT%/Images/fb2/%1`, you can read books with liberama. Before doing so, you need to <a  href=\"https://github.com/bookpauk/liberama\" target=\"_blank\">download</a> liberama, configure it, and launch it. Perhaps the configuration will find another use someday.",
+                "[*] v2.3.0 `Preferences/opds/SeparatedSearch`, string (true | false) false by default - for OPDS and the web interface, it includes separate search modes for authors, series, book titles, and all together.",
+                "[*] v2.3.0 `Preferences/opds/AutoupdateCollection`, string (true | false) false by default - when set to `true`, the HTTP server (opds.exe) will monitor inpx and, if it changes, automatically update the collection.",
+                "[*] v2.4.1 `Preferences/StartFocusedControl`, string (SearchBooksByNames | NavigationSearchAndFilter | BooksSearchAndFilter) SearchBooksByNames by default - input field, active at program startup.",
+                "[*] v2.4.1 `Preferences/Alphabets/LinkedControl`, string (SearchBooksByNames | NavigationSearchAndFilter | BooksSearchAndFilter) - the input field with which the alphabet panel works. By default, this is not specified; the alphabet panel works with the active input field, i.e., the one where the cursor is currently located.",
+                "[*] v2.4.1 `Preferences/CommonBooksTableColumnSettings`, string (true | false) false by default - when set to `true`, the table column settings will be common to all navigation modes.",
+                "[*] v2.5.0 `Preferences/AnnotationReviewSortMode`, string (Time | Reviewer | Text | TimeDesc | ReviewerDesc | TextDesc), Time by default - modes for sorting reader reviews in the annotation.",
+                "[*] v2.5.4 `Preferences/HideToTray`, string (true | false) false by default - when set to `true`, the program hides in the system tray when Alt+F4 is pressed or the cross in the main window is clicked. Exiting via the main menu or hotkey closes the program.",
+                "[*] v2.5.4 `Preferences/MultipleInstance`, string (Enabled | Disabled | Dialog) - configures the ability to run multiple instances of FLibrary. Enabled - multiple instances can be run, Disabled - multiple instances cannot be run; when the next instance of the application is launched, the existing one will be displayed, Dialog - when the next instance is launched, a dialog box will be displayed. The default setting is Enabled. However, if HideToTray mode is enabled (see above), the setting will always be Disabled, regardless of the value set.",
+                "[*] v2.5.4 `Preferences/Export/TransliterationMode, string (None | FileNameOnly | AllExceptUserPath | All) - configures the transliteration of exported file names. The default value is None, i.e. do not transliterate. FileNameOnly - the file name will be transliterated, AllExceptUserPath - transliterate the export path except for the user-selected folder (%user_destination_folder%), All - transliterate the entire export path.",
+                "[*] v2.5.4 `Preferences/Interaction/Book/OnLink`, string (Read | ExtractAsFb2 | ExtractAsZip) - configures the program's behavior when clicking on a book title link in the annotation. Default - Read - open the book in the reader. ExtractAsIs - extract the book. ExtractAsZip - extract the book and pack it into a zip archive.",
+                "[*] v2.5.4 `Preferences/Interaction/Book/OnDoubleClick`, string (Read | ExtractAsFb2 | ExtractAsZip) - configures the program's behavior when double-clicking on a row in the book table; the values are the same as in the previous setting.",
+                "[*] v2.5.4 `Preferences/RelativePaths', string (true | false) false by default - when set to `true`, the program will save relative paths (reader, scripts, etc.) in the settings.",
+                "[*] v2.5.5 `Preferences/ReadMark/color' - color of mark for books read - DWORD number, corresponding to the color in the AABBGGRR format, where AA is the transparency value, and BBGGRR are the values for each of the RGB colors (note the color sequence => B-G-R!). It is also worth considering that AA is inverted, i.e. with a transparency value of FF (100% opaque), the color will become completely transparent and will not be visible. Setting the color is not required for application. To highlight what has been read, you can omit the ‘color’ parameter altogether and only specify the ‘width’ parameter. In this case, the color of the text will be used as the color of the mark (i.e., black in a light theme and white in a dark theme). <b>(⊙_⊙)</b> A book becomes “read” when a user rating is set for it.",
+                "[*] v2.5.5 `Preferences/ReadMark/width', DWORD number, `0` by default - width of the read books label. A value of ‘0’ disables the label. ",
+                "[*] v2.5.5 `Preferences/opds/converter', section for managing the conversion of files downloaded via http (opds, web interfaces). Keys:",
+                "[*] Preferences/opds/converter/command, string - path to the executable file (command line utility) of the converter",
+                "[*] Preferences/opds/converter/arguments, string - converter parameters, default “%src%” “%dst%”. The following substitutions (macros) are used: %src% - the .fb2 book file to be converted, %dst% - the resulting file",
+                "[*] Preferences/opds/converter/cwd, string - working directory for the converter being launched, by default - the folder containing FLibrary.exe",
+                "[*] Preferences/opds/converter/ext, string - file extension after conversion ",
+                "[*] <b>(⊙_⊙)</b> ATTENTION! Reading will no longer work on the web. If this is relevant to anyone, please let us know.",
+                "[*] v2.5.5 `Preferences/AnnotationJokes/ShowErrors`, string  (true | false) `false` by default - when set to `true`, the error message will be displayed in case of an error while retrieving entertainment content.",
+                "[*] v2.5.5 `Preferences/Books/Alignment', section for managing field alignment in the book table. In this section, you can create keys with the field name and alignment value. Possible field names (keys): Author, Title, Series, SeqNumber, Genre, Folder, FileName, Size, LibRate, UserRate, UpdateDate, Year, Lang. Possible alignment values: AlignLeft, AlignRight, AlignCenter. If you are interested, you can experiment with the values <a href=\"https://doc.qt.io/qt-6/qt.html#AlignmentFlag-enum\" target=\"_blank\">here</a>.",
+                "[*] v2.5.5 `Preferences/UserRate/symbol`, число по умолчанию '11088' - ascii или utf-8 код символа звёздочки ⭐ для колонки пользовательского рейтинга.",
+                "[*] v2.5.5 `Preferences/UserRate/noRateSymbol`, ascii or utf-8 character code for books with a rating of “No rating”.",
+                "[*] v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, string (true | false) false by default - when set to `true`, adds a “Hash” submenu to the book context menu with the items ‘Calculate’ and “Compare.” For those interested in the duplicate detector.",
+                "[/ul]",
+                "[hr lite]"
+            ],
             "x": [
                 {
-                    "q": "New question",
+                    "q": "I read the FAQ about hidden settings. “I didn't understand anything, but it was interesting ©”",
+                    "t": [
+                        "[p ss] That's strange, no one has complained before you. Well, let me explain. You wanted to replace the rate star symbol..."
+                    ],
                     "x": [
                         {
-                            "q": "New question"
+                            "q": "If you have the portable version of FLibrary, then:",
+                            "t": [
+                                "[ol]",
+                                "[*] Close FLibrary",
+                                "[*] Open the FLibrary.ini file from the program folder in a text editor.",
+                                "[*] Find the [Preferences] section and add the line `LibRate\\symbol=9734` to it.",
+                                "[*] Save the file",
+                                "[*] Launch FLibrary",
+                                "[/ol]",
+                                "[img hide_set 0 700]",
+                                "[p note] * Instead of the number 9734, choose one that suits your taste, for example <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>from here</b></a>"
+                            ]
                         },
                         {
-                            "q": "New question"
+                            "q": "If your version of FLibrary was installed using the installer, then:",
+                            "t": [
+                                "[ol]",
+                                "[*] Close FLibrary",
+                                "[*] Launch the Registry Editor",
+                                "[*] Go to branch `HKEY_CURRENT_USER\\Software\\HomeCompa\\FLibrary\\Preferences`",
+                                "[*] Create (if it does not exist) a subsection named `LibRate` in this branch.",
+                                "[*] Create a DWORD parameter named `symbol` in this subsection.",
+                                "[*] Set the parameter to the decimal value 9734 (also hexadecimal 2606).",
+                                "[*] Launch FLibrary",
+                                "[/ol]",
+                                "[img hide_set 0 700]",
+                                "[p note] * Instead of the number 9734, choose one that suits your taste, for example <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>from here</b></a>"
+                            ]
                         }
                     ]
                 }
