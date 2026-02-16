@@ -1,13 +1,13 @@
 {
     "head": "Frequently Asked Questions",
     "language": "en",
-    "tail": "<a  href=\"https://github.com/Jurchos\">Design © Yuri Shatrov ака Jurchos</a>",
+    "tail": "Design © and translation by <a  href=\"https://github.com/Jurchos\">Yuri Shatrov ака Jurchos</a> using <a href=\"https://www.deepl.com/uk/translator\" target=\"_blank\">DeepL AI</a>",
     "title": "FLibrary FAQ",
     "x": [
         {
             "q": "How is this distribution different from the original?",
             "t": [
-                "First of all, what's different about this distribution is the selection of books. The likelihood that a book isn't included here, but is in the \"original\" giveaways, is minimal. If you find such a book, it's an emergency, please contact me.",
+                "First of all, what's different about this distribution is the selection of books. The likelihood that a book isn't included here, but is in the \"original\" distributions, is minimal. If you find such a book, it's an emergency, please contact me.",
                 "Now about the differences.",
                 "The main difference is the size. That's what this giveaway is all about.",
                 "Additional benefits:",
@@ -203,21 +203,88 @@
             ]
         },
         {
-            "q": "New question",
+            "q": "How to find a book by title, author, or series?",
+            "t": [
+                "[p] It is better to search by author and series in the corresponding navigation sections, where you can not only search by list, but also filter it.",
+                "But you can also search for books by title, author, or series.",
+                "[/p]",
+                "[img search 0 1100]",
+                "[p] Let's say you need to find the book \"Tower and Knife\" by Mazarkis Williams. The programme has a full-text search function for book titles, so you don't have to enter the entire title. It is enough to enter a few words, not necessarily in the order in which they appear in the title.",
+                "[img search 1 1100]",
+                "[p] Press Enter (or the magnifying glass icon on the left), and the programme will go to the \"Search\", navigation section and display the search results in the book window результаты поиска",
+                "[img search 2 1100]",
+                "[p] That would be the end of it, but I will add:",
+                "[ul]",
+                "[*] Search queries are stored in the \"Search\" section, where they can be selected for repeated use",
+                "[*] You can add a search query in the same section by clicking the plus button",
+                "[*] Unnecessary requests can be deleted using the cross button",
+                "[/ul]"
+            ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "Search queries have accumulated. How can I delete them? It's inconvenient to do it one by one",
+                    "t": [
+                        "[ol top10]",
+                        "[*] Select all (Ctrl+A) or only unnecessary queries (mouse + Ctrl or Shift)",
+                        "[*] Press the delete button on one of the selected items",
+                        "[*] Confirm deletion in the dialogue box that appears",
+                        "[/ol]",
+                        "[p s] The same applies to the list of groups."
+                    ]
                 }
             ]
         },
         {
-            "q": "New question"
+            "q": "Is it possible to sort books by several columns?",
+            "t": [
+                "[p] Yes, you can. Hold down Shift while clicking on the column headers."
+            ]
         },
         {
-            "q": "New question"
+            "q": "I want to see books in only one language. Or two. Can you remove the others?",
+            "t": [
+                "[p] Yes, you can. Go to Settings/Filters to open the filter settings dialogue box",
+                "[img filter 0 500]",
+                "[p] Go to the \"Languages\" tab, tick the languages you do not want to see in the \"Books filtered\" column. Tick \"Filter enabled\", click \"Apply.",
+                "[img filter 1 600]",
+                "[p] That's it, books in unwanted languages are hidden. You can hide languages from navigation (left pane of the main window) by ticking the \"Hidden\" column.",
+                "The same method can be used to remove unnecessary authors, series, genres and keywords.",
+                "[/p]",
+                "[p]<b>(⊙_⊙) Caution!</b> Checkboxes are independent — after removing an element from navigation, you will continue to see books related to this element from other navigation elements/sections. Conversely, if you filter books by a navigation element, you will continue to see that navigation element in its section, and when you select it, you will see the filtered books (if they have not been filtered by another element).",
+                "[p] The dialogue box has a search/filter function, and the column headers with checkboxes have a context menu.",
+                "[img filter 2 700]",
+                "[p] The \"Quick filter\" by language is still available from the context menu of the language column header in the books table.",
+                "[img filter 3 1000]"
+            ]
         },
         {
-            "q": "New question"
+            "q": "Is it possible to physically remove books I don't need from the archives?",
+            "t": [
+                "[p] Yes, you can. The programme has a feature that allows you to physically clean up your collection by deleting files from the archive and records from the database. The function for deleting files from the archive is initially blocked. To unblock it, select \"Allow destructive operations\" in the \"Collection\" main menu. After confirming your intention to continue and agreeing to the risk of permanent loss of books, the \"Delete forever\" option will be activated in the context menu of the books. It will also activate the checkbox 7 \"Delete forever along with book files from the archive\", <a href=\"#offlink3\">see below</a>.",
+                "[img cleanup 0 400]",
+                "[p] When you select the \"Clean...\" menu item, the collection cleaning criteria window will pop up.",
+                "[img cleanup 1 1100]",
+                "[p] FLibrary supports the following criteria:",
+                "1. \"Deleted\" books. When this criterion is selected, books marked as deleted in the database will be removed from the collection.",
+                "2. Duplicate books. The programme considers books with the same title and at least one author in common to be duplicates. If you select this criterion, all such books will be deleted except for the one that was added to the collection last. This means that different editions or translations of the same book will be considered duplicates. Please be careful.",
+                "3. Genres. You can mark unwanted genres. This criterion has an additional setting, implemented with radio buttons:",
+                "[/p]",
+                "[ul]",
+                "[*] Exact match. When selected, books will be deleted whose genres are all included in the set selected for deletion.",
+                "[*] Partial match. Books with at least one genre selected for deletion will be deleted. This is a very dangerous option.",
+                "[/ul]",
+                "[p null] 4. Languages. You can mark unwanted languages. It should be understood that the actual language of the text of many books does not match that specified in the description or in the fb2 metadata.",
+                "5. By size. When this criterion is selected, books whose file size is smaller than the minimum or larger than the maximum value will be deleted.",
+                "6. By rating. If the library rating of the book is lower than specified and/or there is no rating, i.e. no one has rated the book yet.",
+                "9. Compilations.",
+                "[/p]",
+                "[p] After carefully placing the check marks, press button 8 \"Analyse collection\", wait a short time for the collection to be analysed for compliance with the specified criteria, and then you will see a message with the result",
+                "[img cleanup 2 500]",
+                "[p] This is your last chance to change your mind and click \"No\". But if you click \"Yes\", the programme will start deleting books.",
+                "[id offlink3]",
+                "<b>(⊙_⊙) WARNING!</b> If checkbox 7 is checked, the book files will be physically deleted from the archives, and their records will be deleted from the database. This may take a long time, depending on the number of books being deleted, the power of the computer, the performance of the disk on which the collection is located, etc. But not very long. If checkbox 7 is not checked, the books will simply be hidden in the FLibrary interface.",
+                "[p] After cleaning the collection, it makes sense to deactivate destructive operations."
+            ]
         },
         {
             "q": "New question",
