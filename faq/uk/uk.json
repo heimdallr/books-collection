@@ -1,8 +1,12 @@
 {
-    "head": "Поширені запитання",
     "language": "uk",
-    "tail": "Дизайн та переклад © <a  href=\"https://github.com/Jurchos\">Юрій Шатров ака Jurchos</a>",
-    "title": "ЧаПи FLibrary",
+    "macro": {
+        "#HEAD#": "Поширені запитання",
+        "#LANGUAGE#": "uk",
+        "#STYLE#": "Стиль",
+        "#TAIL#": "Дизайн та переклад © <a  href=\"https://github.com/Jurchos\">Юрій Шатров ака Jurchos</a>",
+        "#TITLE#": "FLibrary ЧаПи"
+    },
     "x": [
         {
             "q": "Чим ця роздача відрізняється від оригінальних?",

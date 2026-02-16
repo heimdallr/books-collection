@@ -4,7 +4,7 @@
 		"<!DOCTYPE html>",
 		"<html lang=\"#LANGUAGE#\">",
 		"<head>",
-		"\t<title>FAQ FLibrary</title>",
+		"\t<title>#TITLE#</title>",
 		"\t<meta charset=\"UTF-8\">",
 		"\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../img/FLibrary.ico\">",
 		"\t<link id=\"theme\" rel=\"stylesheet\" href=\"../css/style2.css\">",
@@ -16,7 +16,7 @@
 	"tail": [
 		"<h2 id=\"footer\">",
 		"#TAIL#",
-		"<span id=\"button\"><button id=\"styles\" onclick=\"toggleTheme()\">Style</button>",
+		"<span id=\"button\"><button id=\"styles\" onclick=\"toggleTheme()\">#STYLE#</button>",
 		"\t<script>",
 		"\t\tfunction toggleTheme() {",
 		"\t\t\tlet theme = document.getElementById('theme');",

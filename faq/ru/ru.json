@@ -1,8 +1,12 @@
 {
-    "head": "Часто задаваемые вопросы",
     "language": "ru",
-    "tail": "Дизайн © <a  href=\"https://github.com/Jurchos\">Юрий Шатров ака Jurchos</a>",
-    "title": "ЧаВо FLibrary",
+    "macro": {
+        "#HEAD#": "Часто задаваемые вопросы",
+        "#LANGUAGE#": "ru",
+        "#STYLE#": "Стиль",
+        "#TAIL#": "Дизайн © <a href=\"https://github.com/Jurchos\">Юрий Шатров ака Jurchos</a>",
+        "#TITLE#": "FLibrary ЧаВо"
+    },
     "x": [
         {
             "q": "Чем эта раздача отличается от оригинальных?",

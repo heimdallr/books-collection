@@ -1,8 +1,12 @@
 {
-    "head": "Frequently Asked Questions",
     "language": "en",
-    "tail": "Design © and translation by <a  href=\"https://github.com/Jurchos\">Yuri Shatrov ака Jurchos</a> using <a href=\"https://www.deepl.com/uk/translator\" target=\"_blank\">DeepL AI</a>",
-    "title": "FLibrary FAQ",
+    "macro": {
+        "#HEAD#": "Frequently Asked Questions",
+        "#LANGUAGE#": "en",
+        "#STYLE#": "Style",
+        "#TAIL#": "Design © and translation by <a  href=\"https://github.com/Jurchos\">Yuri Shatrov ака Jurchos</a> using <a href=\"https://www.deepl.com/uk/translator\" target=\"_blank\">DeepL AI</a>",
+        "#TITLE#": "FLibrary FAQ"
+    },
     "x": [
         {
             "q": "How is this distribution different from the original?",
