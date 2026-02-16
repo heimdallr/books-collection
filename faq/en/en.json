@@ -291,47 +291,223 @@
             ]
         },
         {
-            "q": "New question",
+            "q": "How do I convert a book from fb2 to the format I need?",
+            "t": [
+                "[p] FLibrary does not have built-in converters, but it is possible to add any external converter if it has a command line interface. For example, you can borrow the necessary converter from the MyHomeLib collection. To call an external converter from FLibrary, you need to configure scripts, one for each desired format.",
+                "[p] 1. In the main menu, select Settings/Scripts...",
+                "[img convert 0 500]",
+                "[p] 2. In the window that appears, click \"Add script\"",
+                "[img convert 1 600]",
+                "[p] 3. A line will appear at the top of the window (\"Scripts\") where you can enter the desired name for the script.",
+                "[img convert 2 600]",
+                "[p] Now you need to add script commands. Which ones exactly depends on the selected external converter. A typical set consists of two commands: create a folder and run the converter.",
+                "So, let's add the commands.",
+                "[/p]",
+                "[p] 4. Click \"Add command\"",
+                "[img convert 3 600]",
+                "[p] 5. Four lines will appear at the bottom of the \"Command Settings\" window. In the first line, “Type” (1), select \"System\" from the drop-down menu.",
+                "[img convert 4 600]",
+                "[p] 6. In the second line, \"Command\" (2), enter <b>mkdir</b> , i.e. create a folder.",
+                "[p] 7. In the third line, ‘Arguments’ (3), enter the desired path. <b>(⊙_⊙) CAUTION!</b> Slashes must be in Windows style, i.e. like this: \\ . It is advisable to enclose each argument in quotation marks. Example:",
+                "[p code] \"d:\\books\\epub\"",
+                "[/p]",
+                "[p] Save the result - \"OK\"",
+                "[img convert 5 600]",
+                "[p] 7. Add a command to launch the converter: click \"Add command\"",
+                "[img convert 6 600]",
+                "[p] 8. In the first line, \"Type\" (1), select \"Launch console application\" from the drop-down menu, then click on the programme selection icon in the second line, \"Command\" (2).",
+                "[img convert 7 600]",
+                "[p note] * Purpose of the fourth line, \"Working folder\" (4) — see below, <a href=\"#offlink4\">\"Details, nuances\"</a>",
+                "[/p]",
+                "[p] 9. In the file selection dialogue box that appears, specify the desired external converter:",
+                "[img convert 8 900]",
+                "[p] 10. Add the converter launch parameters in the \"Arguments\" line (3). This converter requires the paths to the source and converted files. Enter",
+                "[p code] \"%source_file%\" \"d:\\books\\epub\\book.epub\"",
+                "[p] Save the result - \"OK\"",
+                "[img convert 9 700]",
+                "[p] 11. Save the script",
+                "[img convert 10 700]",
+                "[p] That's it, the script is ready. From now on, in the context menu of books, in the Export submenu, there will be an item \"Convert to epub\", i.e. the name of the script from step 3",
+                "[img convert 11 900]",
+                "[p] If you select it, the file 'book.epub' will appear in the folder d:\\books\\epub.",
+                "[p] Probably, few people would want to convert books to the same file every time, because they want the files to be saved in folders named after the authors and named after the book titles. To do this, macros should be used in the script commands when specifying folders. For example, to make sure the path to the book includes its author and series (if any), and the file name includes the series number (if any) and the book title, you should enter the following line in \"Arguments\" (3):",
+                "[p code] \"d:\\books\\epub\\%author%\\[%series%\\[%seq_number%-]]%title%.epub\"",
+                "[/p]",
+                "[p] A complete list of available macros is available from the Arguments editing context menu",
+                "[img convert 12 1200]"
+            ],
             "x": [
                 {
-                    "q": "New question",
+                    "q": "I'm too lazy to read so much, can you make it faster?",
+                    "t": [
+                        "[p s] Yes, you can. Set this registry key by adjusting the paths:",
+                        "[p code]",
+                        " Windows Registry Editor Version 5.00",
+                        "",
+                        " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\a1e61de4-da10-4015-a7c3-91453cd0e215]",
+                        " \"Name\"=\"Конвертация в epub\"",
+                        " \"Number\"=dword:00000001",
+                        " \"Type\"=\"ExportToDevice\"",
+                        "",
+                        " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\a1e61de4-da10-4015-a7c3-91453cd0e215\\37fe0cd3-35ee-4521-85a9-5b3f00138585]",
+                        " \"Command\"=\"D:\\\\programs\\\\converters\\\\FB2ePub\\\\Fb2ePub.exe\"",
+                        " \"Arguments\"=\"\\\"%source_file%\\\" \\\"D:/books/%author%/[%series%/[%seq_number%-]]%title%.epub\\\"\"",
+                        " \"Number\"=dword:00000002",
+                        " \"Type\"=\"LaunchApp\"",
+                        "",
+                        " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\a1e61de4-da10-4015-a7c3-91453cd0e215\\3b791fea-5942-479d-b7e2-6c3c3f6862cd]",
+                        " \"Command\"=\"mkdir\"",
+                        " \"Arguments\"=\"\\\"D:/books/%author%/[%series%]\\\"\"",
+                        " \"Number\"=dword:00000001",
+                        " \"Type\"=\"System\"",
+                        "[/p]",
+                        "[hr lite]"
+                    ],
                     "v": true
                 },
                 {
-                    "q": "New question"
+                    "q": "Details, nuances",
+                    "t": [
+                        "[ol top10]",
+                        "<li> It is important to note that some converters cannot create folders, so before running them, you need to create a folder using the system command \"mkdir\", specifying the full path (using macros). Then, when adding the first and second commands, the \"Arguments\" lines will look like this:",
+                        "[p code]",
+                        " \"d:\\books\\%author%\\[%series%]\"",
+                        " \"%source_file%\" \"d:\\books\\%author%\\[%series%\\[%seq_number%-]]%title%.mobi\"",
+                        "[/p]",
+                        "</li>",
+                        "<li> It should also be noted that when converting books with the same title (for example, when you decide to download two different translations of the same book), the converter will overwrite the previous file with the next one, meaning that there will only be one book in the folder. To avoid this, you should add additional identification macros. For example:",
+                        "[p code]",
+                        "\"%source_file%\" \"d:\\books\\epub\\%author%\\[%series%\\[%seq_number%-]]%title%_%db_id%.epub\"",
+                        "[/p]",
+                        "</li>",
+                        "<li>Some converters require additional commands to operate, such as start keys and the use of third-party configuration files. The FLibrary script allows you to write additional commands and/or specify a working folder <a href=\"#offlink4\">(cwd)*</a> for additional programme files.",
+                        "In particular, the fb2 to lrf converter (fb2lrf.exe - for conversion to the format of the ancient Sony PRS-350 (650, 600...) reader) requires keys for the input and output files, as well as the attachment of the default style file. Therefore, the \"Arguments\" line for this converter will look like this:",
+                        "[p code]",
+                        "\"-i \"%source_file%\" -o \"d:\\books\\%author%\\[%series%\\[%seq_number%-]]%title%_%db_id%.lrf\" -s \"d:\\Programs\\\\converters\\fb2lrf\\default_styles.sini\"",
+                        "[/p]",
+                        "or in the \"Arguments\" line, enter the input and output files with keys:",
+                        "[id offlink4 code]",
+                        "\"-i \"%source_file%\" -o \"d:\\books\\%author%\\[%series%\\[%seq_number%-]]%title%_%db_id%.lrf\"",
+                        "[/p]",
+                        "and in the \"Working folder\" line, select the folder of the default styles file.",
+                        "[img convert 13 1100]",
+                        "[p note] * CWD (Current Workind Directory) is the folder from which the programme is launched, which is the root for the relative paths of the files it opens. For example, here is how to work with the fb2lrf_c.exe converter, which requires a configuration file. If you run it manually from its own folder or, equivalently, run it programmatically (from FLibrary), specifying its own folder as CWD, then the configuration file can be specified as -s default_styles.sini. Or you can not specify it at all, because by default it tries to use this file, and in this case it will succeed."
+                    ]
                 }
             ]
         },
         {
-            "q": "New question"
+            "q": "I selected the ‘All Books’ navigation section. How do I exit it now?",
+            "t": [
+                "[p] Follow any link from the annotation to any book.",
+                "[img all_books 0 1000]"
+            ]
         },
         {
-            "q": "New question",
+            "q": "How to find out if the book I need is available?",
+            "t": [
+                "[id offlink5]",
+                " There are several options:"
+            ],
             "x": [
                 {
-                    "q": "New question"
+                    "q": "with cataloguizer (recommended)",
+                    "t": [
+                        "[ol]",
+                        "[*] Download the index file *.inpx and one of the FLibrary installers, according to your preference",
+                        "[*] Install FLibrary",
+                        "[*] Create a collection based on an index file with the option \"Add books missing from archives\"",
+                        "[*] Search for the book you need in the programme",
+                        "[/ol]"
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "with the contents file",
+                    "t": [
+                        "[p s] Download the file contents.7z. The archive contains text files in csv format, one file per language. Each line of the file describes one book. Format: author, title, series (number in the series), archive, file. The separator is a tab.",
+                        "[p s] This method is useful if you are satisfied with a book without a cover and illustrations. Otherwise, you will still have to download and install the categorizer."
+                    ]
                 },
                 {
-                    "q": "New question"
+                    "q": "with an index file (for experienced users)",
+                    "t": [
+                        "[p s] Download the index file *.inpx. It is a regular zip archive containing text files *.inp, where each line describes one book in the distribution. The line is csv, the separator is a byte with code 04. List of fields: ",
+                        "AUTHOR; GENRE; TITLE; SERIES; SERNO; FILE; SIZE; LIBID; DEL; EXT; DATE; LANG; LIBRATE; KEYWORDS; YEAR; SOURCELIB",
+                        "[p s] You can search the files for text using your favourite text viewer. I recommend the one built into Far Manager.",
+                        "[p s] This method is useful if you are satisfied with a book without a cover and illustrations. Otherwise, you will still have to download and install the categorizer."
+                    ]
                 }
             ]
         },
         {
-            "q": "New question",
+            "q": "How to get the book you need without downloading the entire distribution?",
+            "t": [
+                "[ol top10]",
+                "[*] Let's find out if the book you need is available. <a href=\"#offlink5\">See the instructions above.</a>",
+                "[*] Find out the name of the archive where the book is located",
+                "[*] Скачиваем этот архив, подкладываем под FLibrary",
+                "[*] Download this archive, put it under FLibrary",
+                "[/ol]",
+                "[p s] ...",
+                "[p s] PROFIT!!!! Now the book can be exported from FLibrary."
+            ],
             "x": [
                 {
-                    "q": "New question",
+                    "q": "You don't even need to download the archive",
+                    "t": [
+                        "[p s], instead, you can configure the script to download the book you want directly from the Flibusta website. You will also need a console application for downloading files from the Internet (e.g. curl), which you will need to download and install. If you have the standard version of FLibrary installed by the installer, you can use a registry key to configure the script"
+                    ],
                     "x": [
                         {
-                            "q": "New question"
+                            "q": "Here it is=>",
+                            "t": [
+                                "[p code]",
+                                " Windows Registry Editor Version 5.00",
+                                "",
+                                " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f]",
+                                " \"Name\"=\"Скачать с Флибусты\"",
+                                " \"Number\"=dword:00000001",
+                                " \"Type\"=\"ExportToDevice\"",
+                                "",
+                                " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\b2206572-8ef6-4a69-8f97-71bcb151505d]",
+                                " \"Command\"=\"mkdir\"",
+                                " \"Arguments\"=\"\\\"c:/books/%author%/[%series%]\\\"\"",
+                                " \"Number\"=dword:00000001",
+                                " \"Type\"=\"System\"",
+                                "",
+                                " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\d27e10fd-3816-41b1-af5b-a9a17043ad12]",
+                                " \"Command\"=\"D:\\\\programs\\\\curl\\\\bin\\\\curl.exe\"",
+                                " \"Arguments\"=\"-o \\\"c:/books/%author%/[%series%/[%seq_number%-]]%title%.zip\\\" -L \\\"http://x.flibusta.is/b/%lib_id%/download\\\"\"",
+                                " \"Number\"=dword:00000002",
+                                " \"Type\"=\"LaunchApp\"",
+                                "[/p]",
+                                "",
+                                "[p s] <b>(⊙_⊙) CAUTION!</b> The path to curl in the script must match where you installed it. If you are downloading with a programme other than curl, you must change the command line parameters according to its syntax. Also, adjust the path where the books will be downloaded to your liking. In the suggested registry file, this is c:/books.",
+                                "[p s] If you prefer the portable version of FLibrary, then you are most likely an experienced user and will easily configure everything yourself. But if you encounter any difficulties, please ask, I will be happy to help.",
+                                "[p s] <b>(⊙_⊙) CAUTION!</b> It will only work for books from Flibusta. Librusec probably offers this option too, but the link will be different. If you know what it is, let me know and we'll add it here."
+                            ]
                         }
                     ]
                 },
                 {
-                    "q": "New question"
+                    "q": "You can even do without external tools",
+                    "t": [
+                        "[p s] , but you will still have to configure the script. However, now you don't need curl, and one command built into FLibrary is enough:",
+                        "[ol]",
+                        "[*] Add the script",
+                        "[*] We call it something like \"Download from Flibusta\"",
+                        "[*] Add the command",
+                        "[*] Select the \"Embedded command\" type from the drop-down menu",
+                        "[*] Select the \"Download\" command",
+                        "<li> Set the command parameters (where to put, where to download from). To download from Flibusta to the t:/ftp folder, specify",
+                        "[p code]",
+                        "-o \"t:/ftp/%author%/[%series%/[%seq_number%-]]%title%.zip\" \"http://x.flibusta.is/b/%lib_id%/download\"",
+                        "[/p]",
+                        "In your case, specify any valid path, such as c:\\books. It is up to you, as long as the drive is in the system and you have write permissions. You can also change the path template. In the context menu of the argument input line, there is a context menu with available macros.</li>",
+                        "[*] Save the result",
+                        "[/ol]",
+                        "[p s] After these simple steps, the menu item ‘Download from Flibusta’ will appear in the context menu of the books, and the book will be downloaded when you select it. If your firewall and internet service provider don't mind, of course."
+                    ]
                 }
             ]
         },
