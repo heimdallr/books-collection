@@ -300,7 +300,7 @@
         {
             "q": "How do I convert a book from fb2 to the format I need?",
             "t": [
-                "[p] FLibrary does not have built-in converters, but it is possible to add any external converter if it has a command line interface. For example, you can borrow the necessary converter from the MyHomeLib collection. To call an external converter from FLibrary, you need to configure scripts, one for each desired format.",
+                "[p] FLibrary does not have built-in converters, but it is possible to add any external converter if it has a command line interface. For example, you can borrow the necessary converter from the MyHomeLib folder or get its more modern equivalent <a href=\"https://github.com/rupor-github/fb2cng/releases\" target=\"_blank\">here</a>.. To call an external converter from FLibrary, you need to configure scripts, one for each desired format.",
                 "[p] 1. In the main menu, select Settings/Scripts...",
                 "[img convert 0 500]",
                 "[p] 2. In the window that appears, click \"Add script\"",
