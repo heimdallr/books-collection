@@ -789,7 +789,7 @@
                                 "[*] Сохраните файл",
                                 "[*] Запустите FLibrary",
                                 "[/ol]",
-                                "[img hide_set 0 700]",
+                                "[img hide_set 1 700]",
                                 "[p note] * Вместо числа 9734 подберите своё по вкусу, например <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>отсюда</b></a>"
                             ]
                         },

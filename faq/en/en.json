@@ -788,7 +788,7 @@
                                 "[*] Save the file",
                                 "[*] Launch FLibrary",
                                 "[/ol]",
-                                "[img hide_set 0 700]",
+                                "[img hide_set 1 700]",
                                 "[p note] * Instead of the number 9734, choose one that suits your taste, for example <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>from here</b></a>"
                             ]
                         },
