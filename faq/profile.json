@@ -1,4 +1,5 @@
 {
+	"outputFileName": "index.html",
 	"outputFileExtension": "htm",
 	"head": [
 		"<!DOCTYPE html>",
