@@ -3,6 +3,8 @@
     "macro": {
         "#HEAD#": "Часто задаваемые вопросы",
         "#LANGUAGE#": "ru",
+        "#OTHERLANGUAGE1#": "en",
+        "#OTHERLANGUAGE2#": "uk",
         "#STYLE#": "Стиль",
         "#TAIL#": "Дизайн © <a href=\"https://github.com/Jurchos\">Юрий Шатров ака Jurchos</a>",
         "#TITLE#": "FLibrary ЧаВо"

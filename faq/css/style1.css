@@ -4,6 +4,27 @@ body    {
 	     overflow-x: hidden;
 		 background-color: #fffaf0; }
 		 
+span#langbutton {
+	         float: left;}
+button#langbutton1 {
+	     z-index: 300;  
+         position: absolute;
+		 margin-top: -2px;
+         margin-left: 10px; 
+		 border-radius: 5px;
+         background-color: #d3d3d3;
+         color: #800000;
+		 font-weight: bold; }
+button#langbutton2 {
+	     z-index: 300;  
+         position: absolute;
+		 margin-top: -2px;
+         margin-left: 42px; 
+		 border-radius: 5px;
+         background-color: #d3d3d3;
+         color: #800000;
+		 font-weight: bold; }
+
 span#button {
 	         float: right; }	
 button#styles {
