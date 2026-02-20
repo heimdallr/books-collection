@@ -1,3 +1,15 @@
+/*@media only screen and (min-width: 4000px) {
+  html {
+  zoom: 90%}
+}*/
+
+
+@media only screen and (min-width: 2000px)  /*для 2К масштаб 120%*/
+{
+  html {
+  zoom: 113%}
+}
+
 body {
 	background-color: #fff5ee;
 }
@@ -157,7 +169,7 @@ details>summary {
 	background-color: #d3d3d3;
 	color: #800000;
 	text-shadow: -2px -3px 3px Silver;
-	font-size: 1.1em;
+	font-size: 125%;
 	font-weight: bold;
 	border: 1px gray solid;
 	padding-left: 20px;
@@ -165,7 +177,8 @@ details>summary {
 	cursor: pointer;
 }
 
-details[open] summary {
+details[open]>summary {
+	font-size: 1.2em;
 	background-color: #fff5ee;
 	color: navy;
 	border: 1px gray solid;
@@ -175,24 +188,25 @@ details[open] summary {
 }
 
 details>summary.subtitle {
+	background-color: #fff5ee;
 	margin-top: 10px;
 	padding-left: 20px;
 	color: navy;
 	text-shadow: none;
-	font-size: 1.0em;
+	font-size: 108%;
 	font-weight: bold;
 	border: none;
 	list-style: none;
 }
 
 details>summary.subtitle:before {
-	content: "+";
-	margin: -5px 5px 0 0;
+	content: "\25C6";
+	padding-right: 5px;
 }
 
 details[open]>summary.subtitle:before {
-	content: "-";
-	margin: -5px 5px 0 0;
+	content: "\25C7";
+	padding-right: 5px;
 }
 
 details>summary.sub_subtitle {
@@ -200,19 +214,20 @@ details>summary.sub_subtitle {
 	padding-left: 40px;
 	color: navy;
 	text-shadow: none;
-	font-size: 0.8em;
+	font-size: 98%;
 	font-weight: bold;
 	border: none;
 	list-style: none;
 }
 
 details>summary.sub_subtitle:after {
-	content: " ⇒";
-	margin: -5px 5px 0 0;
+	content: "\21D2";
+	padding-left: 5px;
 }
 
 details[open]>summary.sub_subtitle:after {
-	content: " ⇓";
+	content: "\21D3";
+	padding-left: 5px;
 }
 
 /*Картинки*/
@@ -290,7 +305,7 @@ img.img1200 {
 a {
 	text-decoration: none;
 	font-family: 'Arial';
-	font-size: 1.1em;
+	font-size: 105%;
 	font-weight: bold;
 }
 
