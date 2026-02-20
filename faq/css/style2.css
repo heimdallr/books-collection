@@ -207,12 +207,12 @@ details>summary.sub_subtitle {
 }
 
 details>summary.sub_subtitle:after {
-	content: "⇒";
+	content: " ⇒";
 	margin: -5px 5px 0 0;
 }
 
 details[open]>summary.sub_subtitle:after {
-	content: "⇓";
+	content: " ⇓";
 }
 
 /*Картинки*/
