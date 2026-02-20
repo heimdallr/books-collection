@@ -182,7 +182,7 @@ ol.top10 {
 }
 
 /*заголовок*/
-details.summary {
+details>summary {
 	background-color: #fff8dc;
 	color: #4b0082;
 	text-shadow: -2px -3px 3px Silver;
@@ -204,7 +204,7 @@ details[open] summary {
 }
 
 /*подзаголовки*/
-details.summary.subtitle {
+details>summary.subtitle {
 	margin-top: 10px;
 	padding-left: 20px;
 	color: navy;
@@ -215,7 +215,7 @@ details.summary.subtitle {
 	list-style: none;
 }
 
-details.summary.subtitle:before {
+details>summary.subtitle:before {
 	content: "+";
 	margin: -5px 5px 0 0;
 }
@@ -225,7 +225,7 @@ details[open] summary.subtitle:before {
 	margin: -5px 5px 0 0;
 }
 
-details.summary.sub_subtitle {
+details>summary.sub_subtitle {
 	margin-top: 0;
 	padding-left: 40px;
 	color: navy;
