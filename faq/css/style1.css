@@ -236,6 +236,14 @@ details>summary.sub_subtitle {
 	list-style: none;
 }
 
+details>summary.sub_subtitle:after {
+	content: "⇒";
+	margin: -5px 5px 0 0;
+}
+
+details[open]>summary.sub_subtitle:after {
+	content: "⇓";
+}
 
 /*Картинки*/
 p.img {

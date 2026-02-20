@@ -133,7 +133,7 @@
                             ],
                             "x": [
                                 {
-                                    "q": "what it can do=>",
+                                    "q": "what it can do",
                                     "t": [
                                         "[ul nd]",
                                         "[*] search by author",
@@ -467,7 +467,7 @@
                     ],
                     "x": [
                         {
-                            "q": "Here it is=>",
+                            "q": "Here it is",
                             "t": [
                                 "[p code]",
                                 " Windows Registry Editor Version 5.00",
@@ -556,7 +556,7 @@
                     ],
                     "x": [
                         {
-                            "q": "smart people say=>",
+                            "q": "smart people say",
                             "t": [
                                 "[p ss] (⊙_⊙) I set up external access through nginx—I just added the subdomain book.xxx.xx, obtained a certificate for it, and now I can access it via https, and nginx redirects to http on the internal network.",
                                 "[p ss] © SoloMen",
