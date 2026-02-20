@@ -186,7 +186,7 @@ details>summary {
 	background-color: #fff8dc;
 	color: #4b0082;
 	text-shadow: -2px -3px 3px Silver;
-	font-size: 1.4em;
+	font-size: 1.1em;
 	font-weight: bold;
 	border: 1px gray solid;
 	padding-left: 20px;
@@ -209,7 +209,7 @@ details>summary.subtitle {
 	padding-left: 20px;
 	color: navy;
 	text-shadow: none;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	font-weight: bold;
 	border: none;
 	list-style: none;
@@ -230,7 +230,7 @@ details>summary.sub_subtitle {
 	padding-left: 40px;
 	color: navy;
 	text-shadow: none;
-	font-size: 1.1em;
+	font-size: 0.8em;
 	font-weight: bold;
 	border: none;
 	list-style: none;
