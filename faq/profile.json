@@ -17,8 +17,8 @@
 	"tail": [
 		"<h2 id=\"footer\">",
 		"<span id=\"langbutton\">",
-		"\t<button id=\"langbutton1\" onclick=\"document.location='../#OTHERLANGUAGE1#/index.html'\">#OTHERLANGUAGE1#</button>",
-		"\t<button id=\"langbutton2\" onclick=\"document.location='../#OTHERLANGUAGE2#/index.html'\">#OTHERLANGUAGE2#</button>",
+		"\t<button id=\"langbutton1\" onclick=\"document.location='../#OTHERLANGUAGE1#/index.html'\" style=\"background-image: url(../css/#OTHERLANGUAGE1#.png);\"></button>",
+		"\t<button id=\"langbutton2\" onclick=\"document.location='../#OTHERLANGUAGE2#/index.html'\" style=\"background-image: url(../css/#OTHERLANGUAGE2#.png);\"></button>",
 		"</span>",
 		"#TAIL#",
 		"<span id=\"button\"><button id=\"styles\" onclick=\"toggleTheme()\">#STYLE#</button>",
