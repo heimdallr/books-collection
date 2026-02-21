@@ -38,36 +38,29 @@
 		"</body>",
 		"</html>"
 	],
-	"question": [
-		{
+	"question": {
+		"main": {
 			"before": [
 				"<details>",
 				"\t<summary> &#128211; #QUESTION#</summary>\n"
 			],
 			"after": "<hr>\n</details>\n\n"
 		},
-		{
+		"subtitle": {
 			"before": [
 				"<details>",
 				"\t<summary class=\"subtitle\">#QUESTION#</summary>\n"
 			],
 			"after": "</details>\n"
 		},
-		{
-			"before": [
-				"<details>",
-				"\t<summary class=\"subtitle\">#QUESTION#</summary>\n"
-			],
-			"after": "</details>\n"
-		},
-		{
+		"sub_subtitle" : {
 			"before": [
 				"<details>",
 				"\t<summary class=\"sub_subtitle\">#QUESTION#</summary>\n"
 			],
 			"after": "</details>\n"
 		}
-	],
+	},
 	"answer": {
 		"simple": "<br>#ANSWER#\n",
 		"tagged": "#ANSWER#\n",

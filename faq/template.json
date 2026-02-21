@@ -10,7 +10,8 @@
         "</head>",
         "<body>",
         "<div id=\"content\">",
-        "<h1 id=\"header\">#HEAD#</h1>"
+        "<h1 id=\"header\">#HEAD#</h1>",
+        ""
     ],
     "language": "template",
     "outputFileExtension": "htm",
@@ -55,6 +56,24 @@
             "name": "sub_subtitle"
         }
     ],
+    "tags": [
+        {
+            "expression": "\\[id (\\S+)\\]",
+            "replacement": "<p id=\"\\1\">"
+        },
+        {
+            "expression": "\\[id (\\S+) (\\S+)\\]",
+            "replacement": "<p id=\"\\1\" class=\"\\2\">"
+        },
+        {
+            "expression": "\\[(\\S+?) (\\S+?)\\]",
+            "replacement": "<\\1 class=\"\\2\">"
+        },
+        {
+            "expression": "\\[img (\\S+?) (\\S+?) (\\S+?)\\]",
+            "replacement": "<p class=\"img\"><img src=\"img/\\1/\\2.jpg\" alt=\"&#128558; image lost\" class=\"img\\3\">"
+        }
+    ],
     "tail": [
         "<h2 id=\"footer\">",
         "<span id=\"langbutton\">",
@@ -77,23 +96,25 @@
         "</h2>",
         "</div>",
         "</body>",
-        "</html>"
+        "</html>",
+        ""
     ],
     "x": [
         {
             "q": "main",
             "t": [
-                "%1",
-                "%2",
-                "%3",
-                "%4",
+                "<p>%1",
+                "<br>%2",
+                "<br>%3",
+                "<br>%4</p>",
                 "<ul>",
                 "<li>%5</li>",
                 "<li>%6</li>",
                 "<li>%7</li>",
                 "<li>%8</li>",
                 "<li>%9</li>",
-                "</ul>"
+                "</ul>",
+                ""
             ],
             "x": [
                 {
@@ -104,13 +125,14 @@
                         "<li>%2</li>",
                         "<li>%3</li>",
                         "<li>%4</li>",
-                        "</ul>"
+                        "</ul>",
+                        ""
                     ]
                 },
                 {
                     "q": "subtitle",
                     "t": [
-                        "[p subtitle]%1",
+                        "[p subtitle]%1</p>",
                         "<ul>",
                         "<li>%2</li>",
                         "<li>%3</li>",
@@ -119,7 +141,8 @@
                         "<li>%6</li>",
                         "<li>%7</li>",
                         "</ul>",
-                        "[p subtitle]%8"
+                        "[p subtitle]%8</p>",
+                        ""
                     ]
                 }
             ]
@@ -127,8 +150,8 @@
         {
             "q": "main",
             "t": [
-                "%1",
-                "[p subtitle]%2",
+                "<p>%1",
+                "<br>%2</p>",
                 "<ul>",
                 "<li>%3</li>",
                 "<li>%4</li>",
@@ -137,93 +160,102 @@
                 "<li>%7</li>",
                 "<li>%8</li>",
                 "</ul>",
-                "%9",
-                "",
-                "%10"
+                "<p>%9</p>",
+                "<p>%10</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "Just like the “original” ones, in the mode of adding new archives",
+                    "q": "subtitle",
                     "t": [
-                        "<b>(⊙_⊙) Attention!</b> Distribution is carried out by adding new archives; each addition creates a new torrent. To start downloading a new archive, users need to do the following:",
-                        "[ol]",
-                        "[*] Stop downloading.",
-                        "[*] Delete the old torrent from your client, but without deleting the distribution files.",
-                        "[*] Download the new torrent and run it in your client instead of the old one, specifying the path to the old folder where the new archives should be downloaded.",
-                        "[/ol]",
-                        "Your client must hash (verify) the old folder (if they don't do it themselves, help them do it). As a result, they will only download the archives that you don't have yet. The old archives are not deleted, but continue to be distributed!",
-                        "",
-                        "If you have already deleted old archives, you can prevent them from being downloaded again by unchecking the corresponding boxes when starting a new torrent. If possible, it is advisable not to delete old archives for as long as possible. This will help other people download the distribution faster.",
-                        "[hr lite]"
+                        "<p>%1</p>",
+                        "<ol>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ol>",
+                        "<p>%5</p>",
+                        "<p>%6</p>",
+                        "[hr lite]",
+                        ""
                     ],
                     "v": true
                 }
             ]
         },
         {
-            "q": "Will my favorite cataloger work with this distribution?",
+            "q": "main",
             "t": [
-                "[p s] No, it won't."
+                "<p>%1</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "And MyHomeLib won't?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] And MyHomeLib won't.",
-                        "[p s] At least, not to the extent that it should be. Yes, the *.inpx index file in the distribution is compatible with MHL, meaning you can create a collection. But why? You won't be able to export books from it. And the collection itself won't be correct, because MHL doesn't support multi-series books, so it will create multiple copies of books that are part of several series. In short, it's useless."
+                        "[p subtitle]%1</p>",
+                        "[p subtitle]%2</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "What about xxxLib for yyyOS?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] I have neither the opportunity nor the desire to check all the catalogizers available on the Internet for compatibility with the storage format I have invented. But I am almost certain that it will not work. Check it yourself and let the public know. I will add the result of your check here, with a link to you, of course."
+                        "[p subtitle]%1</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "But why?",
+                    "q": "subtitle",
                     "t": [
                         "[ul top10]",
-                        "[*] 7z",
-                        "[*] Images separated from fb2",
-                        "[/ul]",
-                        "[p s] Well, catalogers that support 7z archives may work, but with one limitation: the books they extract will be without pictures."
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "</ul>",
+                        "[p subtitle]%3</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "What should I do?",
+                    "q": "subtitle",
                     "t": [
-                        "[p] Use FLibrary"
+                        "<p>%1</p>",
+                        ""
                     ],
                     "x": [
                         {
-                            "q": "I can't, I have Linux",
+                            "q": "subtitle",
                             "t": [
-                                "[p ss] Use wine",
-                                "[p ss] Console <a href=\"https://codeberg.org/aku4wb/flbs\" target=\"_blank\">script</a> for Linux, working with this distribution, from the respected razobit"
+                                "[p sub_subtitle]%1</p>",
+                                "[p sub_subtitle]%2</p>",
+                                ""
                             ],
                             "x": [
                                 {
-                                    "q": "what it can do",
+                                    "q": "sub_subtitle",
                                     "t": [
-                                        "[ul nd]",
-                                        "[*] search by author",
-                                        "[*] search by book title",
-                                        "[*] extracting a book with images in fb2 format",
-                                        "[/ul]"
+                                        "[ul none_dot]",
+                                        "<li>%1</li>",
+                                        "<li>%2</li>",
+                                        "<li>%3</li>",
+                                        "</ul]>",
+                                        ""
                                     ]
                                 }
                             ]
                         },
                         {
-                            "q": "I can't, I have Windows 7",
+                            "q": "subtitle",
                             "t": [
-                                "[p ss] Yes, then you really can't. The distribution isn't for you, sorry."
+                                "[p sub_subtitle]%1</p>",
+                                ""
                             ],
                             "x": [
                                 {
-                                    "q": "people write to us",
+                                    "q": "sub_subtitle",
                                     "t": [
-                                        "[p ss] For Windows 7/2008R2 users, <a href=\"https://github.com/YuZhouRen86/VxKex-NEXT\" target=\"_blank\">VxKek</a> can be used on Windows 7. The most important thing is that the machine is completely isolated from the network or in a completely closed network circuit. © HedgehogInTheCPP"
+                                        "[p sub_subtitle]%1</p>",
+                                        ""
                                     ]
                                 }
                             ]
@@ -233,415 +265,428 @@
             ]
         },
         {
-            "q": "How can I restore separately stored covers and illustrations to fb2?",
+            "q": "main",
             "t": [
-                "[p] To work with this book storage format, the distribution includes the FLibrary cataloguer. When exporting books from the collection, FLibrary returns images to the fb2 body. The same happens when launching an external reader from FLibrary. And when downloading a book via OPDS. And via web interfaces. Regardless of the method, if a book is extracted from the collection using FLibrary, the result will be the same - the images will be returned to fb2, to their rightful places."
+                "<p>%1</p>",
+                ""
             ]
         },
         {
-            "q": "How do I add a new collection?",
+            "q": "main",
             "t": [
-                "[p] The dialog for adding or creating a new collection can be accessed from the main menu of the program.",
+                "<p>%1</p>",
                 "[img collection 0 400]",
-                "[p] This same dialog box appears when the program is first launched.",
+                "<p>%2</p>",
                 "[img collection 1 700]",
-                "[p] The following should be specified in the dialogue:",
-                "1. Collection name",
-                "2. Path to the database file",
-                "3. The path to the folder with book archives, where the program expects to find the index file *.inpx",
-                "13. The path to the index file *.inpx, if it is located in a different folder than the book archive, or if you need to create a collection without a book archive.",
-                "[/p]",
-                "[p] The following buttons will help you avoid mistakes when filling out the form:",
-                "5. Will display the database file selection dialog",
-                "6. Will display a dialog box for selecting a folder with book archives",
-                "4. Retrieves the name from the collection index file, if found. For this to work, you must first specify 3 or 13.",
-                "[/p]",
-                "[p] If something was filled in incorrectly, error message 10 will indicate this.",
-                "[p] After correctly filling in fields 1-3, you can click on button 11. The process of creating the collection will begin. This will not take long, depending on the performance of your processor and the speed of the disk on which you have decided to locate the database. On my computer, creating a new collection - a local copy of Flibusta - takes about half a minute."
+                "<p>%3",
+                "<br>%4",
+                "<br>%5",
+                "<br>%6",
+                "<br>%7</p>",
+                "<p>%8",
+                "<br>%9",
+                "<br>%10",
+                "<br>%11</p>",
+                "<p>%12</p>",
+                "<p>%13</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "Details, nuances",
+                    "q": "subtitle",
                     "t": [
-                        "[p] You can specify an existing file as the database, for example, from an earlier version of the program, or even from MyHomeLib. Then button 11 will change the text to “Add,” and instead of creating a new collection, the collection from the specified file will be added. ",
-                        "",
-                        "<b>(⊙_⊙) ATTENTION! </b> After that, the database file will most likely not be usable in the program in which it was created, because FLibrary will change its structure to suit itself.",
-                        "[/p]",
-                        "[p] Options for creating a collection:",
-                        "7. Add unindexed books, enabled by default. Books found in archives that are not listed in the archive index will be added to the collection. That is, they are in the archive but not in the index file.",
-                        "8. Add books missing from archives, disabled by default. All books available in the index will be added to the collection, even those whose files are not in the archive. That is, symmetrically to the previous one, if it is in the index, it may not be in the archive.",
-                        "9. Scan unindexed archives, disabled by default. FLibrary will scan all archives in the specified folder, including those not mentioned in the index file. This means that you can place any archives with books in fb2 format in the archive folder, and they will be added to the collection. Of course, such scanning will take more time than simple parsing of *.inpx.",
-                        "12. Mark unindexed books as deleted, enabled by default. Unindexed files are in the archive for historical reasons and usually have indexed copies.",
-                        "14. Archive type. If checkbox 8 is enabled, there may be no archive for the indexed book in folder 3. In this case, an archive with the name from the index and the specified extension will be saved. This may be necessary when searching for the desired book without downloading the entire distribution.",
-                        "[/p]"
+                        "<p>%1",
+                        "<br>%2</p>",
+                        "<p> %3",
+                        "<br>%4",
+                        "<br>%5",
+                        "<br>%6",
+                        "<br>%7",
+                        "<br>%8</p>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "How do I update my collection?",
+            "q": "main",
             "t": [
-                "[p] Download the distribution update as usual. The next time you launch FLibrary, it will detect the change in the *.inpx index file and prompt you to update the collection. Agree, and in a few seconds everything will be ready. However, from time to time it makes sense to recreate the collection “from scratch”, as the automatic update only pulls in previously missing data. Meanwhile, existing descriptions may contain useful corrections. Sometimes it is useful to recreate the collection when updating the FLibrary version, especially if it is recommended on the What's Changed page. When recreating the collection, do not forget to save user data.",
-                "[p] The FLibrary HTTP server has a hidden setting <a href=\"#offlink1\">(see below)</a> that causes it to silently update the collection when *.inpx changes."
+                "<p>%1</p>",
+                "<p>%2</p>",
+                ""
             ]
         },
         {
-            "q": "How to find a book by title, author, or series?",
+            "q": "main",
             "t": [
-                "[p] It is better to search by author and series in the corresponding navigation sections, where you can not only search by list, but also filter it.",
-                "But you can also search for books by title, author, or series.",
-                "[/p]",
+                "<p>%1",
+                "<br>%2</p>",
                 "[img search 0 1100]",
-                "[p] Let's say you need to find the book \"Tower and Knife\" by Mazarkis Williams. The programme has a full-text search function for book titles, so you don't have to enter the entire title. It is enough to enter a few words, not necessarily in the order in which they appear in the title.",
+                "<p>%3</p>",
                 "[img search 1 1100]",
-                "[p] Press Enter (or the magnifying glass icon on the left), and the programme will go to the \"Search\", navigation section and display the search results in the book window результаты поиска",
+                "<p>%4</p>",
                 "[img search 2 1100]",
-                "[p] That would be the end of it, but I will add:",
-                "[ul]",
-                "[*] Search queries are stored in the \"Search\" section, where they can be selected for repeated use",
-                "[*] You can add a search query in the same section by clicking the plus button",
-                "[*] Unnecessary requests can be deleted using the cross button",
-                "[/ul]"
+                "<p>%5</p>",
+                "<ul>",
+                "<li>%6</li>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "</ul>",
+                ""
             ],
             "x": [
                 {
-                    "q": "Search queries have accumulated. How can I delete them? It's inconvenient to do it one by one",
+                    "q": "subtitle",
                     "t": [
                         "[ol top10]",
-                        "[*] Select all (Ctrl+A) or only unnecessary queries (mouse + Ctrl or Shift)",
-                        "[*] Press the delete button on one of the selected items",
-                        "[*] Confirm deletion in the dialogue box that appears",
-                        "[/ol]",
-                        "[p s] The same applies to the list of groups."
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "</ol>",
+                        "[p subtitle]%4</p>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "Is it possible to sort books by several columns?",
+            "q": "main",
             "t": [
-                "[p] Yes, you can. Hold down Shift while clicking on the column headers."
+                "<p>%1</p>",
+                ""
             ]
         },
         {
-            "q": "I want to see books in only one language. Or two. Can you remove the others?",
+            "q": "main",
             "t": [
-                "[p] Yes, you can. Go to Settings/Filters to open the filter settings dialogue box",
+                "<p>%1</p>",
                 "[img filter 0 500]",
-                "[p] Go to the \"Languages\" tab, tick the languages you do not want to see in the \"Books filtered\" column. Tick \"Filter enabled\", click \"Apply.",
+                "<p>%2</p>",
                 "[img filter 1 600]",
-                "[p] That's it, books in unwanted languages are hidden. You can hide languages from navigation (left pane of the main window) by ticking the \"Hidden\" column.",
-                "The same method can be used to remove unnecessary authors, series, genres and keywords.",
-                "[/p]",
-                "[p]<b>(⊙_⊙) Caution!</b> Checkboxes are independent — after removing an element from navigation, you will continue to see books related to this element from other navigation elements/sections. Conversely, if you filter books by a navigation element, you will continue to see that navigation element in its section, and when you select it, you will see the filtered books (if they have not been filtered by another element).",
-                "[p] The dialogue box has a search/filter function, and the column headers with checkboxes have a context menu.",
+                "<p>%3",
+                "<br>%4</p>",
+                "<p>%5</p>",
+                "<p>%6</p>",
                 "[img filter 2 700]",
-                "[p] The \"Quick filter\" by language is still available from the context menu of the language column header in the books table.",
-                "[img filter 3 1000]"
+                "<p>%7</p>",
+                "[img filter 3 1000]",
+                ""
             ]
         },
         {
-            "q": "Is it possible to physically remove books I don't need from the archives?",
+            "q": "main",
             "t": [
-                "[p] Yes, you can. The programme has a feature that allows you to physically clean up your collection by deleting files from the archive and records from the database. The function for deleting files from the archive is initially blocked. To unblock it, select \"Allow destructive operations\" in the \"Collection\" main menu. After confirming your intention to continue and agreeing to the risk of permanent loss of books, the \"Delete forever\" option will be activated in the context menu of the books. It will also activate the checkbox 7 \"Delete forever along with book files from the archive\", <a href=\"#offlink3\">see below</a>.",
+                "<p>%1</p>",
                 "[img cleanup 0 400]",
-                "[p] When you select the \"Clean...\" menu item, the collection cleaning criteria window will pop up.",
+                "<p>%2</p>",
                 "[img cleanup 1 1100]",
-                "[p] FLibrary supports the following criteria:",
-                "1. \"Deleted\" books. When this criterion is selected, books marked as deleted in the database will be removed from the collection.",
-                "2. Duplicate books. The programme considers books with the same title and at least one author in common to be duplicates. If you select this criterion, all such books will be deleted except for the one that was added to the collection last. This means that different editions or translations of the same book will be considered duplicates. Please be careful.",
-                "3. Genres. You can mark unwanted genres. This criterion has an additional setting, implemented with radio buttons:",
-                "[/p]",
-                "[ul]",
-                "[*] Exact match. When selected, books will be deleted whose genres are all included in the set selected for deletion.",
-                "[*] Partial match. Books with at least one genre selected for deletion will be deleted. This is a very dangerous option.",
-                "[/ul]",
-                "[p null] 4. Languages. You can mark unwanted languages. It should be understood that the actual language of the text of many books does not match that specified in the description or in the fb2 metadata.",
-                "5. By size. When this criterion is selected, books whose file size is smaller than the minimum or larger than the maximum value will be deleted.",
-                "6. By rating. If the library rating of the book is lower than specified and/or there is no rating, i.e. no one has rated the book yet.",
-                "9. Compilations.",
-                "[/p]",
-                "[p] After carefully placing the check marks, press button 8 \"Analyse collection\", wait a short time for the collection to be analysed for compliance with the specified criteria, and then you will see a message with the result",
+                "<p>%3",
+                "<br>%4",
+                "<br>%5",
+                "<br>%6</p>",
+                "<ul>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "</ul>",
+                "[p null]%9",
+                "<br>%10",
+                "<br>%11",
+                "<br>%12</p>",
+                "<p>%13</p>",
                 "[img cleanup 2 500]",
-                "[p] This is your last chance to change your mind and click \"No\". But if you click \"Yes\", the programme will start deleting books.",
-                "[id offlink3]",
-                "<b>(⊙_⊙) WARNING!</b> If checkbox 7 is checked, the book files will be physically deleted from the archives, and their records will be deleted from the database. This may take a long time, depending on the number of books being deleted, the power of the computer, the performance of the disk on which the collection is located, etc. But not very long. If checkbox 7 is not checked, the books will simply be hidden in the FLibrary interface.",
-                "[p] After cleaning the collection, it makes sense to deactivate destructive operations."
+                "<p>%14</p>",
+                "[id offlink3]%15</p>",
+                "<p>%16</p>",
+                ""
             ]
         },
         {
-            "q": "How do I convert a book from fb2 to the format I need?",
+            "q": "main",
             "t": [
-                "[p] FLibrary does not have built-in converters, but it is possible to add any external converter if it has a command line interface. For example, you can borrow the necessary converter from the MyHomeLib folder or get its more modern equivalent <a href=\"https://github.com/rupor-github/fb2cng/releases\" target=\"_blank\">here</a>.. To call an external converter from FLibrary, you need to configure scripts, one for each desired format.",
-                "[p] 1. In the main menu, select Settings/Scripts...",
-                "[img convert 0 500]",
-                "[p] 2. In the window that appears, click \"Add script\"",
-                "[img convert 1 600]",
-                "[p] 3. A line will appear at the top of the window (\"Scripts\") where you can enter the desired name for the script.",
-                "[img convert 2 600]",
-                "[p] Now you need to add script commands. Which ones exactly depends on the selected external converter. A typical set consists of two commands: create a folder and run the converter.",
-                "So, let's add the commands.",
-                "[/p]",
-                "[p] 4. Click \"Add command\"",
-                "[img convert 3 600]",
-                "[p] 5. Four lines will appear at the bottom of the \"Command Settings\" window. In the first line, “Type” (1), select \"System\" from the drop-down menu.",
-                "[img convert 4 600]",
-                "[p] 6. In the second line, \"Command\" (2), enter <b>mkdir</b> , i.e. create a folder.",
-                "[p] 7. In the third line, ‘Arguments’ (3), enter the desired path. <b>(⊙_⊙) CAUTION!</b> Slashes must be in Windows style, i.e. like this: \\ . It is advisable to enclose each argument in quotation marks. Example:",
-                "[p code] \"d:\\books\\epub\"",
-                "[/p]",
-                "[p] Save the result - \"OK\"",
-                "[img convert 5 600]",
-                "[p] 7. Add a command to launch the converter: click \"Add command\"",
-                "[img convert 6 600]",
-                "[p] 8. In the first line, \"Type\" (1), select \"Launch console application\" from the drop-down menu, then click on the programme selection icon in the second line, \"Command\" (2).",
+                "<p>%1</p>",
+                "<ol>",
+                "<li>%2",
+                "[img convert 0 500]</li>",
+                "<li>%3",
+                "[img convert 1 600]</li>",
+                "<li>%4",
+                "[img convert 2 600]</li>",
+                "<br>%5",
+                "<br>%6",
+                "<br><p/>",
+                "<li>%7",
+                "[img convert 3 600]</li>",
+                "<li>%8",
+                "[img convert 4 600]</li>",
+                "<li>%9</li>",
+                "<li>%10</li>",
+                "[p code]%11</p></li>",
+                "<li>%12",
+                "[img convert 5 600]</li>",
+                "<li>%13",
+                "[img convert 6 600]</li>",
+                "<li>%14</p>",
                 "[img convert 7 600]",
-                "[p note] * Purpose of the fourth line, \"Working folder\" (4) — see below, <a href=\"#offlink4\">\"Details, nuances\"</a>",
-                "[/p]",
-                "[p] 9. In the file selection dialogue box that appears, specify the desired external converter:",
-                "[img convert 8 900]",
-                "[p] 10. Add the converter launch parameters in the \"Arguments\" line (3). This converter requires the paths to the source and converted files. Enter",
-                "[p code] \"%source_file%\" \"d:\\books\\epub\\book.epub\"",
-                "[p] Save the result - \"OK\"",
-                "[img convert 9 700]",
-                "[p] 11. Save the script",
-                "[img convert 10 700]",
-                "[p] That's it, the script is ready. From now on, in the context menu of books, in the Export submenu, there will be an item \"Convert to epub\", i.e. the name of the script from step 3",
+                "[p note]%15</p></li>",
+                "<li>%16",
+                "[img convert 8 900]</li>",
+                "<li>%17",
+                "[p code]%18</p></li>",
+                "<li>%19",
+                "[img convert 9 700]</li>",
+                "<li>%20",
+                "[img convert 10 700]</li>",
+                "</ol>",
+                "<p>%21</p>",
                 "[img convert 11 900]",
-                "[p] If you select it, the file 'book.epub' will appear in the folder d:\\books\\epub.",
-                "[p] Probably, few people would want to convert books to the same file every time, because they want the files to be saved in folders named after the authors and named after the book titles. To do this, macros should be used in the script commands when specifying folders. For example, to make sure the path to the book includes its author and series (if any), and the file name includes the series number (if any) and the book title, you should enter the following line in \"Arguments\" (3):",
-                "[p code] \"d:\\books\\epub\\%author%\\[%series%\\[%seq_number%-]]%title%.epub\"",
-                "[/p]",
-                "[p] A complete list of available macros is available from the Arguments editing context menu",
-                "[img convert 12 1200]"
+                "<p>%22</p>",
+                "<p>%23</p>",
+                "[p code]%24</p>",
+                "<p>%25</p>",
+                "[img convert 12 1200]",
+                ""
             ],
             "x": [
                 {
-                    "q": "I'm too lazy to read so much, can you make it faster?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] Yes, you can. Set this registry key by adjusting the paths:",
+                        "[p subtitle]%1</p>",
                         "[p code]",
-                        " Windows Registry Editor Version 5.00",
+                        "%2",
                         "",
-                        " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\a1e61de4-da10-4015-a7c3-91453cd0e215]",
-                        " \"Name\"=\"Convert to epub\"",
-                        " \"Number\"=dword:00000001",
-                        " \"Type\"=\"ExportToDevice\"",
+                        "%3",
+                        "%4",
+                        "%5",
+                        "%6",
                         "",
-                        " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\a1e61de4-da10-4015-a7c3-91453cd0e215\\37fe0cd3-35ee-4521-85a9-5b3f00138585]",
-                        " \"Command\"=\"D:\\\\programs\\\\converters\\\\FB2ePub\\\\Fb2ePub.exe\"",
-                        " \"Arguments\"=\"\\\"%source_file%\\\" \\\"D:/books/%author%/[%series%/[%seq_number%-]]%title%.epub\\\"\"",
-                        " \"Number\"=dword:00000002",
-                        " \"Type\"=\"LaunchApp\"",
+                        "%7",
+                        "%8",
+                        "%9",
+                        "%10",
+                        "%11",
                         "",
-                        " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\a1e61de4-da10-4015-a7c3-91453cd0e215\\3b791fea-5942-479d-b7e2-6c3c3f6862cd]",
-                        " \"Command\"=\"mkdir\"",
-                        " \"Arguments\"=\"\\\"D:/books/%author%/[%series%]\\\"\"",
-                        " \"Number\"=dword:00000001",
-                        " \"Type\"=\"System\"",
-                        "[/p]",
-                        "[hr lite]"
+                        "%12",
+                        "%13",
+                        "%14",
+                        "%15",
+                        "%16",
+                        "</p>",
+                        "[hr lite]",
+                        ""
                     ],
                     "v": true
                 },
                 {
-                    "q": "Details, nuances",
+                    "q": "subtitle",
                     "t": [
                         "[ol top10]",
-                        "<li> It is important to note that some converters cannot create folders, so before running them, you need to create a folder using the system command \"mkdir\", specifying the full path (using macros). Then, when adding the first and second commands, the \"Arguments\" lines will look like this:",
+                        "<li>%1",
                         "[p code]",
-                        " \"d:\\books\\%author%\\[%series%]\"",
-                        " \"%source_file%\" \"d:\\books\\%author%\\[%series%\\[%seq_number%-]]%title%.mobi\"",
-                        "[/p]",
+                        "%2",
+                        "",
+                        "%3</p>",
                         "</li>",
-                        "<li> It should also be noted that when converting books with the same title (for example, when you decide to download two different translations of the same book), the converter will overwrite the previous file with the next one, meaning that there will only be one book in the folder. To avoid this, you should add additional identification macros. For example:",
+                        "<li>%4",
                         "[p code]",
-                        "\"%source_file%\" \"d:\\books\\epub\\%author%\\[%series%\\[%seq_number%-]]%title%_%db_id%.epub\"",
-                        "[/p]",
+                        "%5</p>",
                         "</li>",
-                        "<li>Some converters require additional commands to operate, such as start keys and the use of third-party configuration files. The FLibrary script allows you to write additional commands and/or specify a working folder <a href=\"#offlink4\">(cwd)*</a> for additional programme files.",
-                        "In particular, the fb2 to lrf converter (fb2lrf.exe - for conversion to the format of the ancient Sony PRS-350 (650, 600...) reader) requires keys for the input and output files, as well as the attachment of the default style file. Therefore, the \"Arguments\" line for this converter will look like this:",
+                        "<li>%6",
+                        "<br>%7",
                         "[p code]",
-                        "\"-i \"%source_file%\" -o \"d:\\books\\%author%\\[%series%\\[%seq_number%-]]%title%_%db_id%.lrf\" -s \"d:\\Programs\\\\converters\\fb2lrf\\default_styles.sini\"",
-                        "[/p]",
-                        "or in the \"Arguments\" line, enter the input and output files with keys:",
+                        "%8</p>",
+                        "<br>%9",
                         "[id offlink4 code]",
-                        "\"-i \"%source_file%\" -o \"d:\\books\\%author%\\[%series%\\[%seq_number%-]]%title%_%db_id%.lrf\"",
-                        "[/p]",
-                        "and in the \"Working folder\" line, select the folder of the default styles file.",
+                        "%10</p>",
+                        "<br>%11",
                         "[img convert 13 1100]",
-                        "[p note] * CWD (Current Workind Directory) is the folder from which the programme is launched, which is the root for the relative paths of the files it opens. For example, here is how to work with the fb2lrf_c.exe converter, which requires a configuration file. If you run it manually from its own folder or, equivalently, run it programmatically (from FLibrary), specifying its own folder as CWD, then the configuration file can be specified as -s default_styles.sini. Or you can not specify it at all, because by default it tries to use this file, and in this case it will succeed."
+                        "[p note] %12</p>",
+                        "</li>",
+                        "</ol>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "I selected the ‘All Books’ navigation section. How do I exit it now?",
+            "q": "main",
             "t": [
-                "[p] Follow any link from the annotation to any book.",
-                "[img all_books 0 1000]"
+                "<p>%1</p>",
+                "[img all_books 0 1000]",
+                ""
             ]
         },
         {
-            "q": "How to find out if the book I need is available?",
+            "q": "main",
             "t": [
-                "[id offlink5]",
-                " There are several options:"
+                "[id offlink5]%1</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "with cataloguizer (recommended)",
+                    "q": "subtitle",
                     "t": [
-                        "[ol]",
-                        "[*] Download the index file *.inpx and one of the FLibrary installers, according to your preference",
-                        "[*] Install FLibrary",
-                        "[*] Create a collection based on an index file with the option \"Add books missing from archives\"",
-                        "[*] Search for the book you need in the programme",
-                        "[/ol]"
+                        "<ol>",
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ol>",
+                        ""
                     ]
                 },
                 {
-                    "q": "with the contents file",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] Download the file contents.7z. The archive contains text files in csv format, one file per language. Each line of the file describes one book. Format: author, title, series (number in the series), archive, file. The separator is a tab.",
-                        "[p s] This method is useful if you are satisfied with a book without a cover and illustrations. Otherwise, you will still have to download and install the categorizer."
+                        "[p subtitle]%1",
+                        "<br>%2</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "with an index file (for experienced users)",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] Download the index file *.inpx. It is a regular zip archive containing text files *.inp, where each line describes one book in the distribution. The line is csv, the separator is a byte with code 04. List of fields: ",
-                        "AUTHOR; GENRE; TITLE; SERIES; SERNO; FILE; SIZE; LIBID; DEL; EXT; DATE; LANG; LIBRATE; KEYWORDS; YEAR; SOURCELIB",
-                        "[p s] You can search the files for text using your favourite text viewer. I recommend the one built into Far Manager.",
-                        "[p s] This method is useful if you are satisfied with a book without a cover and illustrations. Otherwise, you will still have to download and install the categorizer."
+                        "[p subtitle]%1",
+                        "<br>%2",
+                        "<br>%3",
+                        "<br>%4</p>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "How to get the book you need without downloading the entire distribution?",
+            "q": "main",
             "t": [
                 "[ol top10]",
-                "[*] Let's find out if the book you need is available. <a href=\"#offlink5\">See the instructions above.</a>",
-                "[*] Find out the name of the archive where the book is located",
-                "[*] Download this archive, put it under FLibrary",
-                "[/ol]",
-                "[p s] ...",
-                "[p s] PROFIT!!!! Now the book can be exported from FLibrary."
+                "<li>%1</li>",
+                "<li>%2</li>",
+                "<li>%3</li>",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "</ol>",
+                "<p>%7</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "You don't even need to download the archive",
+                    "q": "subtitle",
                     "t": [
-                        "[p s], instead, you can configure the script to download the book you want directly from the Flibusta website. You will also need a console application for downloading files from the Internet (e.g. curl), which you will need to download and install. If you have the standard version of FLibrary installed by the installer, you can use a registry key to configure the script"
+                        "[p subtitle]%1</p>",
+                        ""
                     ],
                     "x": [
                         {
-                            "q": "Here it is",
+                            "q": "sub_subtitle",
                             "t": [
                                 "[p code]",
-                                " Windows Registry Editor Version 5.00",
+                                "%1",
                                 "",
-                                " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f]",
-                                " \"Name\"=\"Download from Flibusta\"",
-                                " \"Number\"=dword:00000001",
-                                " \"Type\"=\"ExportToDevice\"",
+                                "%2",
+                                "%3",
+                                "%4",
+                                "%5",
                                 "",
-                                " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\b2206572-8ef6-4a69-8f97-71bcb151505d]",
-                                " \"Command\"=\"mkdir\"",
-                                " \"Arguments\"=\"\\\"c:/books/%author%/[%series%]\\\"\"",
-                                " \"Number\"=dword:00000001",
-                                " \"Type\"=\"System\"",
+                                "%6",
+                                "%7",
+                                "%8",
+                                "%9",
+                                "%10",
                                 "",
-                                " [HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\d27e10fd-3816-41b1-af5b-a9a17043ad12]",
-                                " \"Command\"=\"D:\\\\programs\\\\curl\\\\bin\\\\curl.exe\"",
-                                " \"Arguments\"=\"-o \\\"c:/books/%author%/[%series%/[%seq_number%-]]%title%.zip\\\" -L \\\"http://x.flibusta.is/b/%lib_id%/download\\\"\"",
-                                " \"Number\"=dword:00000002",
-                                " \"Type\"=\"LaunchApp\"",
-                                "[/p]",
-                                "",
-                                "[p s] <b>(⊙_⊙) CAUTION!</b> The path to curl in the script must match where you installed it. If you are downloading with a programme other than curl, you must change the command line parameters according to its syntax. Also, adjust the path where the books will be downloaded to your liking. In the suggested registry file, this is c:/books.",
-                                "[p s] If you prefer the portable version of FLibrary, then you are most likely an experienced user and will easily configure everything yourself. But if you encounter any difficulties, please ask, I will be happy to help.",
-                                "[p s] <b>(⊙_⊙) CAUTION!</b> It will only work for books from Flibusta. Librusec probably offers this option too, but the link will be different. If you know what it is, let me know and we'll add it here."
+                                "%11",
+                                "%12",
+                                "%13",
+                                "%14",
+                                "%15",
+                                "</p>",
+                                "<br>",
+                                "[p subtitle]%16</p>",
+                                "[p subtitle]%17</p>",
+                                "[p subtitle]%18</p>",
+                                ""
                             ]
                         }
                     ]
                 },
                 {
-                    "q": "You can even do without external tools",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] , but you will still have to configure the script. However, now you don't need curl, and one command built into FLibrary is enough:",
-                        "[ol]",
-                        "[*] Add the script",
-                        "[*] We call it something like \"Download from Flibusta\"",
-                        "[*] Add the command",
-                        "[*] Select the \"Embedded command\" type from the drop-down menu",
-                        "[*] Select the \"Download\" command",
-                        "<li> Set the command parameters (where to put, where to download from). To download from Flibusta to the t:/ftp folder, specify",
-                        "[p code]",
-                        "-o \"t:/ftp/%author%/[%series%/[%seq_number%-]]%title%.zip\" \"http://x.flibusta.is/b/%lib_id%/download\"",
-                        "[/p]",
-                        "In your case, specify any valid path, such as c:\\books. It is up to you, as long as the drive is in the system and you have write permissions. You can also change the path template. In the context menu of the argument input line, there is a context menu with available macros.</li>",
-                        "[*] Save the result",
-                        "[/ol]",
-                        "[p s] After these simple steps, the menu item ‘Download from Flibusta’ will appear in the context menu of the books, and the book will be downloaded when you select it. If your firewall and internet service provider don't mind, of course."
+                        "[p subtitle]%1</p>",
+                        "<ol>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "<li>%5</li>",
+                        "<li>%6</li>",
+                        "<li>%7",
+                        "[p code]%8</p>",
+                        "%9</li>",
+                        "<li>%10</li>",
+                        "</ol>",
+                        "[p subtitle]%11</p>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "I have five computers and three laptops at home. Do I need to download the distribution and install FLibrary on all of these devices?",
+            "q": "main",
             "t": [
-                "[p s] Not necessarily. FLibrary provides some networking capabilities in the form of several HTTP services. To access them, you need to run the HTTP server included in FLibrary. Select the menu item",
+                "<p>%1</p>",
                 "[img http 0 900]",
-                "[p s] In the dialog box that opens => Click Start and that's it, the server is running, you can see how it works. To do this, you can click on the labels that have become clickable.",
+                "<p>%2</p>",
                 "[img http 1 600]",
                 "[ol top10]",
-                "[*] <b>Web interface ReactApp.</b> The browser will open a website developed by the respected alloroc2. Here you can search for books by title/author/series, download them, and even read them right there on the website. It's very convenient. The website interface is quite intuitive, and its functionality is constantly expanding.",
-                "[*] <b>Simplified web interface.</b> A page will open in your browser, reflecting my knowledge of HTML. There you will also find search, navigation through the collection, downloading, and reading. But it has absolutely no design, just extreme minimalism. It's very niche, but it's enough for me.",
-                "[*] <b>OPDS</b> A page with some JSON will open in your browser. Actually, you should access this address not with a browser, but with a reader that supports the OPDS protocol.",
-                "[/ol]",
-                "[p s] When the HTTP server is running, these addresses are accessible from any device on the same local network, i.e., you can access two versions of the web interface on another computer/smartphone/tablet, as well as connect to the OPDS catalog with a reader."
+                "<li>%3</li>",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "</ol>",
+                "<p>%6</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "ReactApp. By the Author",
+                    "q": "sub_subtitle",
                     "t": [
-                        "You can work via the web in a browser from any device.",
-                        "Search by entering text, with results immediately sorted by title, author, and series.",
-                        "View groups of books pre-selected in the program.",
-                        "For the selected book, statistics + cover, table of contents with chapters and their location in the book.",
-                        "You can read the selected book without leaving the cataloguer's web interface.",
-                        "For ease of reading, switch to full screen and scroll through the text.",
-                        "Control the font and scrolling speed with hotkeys.",
-                        "Reading progress is saved in the browser.",
-                        "Opened the site, found a book, and lost touch with reality.",
-                        "© alloroc2"
+                        "[p sub_subtitle]%1",
+                        "<br>%2",
+                        "<br>%3",
+                        "<br>%4",
+                        "<br>%5",
+                        "<br>%6",
+                        "<br>%7",
+                        "<br>%8",
+                        "<br>%9</p>",
+                        "[p sub_subtitle]&nbsp;%10</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "Will it only work at home? Can't it be done online?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] It is possible, but you will have to forward the specified ports to the outside world yourself. I am not knowledgeable enough in this area to even be sure that the previous statement makes sense. Please search for “white IP” and “CloudFlare.com tunnels.” I would appreciate any insightful comments about this in a private message."
+                        "[p subtitle]%1</p>",
+                        ""
                     ],
                     "x": [
                         {
-                            "q": "smart people say",
+                            "q": "sub_subtitle",
                             "t": [
-                                "[p ss] (⊙_⊙) I set up external access through nginx—I just added the subdomain book.xxx.xx, obtained a certificate for it, and now I can access it via https, and nginx redirects to http on the internal network.",
-                                "[p ss] © SoloMen",
+                                "[p sub_subtitle]%1",
+                                "<br>%2",
+                                "<br>&nbsp;%3</p>",
                                 "[hr lite]",
-                                "[p ss] (⊙_⊙) <br>I managed to do it with Tilescale. Here's what I did to use it:",
+                                "[p sub_subtitle]%4",
+                                "<br>%5",
                                 "[ol top10]",
-                                "[*] I downloaded TileScale (somewhere on the Internet they say there is an open source equivalent) onto my phone and computer;",
-                                "[*] Connected them (the phone and the computer) to the general network using Tilescale;",
-                                "[*] I enabled the server in FLibrary according to the FAQ and entered the address specified in Tilescale, which in my case was the attached address 100.84.44.127 (those who want to try this method may find a different address; check the control panel on the website or the task manager by clicking on the Tilescale column; the IPv4 address column below the graph will show the address that we attach). I specifically left opds mode enabled for myself, entered its address for AlReader;",
-                                "[*] Profit, actually;",
-                                "[/ol]",
+                                "<li>%6</li>",
+                                "<li>%7</li>",
+                                "<li>%8</li>",
+                                "<li>%9</li>",
+                                "</ol>",
                                 "",
-                                "[p ss] © AncientSUS</li>",
-                                "",
-                                "[p ss] UPD In the HTTP server address settings, you can specify “Any,” in which case the services will be accessible via all available interfaces: localhost, 127.0.0.1, local IP address, etc."
+                                "[p sub_subtitle]%10",
+                                "<br>&nbsp;%11</p>",
+                                ""
                             ]
                         }
                     ]
@@ -649,236 +694,259 @@
             ]
         },
         {
-            "q": "What's with all the mess with authors and series?",
+            "q": "main",
             "t": [
-                "[p s] This is the result of merging Flibusta and Librusec into a single distribution. Indeed, the inconsistency in the naming of authors and series on Flibusta and Librusec is a serious problem. Plus, libraries have different approaches to resolving conflicts between authors with the same name. Because of this, some names here may either “split” or “collapse,” resulting in books by the same author in a distribution being “linked” to different authors, and vice versa, books by different authors being attributed to the same author. The same applies to series."
+                "<p>%1</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "So, there's nothing we can do about it?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] Unfortunately, it is unlikely that we will be able to coordinate this distribution at the level of network libraries that are sources of books. We can only make minor corrections. If you notice that any author or series has been “split” or “merged,” please let me know. I will make a local edit, and the next monthly update will correct the situation."
+                        "[p subtitle]%1</p>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "Is it okay that my antivirus software is complaining about the distribution?",
+            "q": "main",
             "t": [
-                "[p] It is ok. Currently, there are several known reasons why antivirus software may trigger alerts for this distribution.",
-                "[/p]",
-                "[p s] 1. FLibrary_setup.exe installer. The file is generated by one of the most popular installer creation tools, Inno Setup. It can be assumed that virus writers use the same tool, which is why Inno Setup signatures regularly appear in antivirus databases. What can be done about this? In similar cases, reputable software companies contact vendors, who tweak their databases, and antivirus programs stop generating false positives. Unfortunately, I am not a reputable company, so in the case of FLibrary, all you can do is take my word for it and ignore the antivirus. That's what I do. You can also use the msi installer or an archive with a “portable” version; virustotal.com has never complained about them. Or you can carefully examine the source code for malware and compile the project yourself.",
-                "[p s] 2. The library has a book by Oleg Mikhailovich Boitsov called “Protect Your Computer 100% from Viruses and Hackers,” file 166093.fb2 in the archive fb2-166043-168102.7z. It seems that some antivirus programs don't like the examples of malicious code contained therein. In my opinion, this is clearly overkill and paranoia. If your reader does not attempt to interpret and run scripts from book pages, there is nothing to worry about, and you can safely add *.fb2 to your antivirus exceptions.",
-                "[p s] 3. There is also a book by Timofey Chadov called “Using ListView in Virtual List Mode,” file 170704.fb2 in the archive fb2-168103-172702.7z. The author included an executable exe file in it, which at least one vendor from virustotal complained about. But as far as I know, antivirus programs are not yet trying to parse fb2 in order to decode binary attachments from base64, unpack the resulting archive, and analyze its contents. If your reader does not attempt to examine binary attachments of books that are not linked from its pages in order to run programs suddenly found there, then again, there is nothing to worry about."
+                "<p>%1</p>",
+                "<h5>%2</h5>",
+                "%3",
+                "<br>%4",
+                "<h5>%5</h5>",
+                "%6",
+                "<h5>%7</h5>",
+                "%8",
+                "",
+                ""
             ]
         },
         {
-            "q": "I found a bug in the program, what should I do?",
+            "q": "main",
             "t": [
                 "[ol top10]",
-                "[*] Ensure that the bug is present in the latest release of FLibrary. This is especially true for typos, many of which were found and fixed while writing these instructions.",
-                "[*] Post the bug report <a href=\"https://github.com/heimdallr/books/issues\" target=\"_blank\">here></a>, describing the issue if possible, attaching a screenshot, etc.",
-                "[/ol]",
-                "[p s] If you don't have a GitHub account and don't feel like registering, you can send me a private message. Or leave a message in the thread. I would appreciate any feedback. But anyone who posts a bug report (or feature request that will be taken for implementation) on GitHub will receive a personal pre-release build of FLibrary. With a mention in About."
+                "<li>%1</li>",
+                "<li>%2</li>",
+                "</ol>",
+                "<p>%3</p>",
+                ""
             ]
         },
         {
-            "q": "They promise fast FLibrary performance, but in reality it's slow. Are they lying?",
+            "q": "main",
             "t": [
-                "[p s] At least one user experienced interference with the program from Microsoft Defender, which manifested itself in slow performance and increased RAM consumption. Configuring Defender helped.",
-                "[p s] Try adding it to your antivirus exceptions",
-                "[ul]",
-                "[*] The folder with the program",
-                "[*] The folder containing the collection database",
-                "[*] Folder with book archives",
-                "[*] Folder with temporary files (%TEMP%)",
-                "[/ul]"
+                "<p>%1</p>",
+                "<p>%2</p>",
+                "<ul>",
+                "<li>%3</li>",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "</ul>",
+                ""
             ]
         },
         {
-            "q": "There are some ‘entertainment’ options in the menu. I checked all the boxes, what next?",
+            "q": "main",
             "t": [
-                "[p s] Entertainment content is displayed instead of an empty annotation when no books are selected in the books window."
+                "<p>%1</p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "For example",
+                    "q": "subtitle",
                     "t": [
                         "[img entertainment 0 800]",
                         "[img entertainment 1 800]",
-                        "[img entertainment 2 800]"
+                        "[img entertainment 2 800]",
+                        ""
                     ]
                 },
                 {
-                    "q": "I see an empty annotation, where are the jokes?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] For this to work, you need access to a) the internet, and b) services that provide content. Keep in mind that some services may stop working. And some are not accessible from your location without a VPN.",
-                        "[p s] To diagnose the problem, you can enable the display of errors in receiving entertainment content using a hidden setting."
+                        "[p subtitle]%1",
+                        "<br>%2</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "Why is everything in English?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] If you find (or set up your own) a similar public service (without registration or SMS) in another language, let me know and I'll add it."
+                        "[p subtitle]%1</p>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "Why are there so many FLibrary installers in the distribution?",
+            "q": "main",
             "t": [
-                "<p class=\"subtitle\" style=\"text-align:right\"><i>",
-                "Three Rings for the Elven-kings under the sky",
-                "<br>Seven for the Dwarf-lords in their halls of stone",
-                "<br>Nine for Mortal Men doomed to die",
-                "</i></p>"
+                "<p class=\"subtitle\" style=\"text-align:right; margin-right:1%\"><i>",
+                "%1",
+                "<br>%2",
+                "<br>%3",
+                "</i></p>",
+                ""
             ],
             "x": [
                 {
-                    "q": "I FLibrary_setup.exe",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] Generated by InnoSetup. The main installer, the most convenient and functional. Allows you to",
-                        "[ul]",
-                        "[*] Select the installer language",
-                        "[*] Select installation mode for me only/for everyone",
-                        "[*] Run the program immediately after installation",
-                        "[/ul]",
-                        "[p s] There is one caveat: some antivirus programs don't like it. Who should you believe, the antivirus program or me, Jordan Russell and Martijn Laan? Decide for yourself..."
+                        "[p subtitle]%1</p>",
+                        "<ul>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ul>",
+                        "[p subtitle]%5</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "II FLibrary_setup.msi",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] Microsoft Windows Installer. Most likely, I just don't know how to cook it, but",
-                        "[ul]",
-                        "[*] The installer language is English for universality.",
-                        "[*] The program is installed only for everyone, in `C:\\Program Files`",
-                        "[*] After the installer finishes, nothing starts automatically.",
-                        "[/ul]",
-                        "[p s] I would be grateful if someone could teach me how to make msi smooth and silky."
+                        "[p subtitle]%1</p>",
+                        "<ul>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ul>",
+                        "[p subtitle]%5</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "III FLibrary_portable.7z",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] This is not an installer at all, but simply an archive with binaries. You will have to unpack and configure the launch shortcuts yourself, manually. A program installed in this way does not store its settings in the registry, but in a nearby ini file, like a portable one. Therefore, you need to unpack it where you have write access."
+                        "[p subtitle]%1</p>",
+                        ""
                     ]
                 },
                 {
-                    "q": "So which one should I choose?",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] The contents of all installers are identical, so you can choose any one based on your preferences and experience. However, I recommend the first option, as that is the one I use myself. The other two are tested rarely."
+                        "[p subtitle]%1</p>"
                     ]
                 }
             ]
         },
         {
-            "q": "Where does the program store ...?",
+            "q": "main",
             "t": [
                 " "
             ],
             "x": [
                 {
-                    "q": "settings",
+                    "q": "subtitle",
                     "t": [
                         "[id offlink2]",
-                        "[ul]",
-                        "[*] Standard version (installed by the installer) - registry branch HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary",
-                        "[*] Portable version (from archive) - FLibrary.ini file in the program folder",
-                        "[/ul]"
+                        "<ul>",
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "</ul>",
+                        ""
                     ]
                 },
                 {
-                    "q": "work log",
+                    "q": "subtitle",
                     "t": [
-                        "[p s] File %TEMP%\\HomeCompa.FLibrary.log",
-                        "[p s] The latest log entries can be viewed directly in the program by pressing Esc. Or via the Settings/View/Log/Show menu."
+                        "[p subtitle]%1",
+                        "<br>%2</p>",
+                        ""
                     ]
                 }
             ]
         },
         {
-            "q": "Can I have a complete list of FLibrary's hidden settings?",
+            "q": "main",
             "t": [
-                "[id offlink1]",
-                "[p s] This section describes features that few people need, so they are not included in the interface in order to avoid clutter.",
-                "[p s] <b>(⊙_⊙) ATTENTION!!!</b> These settings should be added as needed; they are not included in the settings storage by default.",
-                "[p s] Where to find the settings - see <a href=\"#offlink2\">“Where does the program store ...?”.</a>",
+                "[id offlink1]%1</p>",
+                "[p subtitle]%2",
+                "<br>%3</p>",
                 "[ul top10]",
-                "[*] v2.0.0 `Preferences/LibRate/symbol`, number, 11088 by default - ASCII or UTF-8 code for the star symbol ⭐ for the rating column in the source library. The codes for different characters can be found <a href=\"https://www.w3schools.com/charsets\" target=\"_blank\">here</a>. You can use those that have no more than four characters in Hex.",
-                "[*] v2.1.2 `Preferences/hideScrollBars`, string (true | false) true by default - controls the visibility of scrollbars. If set to ‘false’, scrollbars will not be hidden.",
-                "[*] v2.1.4 `Preferences/GenresSortMode`, string (SortByCode | SortByName | SortByChildCount | SortByCodeDesc | SortByNameDesc | SortByChildCountDesc), SortByCode by default - genre sorting mode",
-                "[*] v2.1.4 `Preferences/opds/BookEntryLimit`, DWORD number, 25 y default - limit on the number of books returned by a single list via http.",
-                "[*] v2.2.0 Not a setting, but a hidden feature. Pressing Alt+Shift+Q will bring up a window where you can run SQL queries on the collection database. The results of the queries are recorded in the logs.",
-                "[*] v2.2.1 `Preferences/opds/transliterate`, string (true | false), false by default - transliteration of the name of a file downloaded via http.",
-                "[*] v2.2.1 `Preferences/LibRate/precision`, DWORD number, -1 by default - replaces the book rating stars in the library with a number with the precision specified by this parameter. For a true average rating on Flibusta, you will need the reviews\\additional.zip file. If this setting is missing or set to -1, stars are displayed.",
-                "[*] v2.2.1 `Preferences/LibRate/colors/2.0`, `ui/Books/LibRate/colors/3.0`, `ui/Books/LibRate/colors/4.5`и т.п. DWORD number, corresponding to the color in RRGGBB format. For gradient coloring of the rating digits from the previous point.",
-                "[*] v2.2.2 `Preferences/AnnotationJokes/Visible`, string (true | false) true  by default - when set to ‘false’, disables entertainment content functionality in empty annotations.",
-                "[*] v2.2.2 `Preferences/AnnotationJokes/%ApiName%Visible`, string (true | false) true by default - when set to ‘false’, disables %ApiName%, hides the corresponding menu item `Settings/View/Annotation/Entertainment/%ApiNameTitle%`. It makes sense to disable those APIs that are not available in your area. Or those that have stopped working.",
-                "[*] v2.3.0 `Preferences/opds/ReadUrlTemplate` Template for linking to a reader from the Web. For example, if you set it to `http://127.0.0.1:44080/#/reader?url=http://%HTTP_HOST%:%HTTP_PORT%/Images/fb2/%1`, you can read books with liberama. Before doing so, you need to <a  href=\"https://github.com/bookpauk/liberama\" target=\"_blank\">download</a> liberama, configure it, and launch it. Perhaps the configuration will find another use someday.",
-                "[*] v2.3.0 `Preferences/opds/SeparatedSearch`, string (true | false) false by default - for OPDS and the web interface, it includes separate search modes for authors, series, book titles, and all together.",
-                "[*] v2.3.0 `Preferences/opds/AutoupdateCollection`, string (true | false) false by default - when set to `true`, the HTTP server (opds.exe) will monitor inpx and, if it changes, automatically update the collection.",
-                "[*] v2.4.1 `Preferences/StartFocusedControl`, string (SearchBooksByNames | NavigationSearchAndFilter | BooksSearchAndFilter) SearchBooksByNames by default - input field, active at program startup.",
-                "[*] v2.4.1 `Preferences/Alphabets/LinkedControl`, string (SearchBooksByNames | NavigationSearchAndFilter | BooksSearchAndFilter) - the input field with which the alphabet panel works. By default, this is not specified; the alphabet panel works with the active input field, i.e., the one where the cursor is currently located.",
-                "[*] v2.4.1 `Preferences/CommonBooksTableColumnSettings`, string (true | false) false by default - when set to `true`, the table column settings will be common to all navigation modes.",
-                "[*] v2.5.0 `Preferences/AnnotationReviewSortMode`, string (Time | Reviewer | Text | TimeDesc | ReviewerDesc | TextDesc), Time by default - modes for sorting reader reviews in the annotation.",
-                "[*] v2.5.4 `Preferences/HideToTray`, string (true | false) false by default - when set to `true`, the program hides in the system tray when Alt+F4 is pressed or the cross in the main window is clicked. Exiting via the main menu or hotkey closes the program.",
-                "[*] v2.5.4 `Preferences/MultipleInstance`, string (Enabled | Disabled | Dialog) - configures the ability to run multiple instances of FLibrary. Enabled - multiple instances can be run, Disabled - multiple instances cannot be run; when the next instance of the application is launched, the existing one will be displayed, Dialog - when the next instance is launched, a dialog box will be displayed. The default setting is Enabled. However, if HideToTray mode is enabled (see above), the setting will always be Disabled, regardless of the value set.",
-                "[*] v2.5.4 `Preferences/Export/TransliterationMode, string (None | FileNameOnly | AllExceptUserPath | All) - configures the transliteration of exported file names. The default value is None, i.e. do not transliterate. FileNameOnly - the file name will be transliterated, AllExceptUserPath - transliterate the export path except for the user-selected folder (%user_destination_folder%), All - transliterate the entire export path.",
-                "[*] v2.5.4 `Preferences/Interaction/Book/OnLink`, string (Read | ExtractAsFb2 | ExtractAsZip) - configures the program's behavior when clicking on a book title link in the annotation. Default - Read - open the book in the reader. ExtractAsIs - extract the book. ExtractAsZip - extract the book and pack it into a zip archive.",
-                "[*] v2.5.4 `Preferences/Interaction/Book/OnDoubleClick`, string (Read | ExtractAsFb2 | ExtractAsZip) - configures the program's behavior when double-clicking on a row in the book table; the values are the same as in the previous setting.",
-                "[*] v2.5.4 `Preferences/RelativePaths', string (true | false) false by default - when set to `true`, the program will save relative paths (reader, scripts, etc.) in the settings.",
-                "[*] v2.5.5 `Preferences/ReadMark/color' - color of mark for books read - DWORD number, corresponding to the color in the AABBGGRR format, where AA is the transparency value, and BBGGRR are the values for each of the RGB colors (note the color sequence => B-G-R!). It is also worth considering that AA is inverted, i.e. with a transparency value of FF (100% opaque), the color will become completely transparent and will not be visible. Setting the color is not required for application. To highlight what has been read, you can omit the ‘color’ parameter altogether and only specify the ‘width’ parameter. In this case, the color of the text will be used as the color of the mark (i.e., black in a light theme and white in a dark theme). <b>(⊙_⊙)</b> A book becomes “read” when a user rating is set for it.",
-                "[*] v2.5.5 `Preferences/ReadMark/width', DWORD number, `0` by default - width of the read books label. A value of ‘0’ disables the label. ",
-                "[*] v2.5.5 `Preferences/opds/converter', section for managing the conversion of files downloaded via http (opds, web interfaces). Keys:",
-                "[*] Preferences/opds/converter/command, string - path to the executable file (command line utility) of the converter",
-                "[*] Preferences/opds/converter/arguments, string - converter parameters, default “%src%” “%dst%”. The following substitutions (macros) are used: %src% - the .fb2 book file to be converted, %dst% - the resulting file",
-                "[*] Preferences/opds/converter/cwd, string - working directory for the converter being launched, by default - the folder containing FLibrary.exe",
-                "[*] Preferences/opds/converter/ext, string - file extension after conversion ",
-                "[*] <b>(⊙_⊙)</b> ATTENTION! Reading will no longer work on the web. If this is relevant to anyone, please let us know.",
-                "[*] v2.5.5 `Preferences/AnnotationJokes/ShowErrors`, string  (true | false) `false` by default - when set to `true`, the error message will be displayed in case of an error while retrieving entertainment content.",
-                "[*] v2.5.5 `Preferences/Books/Alignment', section for managing field alignment in the book table. In this section, you can create keys with the field name and alignment value. Possible field names (keys): Author, Title, Series, SeqNumber, Genre, Folder, FileName, Size, LibRate, UserRate, UpdateDate, Year, Lang. Possible alignment values: AlignLeft, AlignRight, AlignCenter. If you are interested, you can experiment with the values <a href=\"https://doc.qt.io/qt-6/qt.html#AlignmentFlag-enum\" target=\"_blank\">here</a>.",
-                "[*] v2.5.5 `Preferences/UserRate/symbol`, число по умолчанию '11088' - ascii или utf-8 код символа звёздочки ⭐ для колонки пользовательского рейтинга.",
-                "[*] v2.5.5 `Preferences/UserRate/noRateSymbol`, ascii or utf-8 character code for books with a rating of “No rating”.",
-                "[*] v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, string (true | false) false by default - when set to `true`, adds a “Hash” submenu to the book context menu with the items ‘Calculate’ and “Compare.” For those interested in the duplicate detector.",
-                "[/ul]",
-                "[hr lite]"
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "<li>%9</li>",
+                "<li>%10</li>",
+                "<li>%11</li>",
+                "<li>%12</li>",
+                "<li>%13</li>",
+                "<li>%14</li>",
+                "<li>%15</li>",
+                "<li>%16</li>",
+                "<li>%17</li>",
+                "<li>%18</li>",
+                "<li>%19</li>",
+                "<li>%20</li>",
+                "<li>%21</li>",
+                "<li>%22</li>",
+                "<li>%23</li>",
+                "<li>%24</li>",
+                "<li>%25</li>",
+                "<li>%26</li>",
+                "<li>%27</li>",
+                "<li>%28</li>",
+                "<ul>",
+                "<li>%29",
+                "<li>%30</li>",
+                "<li>%31</li>",
+                "<li>%32</li>",
+                "</ul>",
+                "%33</li>",
+                "<li>%34</li>",
+                "<li>%35</li>",
+                "<li>%36</li>",
+                "<li>%37</li>",
+                "<li>%38</li>",
+                "</ul>",
+                "[hr lite]",
+                ""
             ],
             "x": [
                 {
-                    "q": "I read the FAQ about hidden settings. “I didn't understand anything, but it was interesting ©”",
+                    "q": "subtitle",
                     "t": [
-                        "[p ss] That's strange, no one has complained before you. Well, let me explain. You wanted to replace the rate star symbol..."
+                        "<p>%1</p>",
+                        ""
                     ],
                     "x": [
                         {
-                            "q": "If you have the portable version of FLibrary, then:",
+                            "q": "subtitle",
                             "t": [
-                                "[ol]",
-                                "[*] Close FLibrary",
-                                "[*] Open the FLibrary.ini file from the program folder in a text editor.",
-                                "[*] Find the [Preferences] section and add the line `LibRate\\symbol=9734` to it.",
-                                "[*] Save the file",
-                                "[*] Launch FLibrary",
-                                "[/ol]",
+                                "<ol>",
+                                "<li>%1</li>",
+                                "<li>%2</li>",
+                                "<li>%3</li>",
+                                "<li>%4</li>",
+                                "<li>%5</li>",
+                                "</ol>",
                                 "[img hide_set 1 700]",
-                                "[p note] * Instead of the number 9734, choose one that suits your taste, for example <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>from here</b></a>"
+                                "<p note>%6</p>",
+                                ""
                             ]
                         },
                         {
-                            "q": "If your version of FLibrary was installed using the installer, then:",
+                            "q": "subtitle",
                             "t": [
-                                "[ol]",
-                                "[*] Close FLibrary",
-                                "[*] Launch the Registry Editor",
-                                "[*] Go to branch `HKEY_CURRENT_USER\\Software\\HomeCompa\\FLibrary\\Preferences`",
-                                "[*] Create (if it does not exist) a subsection named `LibRate` in this branch.",
-                                "[*] Create a DWORD parameter named `symbol` in this subsection.",
-                                "[*] Set the parameter to the decimal value 9734 (also hexadecimal 2606).",
-                                "[*] Launch FLibrary",
-                                "[/ol]",
+                                "<ol>",
+                                "<li>%1</li>",
+                                "<li>%2</li>",
+                                "<li>%3</li>",
+                                "<li>%4</li>",
+                                "<li>%5</li>",
+                                "<li>%6</li>",
+                                "<li>%7</li>",
+                                "</ol>",
                                 "[img hide_set 0 700]",
-                                "[p note] * Instead of the number 9734, choose one that suits your taste, for example <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>from here</b></a>"
+                                "[p note]%8</p>",
+                                ""
                             ]
                         }
                     ]
