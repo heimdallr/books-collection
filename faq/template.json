@@ -1,0 +1,957 @@
+{
+    "head": [
+        "<!DOCTYPE html>",
+        "<html lang=\"#LANGUAGE#\">",
+        "<head>",
+        "\t<title>#TITLE#</title>",
+        "\t<meta charset=\"UTF-8\">",
+        "\t<link rel=\"icon\" type=\"image/x-icon\" href=\"../img/FLibrary.ico\">",
+        "\t<link id=\"theme\" rel=\"stylesheet\" href=\"../css/style2.css\">",
+        "</head>",
+        "<body>",
+        "<div id=\"content\">",
+        "<h1 id=\"header\">#HEAD#</h1>",
+        ""
+    ],
+    "language": "template",
+    "outputFileExtension": "htm",
+    "outputFileName": "index.html",
+    "question": [
+        {
+            "after": [
+                "<hr>",
+                "</details>",
+                "",
+                ""
+            ],
+            "before": [
+                "<details>",
+                "\t<summary> &#128211; #QUESTION#</summary>",
+                ""
+            ],
+            "name": "main"
+        },
+        {
+            "after": [
+                "</details>",
+                ""
+            ],
+            "before": [
+                "<details>",
+                "\t<summary class=\"subtitle\">#QUESTION#</summary>",
+                ""
+            ],
+            "name": "subtitle"
+        },
+        {
+            "after": [
+                "</details>",
+                ""
+            ],
+            "before": [
+                "<details>",
+                "\t<summary class=\"sub_subtitle\">#QUESTION#</summary>",
+                ""
+            ],
+            "name": "sub_subtitle"
+        }
+    ],
+    "tags": [
+        {
+            "expression": "\\[id (\\S+)\\]",
+            "replacement": "<p id=\"\\1\">"
+        },
+        {
+            "expression": "\\[id (\\S+) (\\S+)\\]",
+            "replacement": "<p id=\"\\1\" class=\"\\2\">"
+        },
+        {
+            "expression": "\\[(\\S+?) (\\S+?)\\]",
+            "replacement": "<\\1 class=\"\\2\">"
+        },
+        {
+            "expression": "\\[img (\\S+?) (\\S+?) (\\S+?)\\]",
+            "replacement": "<p class=\"img\"><img src=\"img/\\1/\\2.jpg\" alt=\"&#128558; image lost\" class=\"img\\3\">"
+        }
+    ],
+    "tail": [
+        "<h2 id=\"footer\">",
+        "<span id=\"langbutton\">",
+        "\t<button id=\"langbutton1\" onclick=\"document.location='../#OTHERLANGUAGE1#/index.html'\" style=\"background-image: url(../css/#OTHERLANGUAGE1#.png);\"></button>",
+        "\t<button id=\"langbutton2\" onclick=\"document.location='../#OTHERLANGUAGE2#/index.html'\" style=\"background-image: url(../css/#OTHERLANGUAGE2#.png);\"></button>",
+        "</span>",
+        "#TAIL#",
+        "<span id=\"button\"><button id=\"styles\" onclick=\"toggleTheme()\">#STYLE#</button>",
+        "\t<script>",
+        "\t\tfunction toggleTheme() {",
+        "\t\t\tlet theme = document.getElementById('theme');",
+        "\t\t\tif (theme.getAttribute('href') == '../css/style2.css') {",
+        "\t\t\t\ttheme.setAttribute('href', '../css/style1.css');",
+        "\t\t\t} ",
+        "\t\t\telse {",
+        "\t\t\t\ttheme.setAttribute('href', '../css/style2.css');",
+        "\t\t\t}",
+        "\t\t}",
+        "\t</script></span>",
+        "</h2>",
+        "</div>",
+        "</body>",
+        "</html>",
+        ""
+    ],
+    "x": [
+        {
+            "q": "main",
+            "t": [
+                "<p>%1",
+                "<br>%2",
+                "<br>%3",
+                "<br>%4</p>",
+                "<ul>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "<li>%9</li>",
+                "</ul>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[ul top10]",
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ul>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        "<ul>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "<li>%5</li>",
+                        "<li>%6</li>",
+                        "<li>%7</li>",
+                        "</ul>",
+                        "[p subtitle]%8</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1",
+                "<br>%2</p>",
+                "<ul>",
+                "<li>%3</li>",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "</ul>",
+                "<p>%9</p>",
+                "<p>%10</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "<p>%1</p>",
+                        "<ol>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ol>",
+                        "<p>%5</p>",
+                        "<p>%6</p>",
+                        "[hr lite]",
+                        ""
+                    ],
+                    "v": true
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        "[p subtitle]%2</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[ul top10]",
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "</ul>",
+                        "[p subtitle]%3</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "<p>%1</p>",
+                        ""
+                    ],
+                    "x": [
+                        {
+                            "q": "subtitle",
+                            "t": [
+                                "[p sub_subtitle]%1</p>",
+                                "[p sub_subtitle]%2</p>",
+                                ""
+                            ],
+                            "x": [
+                                {
+                                    "q": "sub_subtitle",
+                                    "t": [
+                                        "[ul none_dot]",
+                                        "<li>%1</li>",
+                                        "<li>%2</li>",
+                                        "<li>%3</li>",
+                                        "</ul]>",
+                                        ""
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "q": "subtitle",
+                            "t": [
+                                "[p sub_subtitle]%1</p>",
+                                ""
+                            ],
+                            "x": [
+                                {
+                                    "q": "sub_subtitle",
+                                    "t": [
+                                        "[p sub_subtitle]%1</p>",
+                                        ""
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "[img collection 0 400]",
+                "<p>%2</p>",
+                "[img collection 1 700]",
+                "<p>%3",
+                "<br>%4",
+                "<br>%5",
+                "<br>%6",
+                "<br>%7</p>",
+                "<p>%8",
+                "<br>%9",
+                "<br>%10",
+                "<br>%11</p>",
+                "<p>%12</p>",
+                "<p>%13</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "<p>%1",
+                        "<br>%2</p>",
+                        "<p> %3",
+                        "<br>%4",
+                        "<br>%5",
+                        "<br>%6",
+                        "<br>%7",
+                        "<br>%8</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "<p>%2</p>",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1",
+                "<br>%2</p>",
+                "[img search 0 1100]",
+                "<p>%3</p>",
+                "[img search 1 1100]",
+                "<p>%4</p>",
+                "[img search 2 1100]",
+                "<p>%5</p>",
+                "<ul>",
+                "<li>%6</li>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "</ul>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[ol top10]",
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "</ol>",
+                        "[p subtitle]%4</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "[img filter 0 500]",
+                "<p>%2</p>",
+                "[img filter 1 600]",
+                "<p>%3",
+                "<br>%4</p>",
+                "<p>%5</p>",
+                "<p>%6</p>",
+                "[img filter 2 700]",
+                "<p>%7</p>",
+                "[img filter 3 1000]",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "[img cleanup 0 400]",
+                "<p>%2</p>",
+                "[img cleanup 1 1100]",
+                "<p>%3",
+                "<br>%4",
+                "<br>%5",
+                "<br>%6</p>",
+                "<ul>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "</ul>",
+                "[p null]%9",
+                "<br>%10",
+                "<br>%11",
+                "<br>%12</p>",
+                "<p>%13</p>",
+                "[img cleanup 2 500]",
+                "<p>%14</p>",
+                "[id offlink3]%15</p>",
+                "<p>%16</p>",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "<ol>",
+                "<li>%2",
+                "[img convert 0 500]</li>",
+                "<li>%3",
+                "[img convert 1 600]</li>",
+                "<li>%4",
+                "[img convert 2 600]</li>",
+                "<br>%5",
+                "<br>%6",
+                "<br><p/>",
+                "<li>%7",
+                "[img convert 3 600]</li>",
+                "<li>%8",
+                "[img convert 4 600]</li>",
+                "<li>%9</li>",
+                "<li>%10</li>",
+                "[p code]%11</p></li>",
+                "<li>%12",
+                "[img convert 5 600]</li>",
+                "<li>%13",
+                "[img convert 6 600]</li>",
+                "<li>%14</p>",
+                "[img convert 7 600]",
+                "[p note]%15</p></li>",
+                "<li>%16",
+                "[img convert 8 900]</li>",
+                "<li>%17",
+                "[p code]%18</p></li>",
+                "<li>%19",
+                "[img convert 9 700]</li>",
+                "<li>%20",
+                "[img convert 10 700]</li>",
+                "</ol>",
+                "<p>%21</p>",
+                "[img convert 11 900]",
+                "<p>%22</p>",
+                "<p>%23</p>",
+                "[p code]%24</p>",
+                "<p>%25</p>",
+                "[img convert 12 1200]",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        "[p code]",
+                        "%2",
+                        "",
+                        "%3",
+                        "%4",
+                        "%5",
+                        "%6",
+                        "",
+                        "%7",
+                        "%8",
+                        "%9",
+                        "%10",
+                        "%11",
+                        "",
+                        "%12",
+                        "%13",
+                        "%14",
+                        "%15",
+                        "%16",
+                        "</p>",
+                        "[hr lite]",
+                        ""
+                    ],
+                    "v": true
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[ol top10]",
+                        "<li>%1",
+                        "[p code]",
+                        "%2",
+                        "",
+                        "%3</p>",
+                        "</li>",
+                        "<li>%4",
+                        "[p code]",
+                        "%5</p>",
+                        "</li>",
+                        "<li>%6",
+                        "<br>%7",
+                        "[p code]",
+                        "%8</p>",
+                        "<br>%9",
+                        "[id offlink4 code]",
+                        "%10</p>",
+                        "<br>%11",
+                        "[img convert 13 1100]",
+                        "[p note] %12</p>",
+                        "</li>",
+                        "</ol>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "[img all_books 0 1000]",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "[id offlink5]%1</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "<ol>",
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ol>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1",
+                        "<br>%2</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1",
+                        "<br>%2",
+                        "<br>%3",
+                        "<br>%4</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "[ol top10]",
+                "<li>%1</li>",
+                "<li>%2</li>",
+                "<li>%3</li>",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "</ol>",
+                "<p>%7</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        ""
+                    ],
+                    "x": [
+                        {
+                            "q": "sub_subtitle",
+                            "t": [
+                                "[p code]",
+                                "%1",
+                                "",
+                                "%2",
+                                "%3",
+                                "%4",
+                                "%5",
+                                "",
+                                "%6",
+                                "%7",
+                                "%8",
+                                "%9",
+                                "%10",
+                                "",
+                                "%11",
+                                "%12",
+                                "%13",
+                                "%14",
+                                "%15",
+                                "</p>",
+                                "<br>",
+                                "[p subtitle]%16</p>",
+                                "[p subtitle]%17</p>",
+                                "[p subtitle]%18</p>",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        "<ol>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "<li>%5</li>",
+                        "<li>%6</li>",
+                        "<li>%7",
+                        "[p code]%8</p>",
+                        "%9</li>",
+                        "<li>%10</li>",
+                        "</ol>",
+                        "[p subtitle]%11</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "[img http 0 900]",
+                "<p>%2</p>",
+                "[img http 1 600]",
+                "[ol top10]",
+                "<li>%3</li>",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "</ol>",
+                "<p>%6</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "sub_subtitle",
+                    "t": [
+                        "[p sub_subtitle]%1",
+                        "<br>%2",
+                        "<br>%3",
+                        "<br>%4",
+                        "<br>%5",
+                        "<br>%6",
+                        "<br>%7",
+                        "<br>%8",
+                        "<br>%9</p>",
+                        "[p sub_subtitle]&nbsp;%10</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        ""
+                    ],
+                    "x": [
+                        {
+                            "q": "sub_subtitle",
+                            "t": [
+                                "[p sub_subtitle]%1",
+                                "<br>%2",
+                                "<br>&nbsp;%3</p>",
+                                "[hr lite]",
+                                "[p sub_subtitle]%4",
+                                "<br>%5",
+                                "[ol top10]",
+                                "<li>%6</li>",
+                                "<li>%7</li>",
+                                "<li>%8</li>",
+                                "<li>%9</li>",
+                                "</ol>",
+                                "",
+                                "[p sub_subtitle]%10",
+                                "<br>&nbsp;%11</p>",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "<h5>%2</h5>",
+                "%3",
+                "<br>%4",
+                "<h5>%5</h5>",
+                "%6",
+                "<h5>%7</h5>",
+                "%8",
+                "",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "[ol top10]",
+                "<li>%1</li>",
+                "<li>%2</li>",
+                "</ol>",
+                "<p>%3</p>",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                "<p>%2</p>",
+                "<ul>",
+                "<li>%3</li>",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "</ul>",
+                ""
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p>%1</p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[img entertainment 0 800]",
+                        "[img entertainment 1 800]",
+                        "[img entertainment 2 800]",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1",
+                        "<br>%2</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "<p class=\"subtitle\" style=\"text-align:right; margin-right:1%\"><i>",
+                "%1",
+                "<br>%2",
+                "<br>%3",
+                "</i></p>",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        "<ul>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ul>",
+                        "[p subtitle]%5</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        "<ul>",
+                        "<li>%2</li>",
+                        "<li>%3</li>",
+                        "<li>%4</li>",
+                        "</ul>",
+                        "[p subtitle]%5</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1</p>"
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                " "
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[id offlink2]",
+                        "<ul>",
+                        "<li>%1</li>",
+                        "<li>%2</li>",
+                        "</ul>",
+                        ""
+                    ]
+                },
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "[p subtitle]%1",
+                        "<br>%2</p>",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "q": "main",
+            "t": [
+                "[id offlink1]%1</p>",
+                "[p subtitle]%2",
+                "<br>%3</p>",
+                "[ul top10]",
+                "<li>%4</li>",
+                "<li>%5</li>",
+                "<li>%6</li>",
+                "<li>%7</li>",
+                "<li>%8</li>",
+                "<li>%9</li>",
+                "<li>%10</li>",
+                "<li>%11</li>",
+                "<li>%12</li>",
+                "<li>%13</li>",
+                "<li>%14</li>",
+                "<li>%15</li>",
+                "<li>%16</li>",
+                "<li>%17</li>",
+                "<li>%18</li>",
+                "<li>%19</li>",
+                "<li>%20</li>",
+                "<li>%21</li>",
+                "<li>%22</li>",
+                "<li>%23</li>",
+                "<li>%24</li>",
+                "<li>%25</li>",
+                "<li>%26</li>",
+                "<li>%27</li>",
+                "<li>%28</li>",
+                "<ul>",
+                "<li>%29",
+                "<li>%30</li>",
+                "<li>%31</li>",
+                "<li>%32</li>",
+                "</ul>",
+                "%33</li>",
+                "<li>%34</li>",
+                "<li>%35</li>",
+                "<li>%36</li>",
+                "<li>%37</li>",
+                "<li>%38</li>",
+                "</ul>",
+                "[hr lite]",
+                ""
+            ],
+            "x": [
+                {
+                    "q": "subtitle",
+                    "t": [
+                        "<p>%1</p>",
+                        ""
+                    ],
+                    "x": [
+                        {
+                            "q": "subtitle",
+                            "t": [
+                                "<ol>",
+                                "<li>%1</li>",
+                                "<li>%2</li>",
+                                "<li>%3</li>",
+                                "<li>%4</li>",
+                                "<li>%5</li>",
+                                "</ol>",
+                                "[img hide_set 1 700]",
+                                "<p note>%6</p>",
+                                ""
+                            ]
+                        },
+                        {
+                            "q": "subtitle",
+                            "t": [
+                                "<ol>",
+                                "<li>%1</li>",
+                                "<li>%2</li>",
+                                "<li>%3</li>",
+                                "<li>%4</li>",
+                                "<li>%5</li>",
+                                "<li>%6</li>",
+                                "<li>%7</li>",
+                                "</ol>",
+                                "[img hide_set 0 700]",
+                                "[p note]%8</p>",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
