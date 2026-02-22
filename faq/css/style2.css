@@ -67,12 +67,6 @@ h1#header {
 	text-align: center;
 }
 
-h4 {
-	margin: 10px 0 -5px 28px;
-	padding-right: 10px;
-	font-size: 105%;
-}
-
 div#content {
 	position: relative;
 	padding-top: 80px;
@@ -148,11 +142,19 @@ p.quote {
 	text-indent: 0;
 	text-align: justify;
 	color: #800080; 
-	font-family: Segoe Script, Comic Sans, Courier; 
-	size: 24px; 
+	font-family: "Segoe Script", "Comic Sans", "Courier"; 
+	font-size: 24px; 
 	font-weight: bold; 
 	line-height: 1.3em; 
 	padding-left:200px;
+}
+
+p.h4 {
+	margin: 10px 0 -5px 20px;
+	padding-right: 10px;
+	text-indent: 0;
+	font-size: 102%;
+	font-weight: bold;
 }
 
 ul {

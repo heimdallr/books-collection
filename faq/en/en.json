@@ -419,7 +419,7 @@
                         "Select the \"Download\" command",
                         "Set the command parameters (where to put, where to download from). To download from Flibusta to the t:/ftp folder, specify",
                         "-o \"t:/ftp/%author%/[%series%/[%seq_number%-]]%title%.zip\" \"http://x.flibusta.is/b/%lib_id%/download\"",
-                        "In your case, specify any valid path, such as c:\\books. It is up to you, as long as the drive is in the system and you have write permissions. You can also change the path template. In the context menu of the argument input line, there is a context menu with available macros.</li>",
+                        "In your case, specify any valid path, such as c:\\books. It is up to you, as long as the drive is in the system and you have write permissions. You can also change the path template. In the context menu of the argument input line, there is a context menu with available macros.",
                         "Save the result",
                         "After these simple steps, the menu item ‘Download from Flibusta’ will appear in the context menu of the books, and the book will be downloaded when you select it. If your firewall and internet service provider don't mind, of course."
                     ]

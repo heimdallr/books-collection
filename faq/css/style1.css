@@ -63,12 +63,6 @@ h1 {
 	text-align: center;
 }
 
-h4 {
-	margin: 10px 0 -5px 28px;
-	padding-right: 10px;
-	font-size: 105%;
-}
-
 div {
 	z-index: 200;
 	position: relative;
@@ -101,7 +95,6 @@ div:after {
 	content: " ";
 	z-index: 100;
 	position: absolute;
-	overflow-x: no-display;
 	top: 0;
 	right: -100px;
 	width: 80px;
@@ -177,11 +170,19 @@ p.quote {
 	text-indent: 0;
 	text-align: justify;
 	color: #800080; 
-	font-family: Segoe Script, Comic Sans, Courier; 
-	size: 24px; 
+	font-family: "Segoe Script", "Comic Sans", "Courier"; 
+	font-size: 24px; 
 	font-weight: bold; 
 	line-height: 1.3em; 
 	padding-left:200px;
+}
+
+p.h4 {
+	margin: 10px 0 -5px 20px;
+	padding-right: 10px;
+	text-indent: 0;
+	font-size: 102%;
+	font-weight: bold;
 }
 
 ul {
