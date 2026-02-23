@@ -95,7 +95,6 @@ div:after {
 	content: " ";
 	z-index: 100;
 	position: absolute;
-	overflow-x: no-display;
 	top: 0;
 	right: -100px;
 	width: 80px;
@@ -118,9 +117,11 @@ p.code {
 
 /*параграф заголовка*/
 p {
-	margin-top: 10px;
+	margin-top: 6px;
 	margin-left: 0;
 	margin-bottom: 0;
+	padding-left: 5px;
+	padding-right: 10px;
 	text-indent: 20px;
 	text-align: justify;
 }
@@ -129,6 +130,8 @@ p.null {
 	margin-top: 0;
 	margin-left: 0;
 	margin-bottom: 0;
+	padding-left: 5px;
+	padding-right: 10px;
 	text-indent: 0px;
 	text-align: justify;
 }
@@ -140,12 +143,14 @@ p.subtitle {
 	margin-bottom: 0;
 	text-indent: 0;
 	padding-left: 20px;
+	padding-right: 10px;
 	text-align: justify;
 }
 
 p.sub_subtitle {
 	margin-top: 0;
 	margin-left: 40px;
+	padding-right: 10px;
 	margin-bottom: 0;
 	text-indent: 0;
 }
@@ -155,30 +160,58 @@ p.note {
 	color: maroon;
 	font-size: 0.8em;
 	font-weight: bold;
+	padding-right: 40px;
+}
+
+p.quote {
+	margin-top: 6px;
+	margin-left: 0;
+	margin-bottom: 0;
+	text-indent: 0;
+	text-align: justify;
+	color: #800080; 
+	font-family: "Segoe Script", "Comic Sans", "Courier"; 
+	font-size: 24px; 
+	font-weight: bold; 
+	line-height: 1.3em; 
+	padding-left:200px;
+}
+
+p.h4 {
+	margin: 10px 0 -5px 20px;
+	padding-right: 10px;
+	text-indent: 0;
+	font-size: 102%;
+	font-weight: bold;
 }
 
 ul {
 	margin-top: 0;
 	margin-bottom: 0;
+	padding-right: 10px;
 }
 
 ul.top10 {
 	margin-top: 10px;
 	margin-bottom: 0;
+	padding-right: 10px;
 }
 
 ul.none_dot {
 	list-style: none;
+	padding-right: 10px;
 }
 
 ol {
 	margin-top: 0;
 	margin-bottom: 0;
+	padding-right: 10px;
 }
 
 ol.top10 {
 	margin-top: 10px;
 	margin-bottom: 0;
+	padding-right: 10px;
 }
 
 /*заголовок*/
@@ -219,18 +252,18 @@ details>summary.subtitle {
 
 details>summary.subtitle:before {
 	content: "\25C6";
-	padding-right: 5px;
+	padding-right: 10px;
 }
 
 details[open]>summary.subtitle:before {
 	content: "\25C7";
-	padding-right: 5px;
+	padding-right: 10px;
 }
 
 details>summary.sub_subtitle {
 	background-color: #fffaf0;
 	margin-top: 0;
-	padding-left: 40px;
+	padding-left: 45px;
 	color: navy;
 	text-shadow: none;
 	font-size: 98%;
