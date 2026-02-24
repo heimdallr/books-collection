@@ -658,6 +658,7 @@
                 "cwd, string - working directory for the converter being launched, by default - the folder containing FLibrary.exe",
                 "ext, string - file extension after conversion ",
                 "<b>(⊙_⊙)</b> ATTENTION! Reading will no longer work on the web. If this is relevant to anyone, please let us know.",
+                "v2.5.6 `Preferences/opds/converters', a section for managing the conversion of files downloaded via web interfaces. You can add subsections with arbitrary names (Latin characters, numbers) to this section, each of which will add a converter to the simplified web interface download. The keys are identical to those described in the previous setting (command, arguments, cwd, ext).",
                 "v2.5.5 `Preferences/AnnotationJokes/ShowErrors`, string  (true | false) `false` by default - when set to `true`, the error message will be displayed in case of an error while retrieving entertainment content.",
                 "v2.5.5 `Preferences/Books/Alignment', section for managing field alignment in the book table. In this section, you can create keys with the field name and alignment value. ",
                 "Possible field names (keys): Author, Title, Series, SeqNumber, Genre, Folder, FileName, Size, LibRate, UserRate, UpdateDate, Year, Lang. ",
