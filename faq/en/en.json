@@ -11,6 +11,7 @@
     },
     "x": [
         {
+            "id": "0",
             "q": "How is this distribution different from the original?",
             "t": [
                 "First of all, what's different about this distribution is the selection of books. The likelihood that a book isn't included here, but is in the \"original\" distributions, is minimal. If you find such a book, it's an emergency, please contact me.",
@@ -25,6 +26,7 @@
             ],
             "x": [
                 {
+                    "id": "0/0",
                     "q": "Why does the number of books differ?",
                     "t": [
                         "Duplicates removed",
@@ -34,6 +36,7 @@
                     ]
                 },
                 {
+                    "id": "0/1",
                     "q": "Why then is this distribution so much smaller in size?",
                     "t": [
                         "The size reduction is achieved as follows:",
@@ -49,6 +52,7 @@
             ]
         },
         {
+            "id": "1",
             "q": "How will the distribution be updated?",
             "t": [
                 "I will try to update the distribution at the beginning of the month.",
@@ -64,6 +68,7 @@
             ],
             "x": [
                 {
+                    "id": "1/0",
                     "q": "Just like the “original” ones, in the mode of adding new archives",
                     "t": [
                         "<b>(⊙_⊙) Attention!</b> Distribution is carried out by adding new archives; each addition creates a new torrent. To start downloading a new archive, users need to do the following:",
@@ -72,18 +77,19 @@
                         "Download the new torrent and run it in your client instead of the old one, specifying the path to the old folder where the new archives should be downloaded.",
                         "Your client must hash (verify) the old folder (if they don't do it themselves, help them do it). As a result, they will only download the archives that you don't have yet. The old archives are not deleted, but continue to be distributed!",
                         "If you have already deleted old archives, you can prevent them from being downloaded again by unchecking the corresponding boxes when starting a new torrent. If possible, it is advisable not to delete old archives for as long as possible. This will help other people download the distribution faster."
-                    ],
-                    "v": true
+                    ]
                 }
             ]
         },
         {
+            "id": "2",
             "q": "Will my favorite cataloger work with this distribution?",
             "t": [
                 "No, it won't."
             ],
             "x": [
                 {
+                    "id": "2/0",
                     "q": "And MyHomeLib won't?",
                     "t": [
                         "And MyHomeLib won't.",
@@ -91,12 +97,14 @@
                     ]
                 },
                 {
+                    "id": "2/1",
                     "q": "What about xxxLib for yyyOS?",
                     "t": [
                         "I have neither the opportunity nor the desire to check all the catalogizers available on the Internet for compatibility with the storage format I have invented. But I am almost certain that it will not work. Check it yourself and let the public know. I will add the result of your check here, with a link to you, of course."
                     ]
                 },
                 {
+                    "id": "2/2",
                     "q": "But why?",
                     "t": [
                         "7z",
@@ -105,12 +113,14 @@
                     ]
                 },
                 {
+                    "id": "2/3",
                     "q": "What should I do?",
                     "t": [
                         "Use FLibrary"
                     ],
                     "x": [
                         {
+                            "id": "2/3/0",
                             "q": "I can't, I have Linux",
                             "t": [
                                 "Use wine",
@@ -118,6 +128,7 @@
                             ],
                             "x": [
                                 {
+                                    "id": "2/3/0/0",
                                     "q": "what it can do",
                                     "t": [
                                         "search by author",
@@ -128,12 +139,14 @@
                             ]
                         },
                         {
+                            "id": "2/3/1",
                             "q": "I can't, I have Windows 7",
                             "t": [
                                 "Yes, then you really can't. The distribution isn't for you, sorry."
                             ],
                             "x": [
                                 {
+                                    "id": "2/3/1/0",
                                     "q": "people write to us",
                                     "t": [
                                         "For Windows 7/2008R2 users, <a href=\"https://github.com/YuZhouRen86/VxKex-NEXT\" target=\"_blank\">VxKek</a> can be used on Windows 7. The most important thing is that the machine is completely isolated from the network or in a completely closed network circuit. © HedgehogInTheCPP"
@@ -146,12 +159,14 @@
             ]
         },
         {
+            "id": "3",
             "q": "How can I restore separately stored covers and illustrations to fb2?",
             "t": [
                 "To work with this book storage format, the distribution includes the FLibrary cataloguer. When exporting books from the collection, FLibrary returns images to the fb2 body. The same happens when launching an external reader from FLibrary. And when downloading a book via OPDS. And via web interfaces. Regardless of the method, if a book is extracted from the collection using FLibrary, the result will be the same - the images will be returned to fb2, to their rightful places."
             ]
         },
         {
+            "id": "4",
             "q": "How do I add a new collection?",
             "t": [
                 "The dialog for adding or creating a new collection can be accessed from the main menu of the program.",
@@ -170,6 +185,7 @@
             ],
             "x": [
                 {
+                    "id": "4/0",
                     "q": "Details, nuances",
                     "t": [
                         "You can specify an existing file as the database, for example, from an earlier version of the program, or even from MyHomeLib. Then button 11 will change the text to “Add,” and instead of creating a new collection, the collection from the specified file will be added. ",
@@ -185,6 +201,7 @@
             ]
         },
         {
+            "id": "5",
             "q": "How do I update my collection?",
             "t": [
                 "Download the distribution update as usual. The next time you launch FLibrary, it will detect the change in the *.inpx index file and prompt you to update the collection. Agree, and in a few seconds everything will be ready. However, from time to time it makes sense to recreate the collection “from scratch”, as the automatic update only pulls in previously missing data. Meanwhile, existing descriptions may contain useful corrections. Sometimes it is useful to recreate the collection when updating the FLibrary version, especially if it is recommended on the What's Changed page. When recreating the collection, do not forget to save user data.",
@@ -192,6 +209,7 @@
             ]
         },
         {
+            "id": "6",
             "q": "How to find a book by title, author, or series?",
             "t": [
                 "It is better to search by author and series in the corresponding navigation sections, where you can not only search by list, but also filter it.",
@@ -205,6 +223,7 @@
             ],
             "x": [
                 {
+                    "id": "6/0",
                     "q": "Search queries have accumulated. How can I delete them? It's inconvenient to do it one by one",
                     "t": [
                         "Select all (Ctrl+A) or only unnecessary queries (mouse + Ctrl or Shift)",
@@ -216,12 +235,14 @@
             ]
         },
         {
+            "id": "7",
             "q": "Is it possible to sort books by several columns?",
             "t": [
                 "Yes, you can. Hold down Shift while clicking on the column headers."
             ]
         },
         {
+            "id": "8",
             "q": "I want to see books in only one language. Or two. Can you remove the others?",
             "t": [
                 "Yes, you can. Go to Settings/Filters to open the filter settings dialogue box",
@@ -234,6 +255,7 @@
             ]
         },
         {
+            "id": "9",
             "q": "Is it possible to physically remove books I don't need from the archives?",
             "t": [
                 "Yes, you can. The programme has a feature that allows you to physically clean up your collection by deleting files from the archive and records from the database. The function for deleting files from the archive is initially blocked. To unblock it, select \"Allow destructive operations\" in the \"Collection\" main menu. After confirming your intention to continue and agreeing to the risk of permanent loss of books, the \"Delete forever\" option will be activated in the context menu of the books. It will also activate the checkbox 7 \"Delete forever along with book files from the archive\", <a href=\"#offlink3\">see below</a>.",
@@ -255,6 +277,7 @@
             ]
         },
         {
+            "id": "10",
             "q": "How do I convert a book from fb2 to the format I need?",
             "t": [
                 "1. FLibrary does not have built-in converters, but it is possible to add any external converter if it has a command line interface. For example, you can borrow the necessary converter from the MyHomeLib folder or get its more modern equivalent <a href=\"https://github.com/rupor-github/fb2cng/releases\" target=\"_blank\">here</a>.. To call an external converter from FLibrary, you need to configure scripts, one for each desired format.",
@@ -287,6 +310,7 @@
             ],
             "x": [
                 {
+                    "id": "10/0",
                     "q": "I'm too lazy to read so much, can you make it faster?",
                     "t": [
                         "Yes, you can. Set this registry key by adjusting the paths:",
@@ -305,10 +329,10 @@
                         "\"Arguments\"=\"\\\"D:/books/%author%/[%series%]\\\"\"",
                         "\"Number\"=dword:00000001",
                         "\"Type\"=\"System\""
-                    ],
-                    "v": true
+                    ]
                 },
                 {
+                    "id": "10/1",
                     "q": "Details, nuances",
                     "t": [
                         "It is important to note that some converters cannot create folders, so before running them, you need to create a folder using the system command \"mkdir\", specifying the full path (using macros). Then, when adding the first and second commands, the \"Arguments\" lines will look like this:",
@@ -328,18 +352,21 @@
             ]
         },
         {
+            "id": "11",
             "q": "I selected the ‘All Books’ navigation section. How do I exit it now?",
             "t": [
                 "Follow any link from the annotation to any book."
             ]
         },
         {
+            "id": "12",
             "q": "How to find out if the book I need is available?",
             "t": [
                 "There are several options:"
             ],
             "x": [
                 {
+                    "id": "12/0",
                     "q": "with cataloguizer (recommended)",
                     "t": [
                         "Download the index file *.inpx and one of the FLibrary installers, according to your preference",
@@ -349,6 +376,7 @@
                     ]
                 },
                 {
+                    "id": "12/1",
                     "q": "with the contents file",
                     "t": [
                         "Download the file contents.7z. The archive contains text files in csv format, one file per language. Each line of the file describes one book. Format: author, title, series (number in the series), archive, file. The separator is a tab.",
@@ -356,6 +384,7 @@
                     ]
                 },
                 {
+                    "id": "12/2",
                     "q": "with an index file (for experienced users)",
                     "t": [
                         "Download the index file *.inpx. It is a regular zip archive containing text files *.inp, where each line describes one book in the distribution. The line is csv, the separator is a byte with code 04. List of fields: AUTHOR; GENRE; TITLE; SERIES; SERNO; FILE; SIZE; LIBID; DEL; EXT; DATE; LANG; LIBRATE; KEYWORDS; YEAR; SOURCELIB",
@@ -366,6 +395,7 @@
             ]
         },
         {
+            "id": "13",
             "q": "How to get the book you need without downloading the entire distribution?",
             "t": [
                 "Let's find out if the book you need is available. <a href=\"#offlink5\">See the instructions above.</a>",
@@ -378,12 +408,14 @@
             ],
             "x": [
                 {
+                    "id": "13/0",
                     "q": "You don't even need to download the archive",
                     "t": [
                         ", instead, you can configure the script to download the book you want directly from the Flibusta website. You will also need a console application for downloading files from the Internet (e.g. curl), which you will need to download and install. If you have the standard version of FLibrary installed by the installer, you can use a registry key to configure the script"
                     ],
                     "x": [
                         {
+                            "id": "13/0/0",
                             "q": "Here it is",
                             "t": [
                                 "Windows Registry Editor Version 5.00",
@@ -409,6 +441,7 @@
                     ]
                 },
                 {
+                    "id": "13/1",
                     "q": "You can even do without external tools",
                     "t": [
                         ", but you will still have to configure the script. However, now you don't need curl, and one command built into FLibrary is enough:",
@@ -427,6 +460,7 @@
             ]
         },
         {
+            "id": "14",
             "q": "I have five computers and three laptops at home. Do I need to download the distribution and install FLibrary on all of these devices?",
             "t": [
                 "Not necessarily. FLibrary provides some networking capabilities in the form of several HTTP services. To access them, you need to run the HTTP server included in FLibrary. Select the menu item",
@@ -438,7 +472,8 @@
             ],
             "x": [
                 {
-                    "q": "ReactApp. By the Author",
+                    "id": "14/0",
+                    "q": "by the Author",
                     "t": [
                         "You can work via the web in a browser from any device.",
                         "Search by entering text, with results immediately sorted by title, author, and series.",
@@ -453,12 +488,14 @@
                     ]
                 },
                 {
+                    "id": "14/1",
                     "q": "Will it only work at home? Can't it be done online?",
                     "t": [
                         "It is possible, but you will have to forward the specified ports to the outside world yourself. I am not knowledgeable enough in this area to even be sure that the previous statement makes sense. Please search for “white IP” and “CloudFlare.com tunnels.” I would appreciate any insightful comments about this in a private message."
                     ],
                     "x": [
                         {
+                            "id": "14/1/0",
                             "q": "smart people say",
                             "t": [
                                 "(⊙_⊙)",
@@ -479,12 +516,14 @@
             ]
         },
         {
+            "id": "15",
             "q": "What's with all the mess with authors and series?",
             "t": [
                 "This is the result of merging Flibusta and Librusec into a single distribution. Indeed, the inconsistency in the naming of authors and series on Flibusta and Librusec is a serious problem. Plus, libraries have different approaches to resolving conflicts between authors with the same name. Because of this, some names here may either “split” or “collapse,” resulting in books by the same author in a distribution being “linked” to different authors, and vice versa, books by different authors being attributed to the same author. The same applies to series."
             ],
             "x": [
                 {
+                    "id": "15/0",
                     "q": "So, there's nothing we can do about it?",
                     "t": [
                         "Unfortunately, it is unlikely that we will be able to coordinate this distribution at the level of network libraries that are sources of books. We can only make minor corrections. If you notice that any author or series has been “split” or “merged,” please let me know. I will make a local edit, and the next monthly update will correct the situation."
@@ -493,6 +532,7 @@
             ]
         },
         {
+            "id": "16",
             "q": "Is it okay that my antivirus software is complaining about the distribution?",
             "t": [
                 "It is ok. Currently, there are several known reasons why antivirus software may trigger alerts for this distribution.",
@@ -506,6 +546,7 @@
             ]
         },
         {
+            "id": "17",
             "q": "I found a bug in the program, what should I do?",
             "t": [
                 "Ensure that the bug is present in the latest release of FLibrary. This is especially true for typos, many of which were found and fixed while writing these instructions.",
@@ -514,6 +555,7 @@
             ]
         },
         {
+            "id": "18",
             "q": "They promise fast FLibrary performance, but in reality it's slow. Are they lying?",
             "t": [
                 "At least one user experienced interference with the program from Microsoft Defender, which manifested itself in slow performance and increased RAM consumption. Configuring Defender helped.",
@@ -525,18 +567,21 @@
             ]
         },
         {
+            "id": "19",
             "q": "There are some ‘entertainment’ options in the menu. I checked all the boxes, what next?",
             "t": [
                 "Entertainment content is displayed instead of an empty annotation when no books are selected in the books window."
             ],
             "x": [
                 {
+                    "id": "19/0",
                     "q": "For example",
                     "t": [
                         " "
                     ]
                 },
                 {
+                    "id": "19/1",
                     "q": "I see an empty annotation, where are the jokes?",
                     "t": [
                         "For this to work, you need access to a) the internet, and b) services that provide content. Keep in mind that some services may stop working. And some are not accessible from your location without a VPN.",
@@ -544,6 +589,7 @@
                     ]
                 },
                 {
+                    "id": "19/2",
                     "q": "Why is everything in English?",
                     "t": [
                         "If you find (or set up your own) a similar public service (without registration or SMS) in another language, let me know and I'll add it."
@@ -552,6 +598,7 @@
             ]
         },
         {
+            "id": "20",
             "q": "Why are there so many FLibrary installers in the distribution?",
             "t": [
                 "Three Rings for the Elven-kings under the sky",
@@ -560,6 +607,7 @@
             ],
             "x": [
                 {
+                    "id": "20/0",
                     "q": "I FLibrary_setup.exe",
                     "t": [
                         "Generated by InnoSetup. The main installer, the most convenient and functional. Allows you to",
@@ -570,6 +618,7 @@
                     ]
                 },
                 {
+                    "id": "20/1",
                     "q": "II FLibrary_setup.msi",
                     "t": [
                         "Microsoft Windows Installer. Most likely, I just don't know how to cook it, but",
@@ -580,12 +629,14 @@
                     ]
                 },
                 {
+                    "id": "20/2",
                     "q": "III FLibrary_portable.7z",
                     "t": [
                         "This is not an installer at all, but simply an archive with binaries. You will have to unpack and configure the launch shortcuts yourself, manually. A program installed in this way does not store its settings in the registry, but in a nearby ini file, like a portable one. Therefore, you need to unpack it where you have write access."
                     ]
                 },
                 {
+                    "id": "20/3",
                     "q": "So which one should I choose?",
                     "t": [
                         "The contents of all installers are identical, so you can choose any one based on your preferences and experience. However, I recommend the first option, as that is the one I use myself. The other two are tested rarely."
@@ -594,12 +645,14 @@
             ]
         },
         {
+            "id": "21",
             "q": "Where does the program store ...?",
             "t": [
                 " "
             ],
             "x": [
                 {
+                    "id": "21/0",
                     "q": "settings",
                     "t": [
                         "Standard version (installed by the installer) - registry branch HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary",
@@ -607,6 +660,7 @@
                     ]
                 },
                 {
+                    "id": "21/1",
                     "q": "work log",
                     "t": [
                         "File %TEMP%\\HomeCompa.FLibrary.log",
@@ -616,6 +670,7 @@
             ]
         },
         {
+            "id": "22",
             "q": "Can I have a complete list of FLibrary's hidden settings?",
             "t": [
                 "This section describes features that few people need, so they are not included in the interface in order to avoid clutter.",
@@ -669,12 +724,14 @@
             ],
             "x": [
                 {
+                    "id": "22/0",
                     "q": "I read the FAQ about hidden settings. “I didn't understand anything, but it was interesting ©”",
                     "t": [
                         "That's strange, no one has complained before you. Well, let me explain. You wanted to replace the rate star symbol..."
                     ],
                     "x": [
                         {
+                            "id": "22/0/0",
                             "q": "If you have the portable version of FLibrary, then:",
                             "t": [
                                 "Close FLibrary",
@@ -686,6 +743,7 @@
                             ]
                         },
                         {
+                            "id": "22/0/1",
                             "q": "If your version of FLibrary was installed using the installer, then:",
                             "t": [
                                 "Close FLibrary",
