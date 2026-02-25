@@ -53,7 +53,7 @@ h1#header {
 	position: fixed;
 	margin: 0 auto;
 	top: 0;
-	width: calc(100% - 18px);
+	width: calc(100% - 16px);
 	max-width: 1200px;
 	min-width: 370px;
 	height: 60px;
@@ -70,7 +70,7 @@ h1#header {
 div#content {
 	position: relative;
 	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-bottom: 34px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
@@ -94,7 +94,7 @@ p {
 	margin-top: 6px;
 	margin-left: 0;
 	margin-bottom: 0;
-	padding-left: 5px;
+	padding-left: 6px;
 	padding-right: 10px;
 	text-indent: 20px;
 	text-align: justify;
@@ -104,7 +104,7 @@ p.null {
 	margin-top: 0;
 	margin-left: 0;
 	margin-bottom: 0;
-	padding-left: 5px;
+	padding-left: 6px;
 	padding-right: 10px;
 	text-indent: 0px;
 	text-align: justify;
@@ -188,6 +188,7 @@ ol.top10 {
 
 /*заголовок*/
 details>summary {
+	margin-left: 2px;
 	background-color: #d3d3d3;
 	color: #800000;
 	text-shadow: -2px -3px 3px Silver;
@@ -383,7 +384,7 @@ h2#footer {
 	position: fixed;
 	margin: 0 auto;
 	bottom: 0;
-	width: calc(100% - 18px);
+	width: calc(100% - 16px);
 	max-width: 1200px;
 	min-width: 370px;
 	height: 24px;
