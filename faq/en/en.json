@@ -713,14 +713,15 @@
                 "cwd, string - working directory for the converter being launched, by default - the folder containing FLibrary.exe",
                 "ext, string - file extension after conversion ",
                 "<b>(⊙_⊙)</b> ATTENTION! Reading will no longer work on the web. If this is relevant to anyone, please let us know.",
-                "v2.5.6 `Preferences/opds/converters', a section for managing the conversion of files downloaded via web interfaces. You can add subsections with arbitrary names (Latin characters, numbers) to this section, each of which will add a converter to the simplified web interface download. The keys are identical to those described in the previous setting (command, arguments, cwd, ext) plus the <b>required</b> title key, whose value will be displayed on the ReactApp web interface button.",
+                "v2.5.6 `Preferences/opds/converters', a section for managing the conversion of files downloaded via web interfaces. You can add subsections with arbitrary names (Latin characters, numbers) to this section, each of which will add a converter to the web interfaces download. The keys are identical to those described in the previous setting (\"command\", \"arguments\", \"cwd\", \"ext\") plus the <b>required</b> \"title\" key, whose value will be displayed on the ReactApp web interface button.",
                 "v2.5.5 `Preferences/AnnotationJokes/ShowErrors`, string  (true | false) `false` by default - when set to `true`, the error message will be displayed in case of an error while retrieving entertainment content.",
                 "v2.5.5 `Preferences/Books/Alignment', section for managing field alignment in the book table. In this section, you can create keys with the field name and alignment value. ",
                 "Possible field names (keys): Author, Title, Series, SeqNumber, Genre, Folder, FileName, Size, LibRate, UserRate, UpdateDate, Year, Lang. ",
                 "Possible alignment values: AlignLeft, AlignRight, AlignCenter. If you are interested, you can experiment with the values <a href=\"https://doc.qt.io/qt-6/qt.html#AlignmentFlag-enum\" target=\"_blank\">here</a>.",
                 "v2.5.5 `Preferences/UserRate/symbol`, число по умолчанию '11088' - ascii или utf-8 код символа звёздочки ⭐ для колонки пользовательского рейтинга.",
                 "v2.5.5 `Preferences/UserRate/noRateSymbol`, ascii or utf-8 character code for books with a rating of “No rating”.",
-                "v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, string (true | false) false by default - when set to `true`, adds a “Hash” submenu to the book context menu with the items ‘Calculate’ and “Compare.” For those interested in the duplicate detector."
+                "v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, string (true | false) false by default - when set to `true`, adds a “Hash” submenu to the book context menu with the items ‘Calculate’ and “Compare.” For those interested in the duplicate detector.",
+                "v2.5.7 `Preferences/Export/seqNumberWidth`, DWORD number, default <b>1</b>, width of the number substituted for the %seq_number% macro, missing digits are padded with zeros on the left."
             ],
             "x": [
                 {
