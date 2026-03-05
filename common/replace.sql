@@ -1,5 +1,5 @@
 --
--- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Чт мар 5 14:26:11 2026
+-- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Чт мар 5 15:11:32 2026
 --
 -- Использованная кодировка текста: UTF-8
 --
@@ -28,6 +28,8 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 316127, 'Патрик', 'Дж.', 'Холл');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 346366, 'Гоблин', NULL, 'MeXXanik');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 342321, 'Гоблин', NULL, 'MeXXanik');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 210108, 'Екатерина', NULL, 'Насута');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 51954, 'Екатерина', NULL, 'Насута');
 
 -- Таблица: AuthorList
 CREATE TABLE AuthorList (
@@ -72,6 +74,7 @@ INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (1, 604, 'Песнь Ль
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 604, 'Песнь льда и пламени | Истории Семи Королевств');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 26721, 'Ревізіонізм голокосту');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 66739, 'Ребенок от босса [Чайлд]');
+INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 63684, 'Истории попаданок [Воронцова]');
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
