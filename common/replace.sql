@@ -1,5 +1,5 @@
 --
--- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Ср мар 4 19:23:06 2026
+-- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Чт мар 5 14:26:11 2026
 --
 -- Использованная кодировка текста: UTF-8
 --
@@ -31,13 +31,20 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 
 -- Таблица: AuthorList
 CREATE TABLE AuthorList (
-    LibraryId INTEGER REFERENCES Library (Id) ON DELETE CASCADE
-                      NOT NULL,
-    AuthorId  INTEGER NOT NULL,
-    BookId    INTEGER NOT NULL,
-    UNIQUE (LibraryId, AuthorId, BookId)
+    LibraryId  INTEGER      REFERENCES Library (Id) ON DELETE CASCADE
+                            NOT NULL,
+    Id         INTEGER      NOT NULL,
+    BookId     INTEGER      NOT NULL,
+    Additional VARCHAR (64),
+    UNIQUE (
+        LibraryId,
+        Id,
+        BookId
+    )
 );
 
+INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (1, 224205, 759158, '1');
+INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (1, 334099, 759158, '2');
 
 -- Таблица: Library
 CREATE TABLE Library (
