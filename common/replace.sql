@@ -1,5 +1,5 @@
 --
--- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Ср мар 4 19:23:06 2026
+-- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Чт мар 5 15:11:32 2026
 --
 -- Использованная кодировка текста: UTF-8
 --
@@ -28,16 +28,25 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 316127, 'Патрик', 'Дж.', 'Холл');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 346366, 'Гоблин', NULL, 'MeXXanik');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 342321, 'Гоблин', NULL, 'MeXXanik');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 210108, 'Екатерина', NULL, 'Насута');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 51954, 'Екатерина', NULL, 'Насута');
 
 -- Таблица: AuthorList
 CREATE TABLE AuthorList (
-    LibraryId INTEGER REFERENCES Library (Id) ON DELETE CASCADE
-                      NOT NULL,
-    AuthorId  INTEGER NOT NULL,
-    BookId    INTEGER NOT NULL,
-    UNIQUE (LibraryId, AuthorId, BookId)
+    LibraryId  INTEGER      REFERENCES Library (Id) ON DELETE CASCADE
+                            NOT NULL,
+    Id         INTEGER      NOT NULL,
+    BookId     INTEGER      NOT NULL,
+    Additional VARCHAR (64),
+    UNIQUE (
+        LibraryId,
+        Id,
+        BookId
+    )
 );
 
+INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (1, 224205, 759158, '1');
+INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (1, 334099, 759158, '2');
 
 -- Таблица: Library
 CREATE TABLE Library (
@@ -65,6 +74,7 @@ INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (1, 604, 'Песнь Ль
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 604, 'Песнь льда и пламени | Истории Семи Королевств');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 26721, 'Ревізіонізм голокосту');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 66739, 'Ребенок от босса [Чайлд]');
+INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 63684, 'Истории попаданок [Воронцова]');
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
