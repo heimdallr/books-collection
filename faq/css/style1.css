@@ -1,4 +1,5 @@
 body {
+	overflow-y: scroll;
 	overflow-x: hidden;
 	background-color: #fffaf0;
 }
@@ -43,8 +44,9 @@ button#styles {
 	margin-top: -2px;
 	margin-left: -62px;
 	border-radius: 5px;
-	background-color: #d3d3d3;
-	color: #800000;
+	border: 2px gray solid;
+	background-color: #f8f8ff;
+	color: #000;
 	font-weight: bold;
 }
 
@@ -54,7 +56,7 @@ h1 {
 	min-width: 370px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	text-shadow: -2px -3px 3px Silver;
+	margin-bottom: 10px;
 	border: 1px gray solid;
 	border-radius: 5px;
 	border-bottom: 0;
@@ -66,13 +68,14 @@ h1 {
 div {
 	z-index: 200;
 	position: relative;
+	margin-top: -15px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 	max-width: 1200px;
 	min-width: 370px;
 	font-family: 'Tahoma';
-	font-size: 18px;
+	font-size: 17px;
 }
 
 
@@ -123,7 +126,6 @@ p {
 	padding-left: 5px;
 	padding-right: 10px;
 	text-indent: 20px;
-	text-align: justify;
 }
 
 p.null {
@@ -133,7 +135,6 @@ p.null {
 	padding-left: 5px;
 	padding-right: 10px;
 	text-indent: 0px;
-	text-align: justify;
 }
 
 /*параграф подзаголовка*/
@@ -144,7 +145,6 @@ p.subtitle {
 	text-indent: 0;
 	padding-left: 20px;
 	padding-right: 10px;
-	text-align: justify;
 }
 
 p.sub_subtitle {
@@ -218,10 +218,10 @@ ol.top10 {
 details>summary {
 	background-color: #fff8dc;
 	color: #4b0082;
-	text-shadow: -2px -3px 3px Silver;
 	font-size: 125%;
 	font-weight: bold;
 	border: 1px gray solid;
+	margin-bottom: 1px;
 	padding-left: 20px;
 	border-radius: 5px;
 	cursor: pointer;
@@ -243,7 +243,6 @@ details>summary.subtitle {
 	margin-top: 10px;
 	padding-left: 20px;
 	color: navy;
-	text-shadow: none;
 	font-size: 108%;
 	font-weight: bold;
 	border: none;
@@ -265,7 +264,6 @@ details>summary.sub_subtitle {
 	margin-top: 0;
 	padding-left: 45px;
 	color: navy;
-	text-shadow: none;
 	font-size: 98%;
 	font-weight: bold;
 	border: none;
