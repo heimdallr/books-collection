@@ -1,7 +1,7 @@
 --
--- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Чт мар 5 15:11:32 2026
+-- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Вт мар 10 23:27:30 2026
 --
--- Использованная кодировка текста: UTF-8
+-- Использованная кодировка текста: System
 --
 PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
@@ -75,6 +75,7 @@ INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 604, 'Песнь ль
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 26721, 'Ревізіонізм голокосту');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 66739, 'Ребенок от босса [Чайлд]');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 63684, 'Истории попаданок [Воронцова]');
+INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 89942, 'А.Маринина. Больше чем детектив');
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
