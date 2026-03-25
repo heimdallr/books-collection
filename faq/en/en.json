@@ -116,7 +116,10 @@
                     "id": "2/3",
                     "q": "What should I do?",
                     "t": [
-                        "Use FLibrary"
+                        "Use FLibrary",
+                        "You could also try",
+                        "<a href=https://github.com/AlekPet/inpx-web>Fork of inpx-web</a> with support for the distribution format",
+                        "<a href=https://github.com/devenrgy/flbs>Command-line utility</a> for searching for and exporting books"
                     ],
                     "x": [
                         {

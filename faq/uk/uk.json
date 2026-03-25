@@ -116,7 +116,10 @@
                     "id": "2/3",
                     "q": "І що робити?",
                     "t": [
-                        "Користуватися FLibrary"
+                        "Користуватися FLibrary",
+                        "А ще можна спробувати",
+                        "<a href=https://github.com/AlekPet/inpx-web>Форк inpx-web</a> з підтримкою формату роздачі",
+                        "<a href=https://github.com/devenrgy/flbs>Консольна утиліта</a> для пошуку та експорту книг"
                     ],
                     "x": [
                         {
