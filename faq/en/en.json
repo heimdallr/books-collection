@@ -725,7 +725,8 @@
                 "v2.5.5 `Preferences/UserRate/noRateSymbol`, ascii or utf-8 character code for books with a rating of “No rating”.",
                 "v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, string (true | false) false by default - when set to `true`, adds a “Hash” submenu to the book context menu with the items ‘Calculate’ and “Compare.” For those interested in the duplicate detector.",
                 "v2.5.7 `Preferences/Export/seqNumberWidth`, DWORD number, default <b>1</b>, width of the number substituted for the %seq_number% macro, missing digits are padded with zeros on the left.",
-                "v2.6.0 `Preferences/Export/readFolder`, string - folder where files for the running reader are saved."
+                "v2.6.0 `Preferences/Export/readFolder`, string - folder where files for the running reader are saved.",
+                "v2.6.0 `Preferences/MinimizeToTray`, string (true | false); the default value is false - if set to `true`, the program hides in the system tray instead of minimizing."
             ],
             "x": [
                 {
