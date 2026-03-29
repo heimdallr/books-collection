@@ -119,26 +119,15 @@
                         "Use FLibrary",
                         "You could also try",
                         "<a href=https://github.com/AlekPet/inpx-web>Fork of inpx-web</a> with support for the distribution format",
-                        "<a href=https://github.com/devenrgy/flbs>Command-line utility</a> for searching for and exporting books"
+                        "<a href=https://github.com/devenrgy/flbs>Command-line utility</a> for searching for and exporting books",
+                        "Console <a href=\"https://codeberg.org/aku4wb/flbs\" target=\"_blank\">script</a> for Linux, working with this distribution, from the respected razobit"
                     ],
                     "x": [
                         {
                             "id": "2/3/0",
-                            "q": "I can't, I have Linux",
+                            "q": "I can't, I have Mac",
                             "t": [
-                                "Use wine",
-                                "Console <a href=\"https://codeberg.org/aku4wb/flbs\" target=\"_blank\">script</a> for Linux, working with this distribution, from the respected razobit"
-                            ],
-                            "x": [
-                                {
-                                    "id": "2/3/0/0",
-                                    "q": "what it can do",
-                                    "t": [
-                                        "search by author",
-                                        "search by book title",
-                                        "extracting a book with images in fb2 format"
-                                    ]
-                                }
+                                "Use emulator"
                             ]
                         },
                         {
@@ -155,6 +144,15 @@
                                         "For Windows 7/2008R2 users, <a href=\"https://github.com/YuZhouRen86/VxKex-NEXT\" target=\"_blank\">VxKek</a> can be used on Windows 7. The most important thing is that the machine is completely isolated from the network or in a completely closed network circuit. © HedgehogInTheCPP"
                                     ]
                                 }
+                            ]
+                        },
+                        {
+                            "id": "2/3/2",
+                            "q": "what it can do",
+                            "t": [
+                                "search by author",
+                                "search by book title",
+                                "extracting a book with images in fb2 format"
                             ]
                         }
                     ]
