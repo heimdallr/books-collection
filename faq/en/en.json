@@ -724,7 +724,10 @@
                 "v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, string (true | false) false by default - when set to `true`, adds a “Hash” submenu to the book context menu with the items ‘Calculate’ and “Compare.” For those interested in the duplicate detector.",
                 "v2.5.7 `Preferences/Export/seqNumberWidth`, DWORD number, default <b>1</b>, width of the number substituted for the %seq_number% macro, missing digits are padded with zeros on the left.",
                 "v2.6.0 `Preferences/Export/readFolder`, string - folder where files for the running reader are saved.",
-                "v2.6.0 `Preferences/MinimizeToTray`, string (true | false); the default value is false - if set to `true`, the program hides in the system tray instead of minimizing."
+                "v2.6.0 `Preferences/MinimizeToTray`, string (true | false); the default value is false - if set to `true`, the program hides in the system tray instead of minimizing.",
+                "v2.6.2 `Preferences/RecentBooksMenuMaxCount`, DWORD value, default 16, the number of items in the “Recent Books” menu.",
+                "v2.6.2 `Preferences/RecentBooksMenuTitleFormat`, string, - the format of the “Recent Books” menu item. Example: ‘%1 - %2’, where %1 is the author and %2 is the book title.",
+                "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, string (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), default Read, specifies the action when an item is selected from the “Recent Books” menu."
             ],
             "x": [
                 {
