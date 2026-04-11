@@ -727,7 +727,8 @@
                 "v2.6.0 `Preferences/MinimizeToTray`, string (true | false); the default value is false - if set to `true`, the program hides in the system tray instead of minimizing.",
                 "v2.6.2 `Preferences/RecentBooksMenuMaxCount`, DWORD value, default 16, the number of items in the “Recent Books” menu.",
                 "v2.6.2 `Preferences/RecentBooksMenuTitleFormat`, string, - the format of the “Recent Books” menu item. Example: ‘%1 - %2’, where %1 is the author and %2 is the book title.",
-                "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, string (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), default Read, specifies the action when an item is selected from the “Recent Books” menu."
+                "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, string (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), default Read, specifies the action when an item is selected from the “Recent Books” menu.",
+                " v2.6.2 `Preferences/saveKeyboardLayout`, string (true | false), default value is false. If set to `true`, the program will save the keyboard layout between restarts."
             ],
             "x": [
                 {

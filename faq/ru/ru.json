@@ -727,7 +727,8 @@
                 "v2.6.0 `Preferences/MinimizeToTray`, строка (true | false) по умолчанию false - при установке в `true` программа вместо минимизации прячется в системный трей.",
                 "v2.6.2 `Preferences/RecentBooksMenuMaxCount`, число DWORD, по умолчанию 16, количество пунктов в меню \"Недавние книги\".",
                 "v2.6.2 `Preferences/RecentBooksMenuTitleFormat`, строка, - формат пункта меню \"Недавние книги\". Пример - '%1 - %2', где %1 - автор, %2 - название книги.",
-                "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), по умолчанию Read, задаёт действие по выбору пункта из меню \"Недавние книги\"."
+                "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), по умолчанию Read, задаёт действие по выбору пункта из меню \"Недавние книги\".",
+                "v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false) по умолчанию false - при установке в `true` программа будет запоминать раскладку клавиатуры между перезапусками."
             ],
             "x": [
                 {
