@@ -725,10 +725,10 @@
                 "v2.5.7 `Preferences/Export/seqNumberWidth`, число DWORD, за замовчуванням <b>1</b>, ширина числа, що підставляється замість макросу %seq_number%, відсутні розряди доповнюються нулями зліва.",
                 "v2.6.0 `Preferences/Export/readFolder`, строка - папка, у якій будуть зберігатися файли для поточної програми-читалки.",
                 "v2.6.0 `Preferences/MinimizeToTray`, строка (true | false), за замовчуванням false - якщо встановити значення `true`, програма замість мінімізації ховається в системний трей.",
-                "v2.6.2 `Preferences/RecentBooksMenuMaxCount`, число DWORD, за замовчуванням 16, кількість пунктів у меню «Останні книги».",
+                "v2.6.2 `Preferences/RecentBooksMenuMaxCount`, число DWORD, за замовчуванням 16, кількість пунктів у меню «Недавні книги».",
                 "v2.6.2 `Preferences/RecentBooksMenuTitleFormat`, строка, — формат пункту меню «Недавні книги». Приклад — “%1 - %2”, де %1 — автор, %2 — назва книги.",
-                "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), за замовчуванням Read, задає дію при виборі пункту з меню «Недавні книги».",
-                " v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false), за замовчуванням false - якщо встановити значення `true`, програма запам'ятовуватиме розкладку клавіатури між перезапусками."
+                "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), за замовчуванням Read, визначає дію, при виборі запису зі списку «Недавні книги»",
+                "v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false), за замовчуванням false - якщо встановлено значення `true`, програма збереже розкладку клавіатури між перезапусками."
             ],
             "x": [
                 {
