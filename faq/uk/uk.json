@@ -726,7 +726,8 @@
                 "v2.6.0 `Preferences/Export/readFolder`, строка - папка, у якій будуть зберігатися файли для поточної програми-читалки.",
                 "v2.6.0 `Preferences/MinimizeToTray`, строка (true | false), за замовчуванням false - якщо встановити значення `true`, програма замість мінімізації ховається в системний трей.",
                 "v2.6.2 `Preferences/RecentBooksMenuMaxCount`, число DWORD, за замовчуванням 16, кількість пунктів у меню «Недавні книги».",
-                "v2.6.2 `Preferences/RecentBooksMenuTitleFormat`, строка, — формат пункту меню «Недавні книги». Приклад — “%1 - %2”, де %1 — автор, %2 — назва книги.",
+                "v2.6.2 `Preferences/RecentBooksMenuTitleFormat`, строка, — формат пункту меню «Недавні книги», за замовчуванням `%author%\\t%title%`. Доступні макроси: %author% - автор, %title% - назва книги, %time% - час останнього відкриття книги.",
+                "v2.6.2 `Preferences/RecentBooksMenu/DateTimeFormat, строка, - формат відображення часу останнього відкриття в рядку меню «Недавні книги», за замовчуванням `yyyy-MM-dd hh:mm:ss`.",
                 "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), за замовчуванням Read, визначає дію, при виборі запису зі списку «Недавні книги»",
                 "v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false), за замовчуванням false - якщо встановлено значення `true`, програма збереже розкладку клавіатури між перезапусками."
             ],
