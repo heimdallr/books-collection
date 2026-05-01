@@ -134,7 +134,7 @@
                             "id": "2/3/1",
                             "q": "Не могу, у меня Windows 7",
                             "t": [
-                                "Да, тогда действительно не можете. Раздача не для вас, извините."
+                                "Вам <a href=\"https://drive.google.com/drive/folders/170DKcd3saPqmr2v--BYpOiTT97i6QsF3?usp=drive_link\"  target=\"_blank\">сюда</a>"
                             ],
                             "x": [
                                 {
@@ -153,6 +153,13 @@
                                 "поиск по автору",
                                 "поиск по названию книги",
                                 "извлечение книги с изображениями в fb2"
+                            ]
+                        },
+                        {
+                            "id": "2/3/3",
+                            "q": "Не могу, у меня Linux",
+                            "t": [
+                                "Вам <a href=\"https://github.com/heimdallr/books/releases\"  target=\"_blank\">сюда</a>"
                             ]
                         }
                     ]

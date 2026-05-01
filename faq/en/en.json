@@ -134,7 +134,7 @@
                             "id": "2/3/1",
                             "q": "I can't, I have Windows 7",
                             "t": [
-                                "Yes, then you really can't. The distribution isn't for you, sorry."
+                                "Click <a href=\"https://drive.google.com/drive/folders/170DKcd3saPqmr2v--BYpOiTT97i6QsF3?usp=drive_link\" target=\"_blank\">here</a>"
                             ],
                             "x": [
                                 {
@@ -153,6 +153,13 @@
                                 "search by author",
                                 "search by book title",
                                 "extracting a book with images in fb2 format"
+                            ]
+                        },
+                        {
+                            "id": "2/3/3",
+                            "q": "I can't, I have Linux",
+                            "t": [
+                                "Click <a href=\"https://github.com/heimdallr/books/releases\" target=\"_blank\">here</a>"
                             ]
                         }
                     ]
