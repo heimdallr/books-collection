@@ -775,6 +775,27 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "23",
+            "q": "Why isn't the book XXXX included in the distribution? It's available on the website.",
+            "t": [
+                "The following is possible:",
+                "The book was uploaded to the site in a format other than fb2.",
+                "The book was uploaded to the site this month.",
+                "The book was identified as a duplicate and filtered out during the preparation of the distribution update."
+            ],
+            "x": [
+                {
+                    "id": "23/0",
+                    "q": "So what should I do?",
+                    "t": [
+                        "Download the book, OCR it or convert it, and upload it to the site in FB2 format.",
+                        "Wait until the next update to the distribution.",
+                        "If you think the book isn't a duplicate, let me know. It might be a bug in the duplicate detector."
+                    ]
+                }
+            ]
         }
     ]
 }
