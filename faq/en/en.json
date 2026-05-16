@@ -404,6 +404,27 @@
         },
         {
             "id": "13",
+            "q": "Why isn't the book XXXX included in the distribution? It's available on the website.",
+            "t": [
+                "The following is possible:",
+                "The book was uploaded to the site in a format other than fb2.",
+                "The book was uploaded to the site this month.",
+                "The book was identified as a duplicate and filtered out during the preparation of the distribution update."
+            ],
+            "x": [
+                {
+                    "id": "13/0",
+                    "q": "So what should I do?",
+                    "t": [
+                        "Download the book, OCR it or convert it, and upload it to the site in FB2 format.",
+                        "Wait until the next update to the distribution.",
+                        "If you think the book isn't a duplicate, let me know. It might be a bug in the duplicate detector."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "14",
             "q": "How to get the book you need without downloading the entire distribution?",
             "t": [
                 "Let's find out if the book you need is available. <a href=\"#offlink5\">See the instructions above.</a>",
@@ -416,14 +437,14 @@
             ],
             "x": [
                 {
-                    "id": "13/0",
+                    "id": "14/0",
                     "q": "You don't even need to download the archive",
                     "t": [
                         ", instead, you can configure the script to download the book you want directly from the Flibusta website. You will also need a console application for downloading files from the Internet (e.g. curl), which you will need to download and install. If you have the standard version of FLibrary installed by the installer, you can use a registry key to configure the script"
                     ],
                     "x": [
                         {
-                            "id": "13/0/0",
+                            "id": "14/0/0",
                             "q": "Here it is",
                             "t": [
                                 "Windows Registry Editor Version 5.00",
@@ -449,7 +470,7 @@
                     ]
                 },
                 {
-                    "id": "13/1",
+                    "id": "14/1",
                     "q": "You can even do without external tools",
                     "t": [
                         ", but you will still have to configure the script. However, now you don't need curl, and one command built into FLibrary is enough:",
@@ -468,7 +489,7 @@
             ]
         },
         {
-            "id": "14",
+            "id": "15",
             "q": "I have five computers and three laptops at home. Do I need to download the distribution and install FLibrary on all of these devices?",
             "t": [
                 "Not necessarily. FLibrary provides some networking capabilities in the form of several HTTP services. To access them, you need to run the HTTP server included in FLibrary. Select the menu item",
@@ -480,7 +501,7 @@
             ],
             "x": [
                 {
-                    "id": "14/0",
+                    "id": "15/0",
                     "q": "by the Author",
                     "t": [
                         "You can work via the web in a browser from any device.",
@@ -496,14 +517,14 @@
                     ]
                 },
                 {
-                    "id": "14/1",
+                    "id": "15/1",
                     "q": "Will it only work at home? Can't it be done online?",
                     "t": [
                         "It is possible, but you will have to forward the specified ports to the outside world yourself. I am not knowledgeable enough in this area to even be sure that the previous statement makes sense. Please search for “white IP” and “CloudFlare.com tunnels.” I would appreciate any insightful comments about this in a private message."
                     ],
                     "x": [
                         {
-                            "id": "14/1/0",
+                            "id": "15/1/0",
                             "q": "smart people say",
                             "t": [
                                 "(⊙_⊙)",
@@ -524,14 +545,14 @@
             ]
         },
         {
-            "id": "15",
+            "id": "16",
             "q": "What's with all the mess with authors and series?",
             "t": [
                 "This is the result of merging Flibusta and Librusec into a single distribution. Indeed, the inconsistency in the naming of authors and series on Flibusta and Librusec is a serious problem. Plus, libraries have different approaches to resolving conflicts between authors with the same name. Because of this, some names here may either “split” or “collapse,” resulting in books by the same author in a distribution being “linked” to different authors, and vice versa, books by different authors being attributed to the same author. The same applies to series."
             ],
             "x": [
                 {
-                    "id": "15/0",
+                    "id": "16/0",
                     "q": "So, there's nothing we can do about it?",
                     "t": [
                         "Unfortunately, it is unlikely that we will be able to coordinate this distribution at the level of network libraries that are sources of books. We can only make minor corrections. If you notice that any author or series has been “split” or “merged,” please let me know. I will make a local edit, and the next monthly update will correct the situation."
@@ -540,7 +561,7 @@
             ]
         },
         {
-            "id": "16",
+            "id": "17",
             "q": "Is it okay that my antivirus software is complaining about the distribution?",
             "t": [
                 "It is ok. Currently, there are several known reasons why antivirus software may trigger alerts for this distribution.",
@@ -554,7 +575,7 @@
             ]
         },
         {
-            "id": "17",
+            "id": "18",
             "q": "I found a bug in the program, what should I do?",
             "t": [
                 "Ensure that the bug is present in the latest release of FLibrary. This is especially true for typos, many of which were found and fixed while writing these instructions.",
@@ -563,7 +584,7 @@
             ]
         },
         {
-            "id": "18",
+            "id": "19",
             "q": "They promise fast FLibrary performance, but in reality it's slow. Are they lying?",
             "t": [
                 "At least one user experienced interference with the program from Microsoft Defender, which manifested itself in slow performance and increased RAM consumption. Configuring Defender helped.",
@@ -575,21 +596,21 @@
             ]
         },
         {
-            "id": "19",
+            "id": "20",
             "q": "There are some ‘entertainment’ options in the menu. I checked all the boxes, what next?",
             "t": [
                 "Entertainment content is displayed instead of an empty annotation when no books are selected in the books window."
             ],
             "x": [
                 {
-                    "id": "19/0",
+                    "id": "20/0",
                     "q": "For example",
                     "t": [
                         " "
                     ]
                 },
                 {
-                    "id": "19/1",
+                    "id": "20/1",
                     "q": "I see an empty annotation, where are the jokes?",
                     "t": [
                         "For this to work, you need access to a) the internet, and b) services that provide content. Keep in mind that some services may stop working. And some are not accessible from your location without a VPN.",
@@ -597,7 +618,7 @@
                     ]
                 },
                 {
-                    "id": "19/2",
+                    "id": "20/2",
                     "q": "Why is everything in English?",
                     "t": [
                         "If you find (or set up your own) a similar public service (without registration or SMS) in another language, let me know and I'll add it."
@@ -606,7 +627,7 @@
             ]
         },
         {
-            "id": "20",
+            "id": "21",
             "q": "Why are there so many FLibrary installers in the distribution?",
             "t": [
                 "Three Rings for the Elven-kings under the sky",
@@ -615,7 +636,7 @@
             ],
             "x": [
                 {
-                    "id": "20/0",
+                    "id": "21/0",
                     "q": "I FLibrary_setup.exe",
                     "t": [
                         "Generated by InnoSetup. The main installer, the most convenient and functional. Allows you to",
@@ -626,7 +647,7 @@
                     ]
                 },
                 {
-                    "id": "20/1",
+                    "id": "21/1",
                     "q": "II FLibrary_setup.msi",
                     "t": [
                         "Microsoft Windows Installer. Most likely, I just don't know how to cook it, but",
@@ -637,14 +658,14 @@
                     ]
                 },
                 {
-                    "id": "20/2",
+                    "id": "21/2",
                     "q": "III FLibrary_portable.7z",
                     "t": [
                         "This is not an installer at all, but simply an archive with binaries. You will have to unpack and configure the launch shortcuts yourself, manually. A program installed in this way does not store its settings in the registry, but in a nearby ini file, like a portable one. Therefore, you need to unpack it where you have write access."
                     ]
                 },
                 {
-                    "id": "20/3",
+                    "id": "21/3",
                     "q": "So which one should I choose?",
                     "t": [
                         "The contents of all installers are identical, so you can choose any one based on your preferences and experience. However, I recommend the first option, as that is the one I use myself. The other two are tested rarely."
@@ -653,14 +674,14 @@
             ]
         },
         {
-            "id": "21",
+            "id": "22",
             "q": "Where does the program store ...?",
             "t": [
                 " "
             ],
             "x": [
                 {
-                    "id": "21/0",
+                    "id": "22/0",
                     "q": "settings",
                     "t": [
                         "Standard version (installed by the installer) - registry branch HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary",
@@ -668,7 +689,7 @@
                     ]
                 },
                 {
-                    "id": "21/1",
+                    "id": "22/1",
                     "q": "work log",
                     "t": [
                         "File %TEMP%\\HomeCompa.FLibrary.log",
@@ -678,7 +699,7 @@
             ]
         },
         {
-            "id": "22",
+            "id": "23",
             "q": "Can I have a complete list of FLibrary's hidden settings?",
             "t": [
                 "This section describes features that few people need, so they are not included in the interface in order to avoid clutter.",
@@ -740,14 +761,14 @@
             ],
             "x": [
                 {
-                    "id": "22/0",
+                    "id": "23/0",
                     "q": "I read the FAQ about hidden settings. “I didn't understand anything, but it was interesting ©”",
                     "t": [
                         "That's strange, no one has complained before you. Well, let me explain. You wanted to replace the rate star symbol..."
                     ],
                     "x": [
                         {
-                            "id": "22/0/0",
+                            "id": "23/0/0",
                             "q": "If you have the portable version of FLibrary, then:",
                             "t": [
                                 "Close FLibrary",
@@ -759,7 +780,7 @@
                             ]
                         },
                         {
-                            "id": "22/0/1",
+                            "id": "23/0/1",
                             "q": "If your version of FLibrary was installed using the installer, then:",
                             "t": [
                                 "Close FLibrary",
@@ -772,27 +793,6 @@
                                 " * Instead of the number 9734, choose one that suits your taste, for example <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>from here</b></a>"
                             ]
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "23",
-            "q": "Why isn't the book XXXX included in the distribution? It's available on the website.",
-            "t": [
-                "The following is possible:",
-                "The book was uploaded to the site in a format other than fb2.",
-                "The book was uploaded to the site this month.",
-                "The book was identified as a duplicate and filtered out during the preparation of the distribution update."
-            ],
-            "x": [
-                {
-                    "id": "23/0",
-                    "q": "So what should I do?",
-                    "t": [
-                        "Download the book, OCR it or convert it, and upload it to the site in FB2 format.",
-                        "Wait until the next update to the distribution.",
-                        "If you think the book isn't a duplicate, let me know. It might be a bug in the duplicate detector."
                     ]
                 }
             ]
