@@ -1,5 +1,7 @@
+set BOOK_TYPE=usr
+
 fliparser.exe ^
-D:\media\books\fb2.Flibusta.Net.7z\*fb2-*.7z;%~dp0hash ^
+V:\books\%BOOK_TYPE%.flibusta.7z\*.7z;%~dp0hash\%BOOK_TYPE% ^
 -o t:\ ^
---dump t:\fb2.Flibusta.Net.7z.db ^
---collection-info-template %~dp0collection.info
+--dump t:\flibusta.7z.db ^
+--collection-info-template %~dp0collection_%BOOK_TYPE%.info

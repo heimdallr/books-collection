@@ -1,5 +1,7 @@
+set BOOK_TYPE=fb2
+
 fliparser.exe ^
-D:\media\books\fb2.lib.rus.ec.7z\fb2-*.7z;%~dp0hash ^
+V:\books\%BOOK_TYPE%.librusec.7z\*.7z;%~dp0hash\%BOOK_TYPE% ^
 -o t:\ ^
---dump t:\fb2.lib.rus.ec.7z.db ^
---collection-info-template %~dp0collection.info
+--dump T:\librusec.7z.db ^
+--collection-info-template %~dp0collection_%BOOK_TYPE%.info
