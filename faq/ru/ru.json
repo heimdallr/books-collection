@@ -757,7 +757,8 @@
                 "v2.6.2 `Preferences/RecentBooksMenu/TitleFormat`, строка, - формат пункта меню \"Недавние книги\", по умолчанию `%author%\\t%title%`. Доступны макросы: '%author% - автор, %title% - название книги, %time% - время последнего открытия книги.",
                 "v2.6.2 `Preferences/RecentBooksMenu/DateTimeFormat, строка, - формат отображения времени последнего открытия в строке меню \"Недавние книги\", по умолчанию `yyyy-MM-dd hh:mm:ss`.",
                 "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), по умолчанию Read, задаёт действие по выбору пункта из меню \"Недавние книги\".",
-                "v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false) по умолчанию false - при установке в `true` программа будет запоминать раскладку клавиатуры между перезапусками."
+                "v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false) по умолчанию false - при установке в `true` программа будет запоминать раскладку клавиатуры между перезапусками.",
+                "v2.6.3 `Preferences/AlternatingRowColors`, строка (true | false) по умолчанию false - установка в `true` включает чередующуюся раскраску строк в таблицах"
             ],
             "x": [
                 {
