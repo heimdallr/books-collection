@@ -1,14 +1,16 @@
-md T:\flibusta
-del /Q T:\flibusta\*
+rmdir /s /q V:\flibusta
+md V:\flibusta\fb2
+md V:\flibusta\usr
 
 for %%f in (*.zip) do (
-	7z e "%%f" -oT:\flibusta
 	echo %%f | findstr /i ".fb2." >nul && (
-		7z a -mx9 V:\recoded\f.fb2-000000-999999.zip T:\flibusta\*.*
+		7z e "%%f" -oV:/flibusta/fb2
 	) || (
-		7z a -mx0 V:\recoded\f.usr-000000-999999.zip T:\flibusta\*.*
+		7z e "%%f" -oV:/flibusta/usr
 	)	
-	del /Q T:\flibusta\*.*
 )
 
-rmdir /s /q T:\flibusta
+7z a -mx9 -sdel V:\repacked\f.fb2-000000-999999.zip V:\flibusta\fb2\*
+7z a -mx0 -sdel V:\repacked\f.usr-000000-999999.zip V:\flibusta\usr\*
+
+rmdir /s /q V:\flibusta
