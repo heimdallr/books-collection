@@ -758,7 +758,8 @@
                 "v2.6.2 `Preferences/RecentBooksMenu/DateTimeFormat, строка, - формат відображення часу останнього відкриття в рядку меню «Недавні книги», за замовчуванням `yyyy-MM-dd hh:mm:ss`.",
                 "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), за замовчуванням Read, визначає дію, при виборі запису зі списку «Недавні книги»",
                 "v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false), за замовчуванням false - якщо встановлено значення `true`, програма збереже розкладку клавіатури між перезапусками.",
-                "v2.6.3 `Preferences/AlternatingRowColors`, строка (true | false), за замовчуванням false — встановлення значення `true` увімкне чергування кольорів рядків у таблицях"
+                "v2.6.3 `Preferences/AlternatingRowColors`, строка (true | false), за замовчуванням false — встановлення значення `true` увімкне чергування кольорів рядків у таблицях",
+                "v2.6.6 `Preferences/Export/readFileNameTemplate`, строка - шаблон імені файлу, що зберігається для програми для читання. Набір макросів аналогічний тим, що використовуються для експорту або скриптів."
             ],
             "x": [
                 {

@@ -758,7 +758,8 @@
                 "v2.6.2 `Preferences/RecentBooksMenu/DateTimeFormat, string, - the format for displaying the last opening time in the “Recent Books” menu bar; the default is `yyyy-MM-dd hh:mm:ss`.",
                 "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, string (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), default Read, specifies the action when an item is selected from the “Recent Books” menu.",
                 "v2.6.2 `Preferences/saveKeyboardLayout`, string (true | false), default value is false. If set to `true`, the program will save the keyboard layout between restarts.",
-                "v2.6.3 `Preferences/AlternatingRowColors`, string (true | false), default: false – setting this to `true` enables alternating row colors in tables"
+                "v2.6.3 `Preferences/AlternatingRowColors`, string (true | false), default: false – setting this to `true` enables alternating row colors in tables",
+                "v2.6.6 `Preferences/Export/readFileNameTemplate`, string – a template for the filename saved for the reader. The set of macros is similar to those used for export or scripts."
             ],
             "x": [
                 {
