@@ -1,7 +1,7 @@
 --
--- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Вт мар 10 23:27:30 2026
+-- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Вс июл 5 18:49:07 2026
 --
--- Использованная кодировка текста: System
+-- Использованная кодировка текста: UTF-8
 --
 PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
@@ -30,6 +30,7 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 342321, 'Гоблин', NULL, 'MeXXanik');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 210108, 'Екатерина', NULL, 'Насута');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 51954, 'Екатерина', NULL, 'Насута');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 289624, 'Роман', NULL, 'Романович');
 
 -- Таблица: AuthorList
 CREATE TABLE AuthorList (
