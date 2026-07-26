@@ -125,9 +125,9 @@
                     "x": [
                         {
                             "id": "2/3/0",
-                            "q": "Не могу, у меня Мак",
+                            "q": "Не могу, у меня Mac",
                             "t": [
-                                "Испольуйте эмулятор"
+                                "Вам <a href=\"https://github.com/heimdallr/books/releases\"  target=\"_blank\">сюда</a>"
                             ]
                         },
                         {
