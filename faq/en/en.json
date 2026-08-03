@@ -750,7 +750,6 @@
                 "Possible alignment values: AlignLeft, AlignRight, AlignCenter. If you are interested, you can experiment with the values <a href=\"https://doc.qt.io/qt-6/qt.html#AlignmentFlag-enum\" target=\"_blank\">here</a>.",
                 "v2.5.5 `Preferences/UserRate/symbol`, число по умолчанию '11088' - ascii или utf-8 код символа звёздочки ⭐ для колонки пользовательского рейтинга.",
                 "v2.5.5 `Preferences/UserRate/noRateSymbol`, ascii or utf-8 character code for books with a rating of “No rating”.",
-                "v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, string (true | false) false by default - when set to `true`, adds a “Hash” submenu to the book context menu with the items ‘Calculate’ and “Compare.” For those interested in the duplicate detector.",
                 "v2.5.7 `Preferences/Export/seqNumberWidth`, DWORD number, default <b>1</b>, width of the number substituted for the %seq_number% macro, missing digits are padded with zeros on the left.",
                 "v2.6.0 `Preferences/Export/readFolder`, string - folder where files for the running reader are saved.",
                 "v2.6.0 `Preferences/MinimizeToTray`, string (true | false); the default value is false - if set to `true`, the program hides in the system tray instead of minimizing.",
@@ -760,8 +759,7 @@
                 "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, string (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), default Read, specifies the action when an item is selected from the “Recent Books” menu.",
                 "v2.6.2 `Preferences/saveKeyboardLayout`, string (true | false), default value is false. If set to `true`, the program will save the keyboard layout between restarts.",
                 "v2.6.3 `Preferences/AlternatingRowColors`, string (true | false), default: false – setting this to `true` enables alternating row colors in tables",
-                "v2.6.6 `Preferences/Export/readFileNameTemplate`, string – a template for the filename saved for the reader. The set of macros is similar to those used for export or scripts.",
-                "v2.7.0 `Preferences/ShowAllSettingsMenuItem`, string (true | false); default value is false. If set to `true` enables the “All Settings...” menu item to access the engineering settings menu."
+                "v2.6.6 `Preferences/Export/readFileNameTemplate`, string – a template for the filename saved for the reader. The set of macros is similar to those used for export or scripts."
             ],
             "x": [
                 {

@@ -750,7 +750,6 @@
                 "Можливі значення вирівнювання: AlignLeft, AlignRight, AlignCenter. Якщо цікаво, можна поекспериментувати зі значеннями <a href=\"https://doc.qt.io/qt-6/qt.html#AlignmentFlag-enum\" target=\"_blank\">звідси</a>",
                 "v2.5.5 `Preferences/UserRate/symbol`, число за замовчуванням 11088 - ascii или utf-8 код символу зірочки ⭐ для колонки рейтингу користувача.",
                 "v2.5.5 `Preferences/UserRate/noRateSymbol`, ascii или utf-8 код символу для книг з рейтингом \"Без оцінки\".",
-                "v2.5.6 `Preferences/Books/ContextMenu/HashEnabled`, строка  (true | false) за замовчуванням false - при встановленні в 'true' додає в контекстне меню книг підменю \"Хеш\" з елементами \"Обчислення\" та \"Порівняння\". Для тих, хто цікавиться детектором дублів.",
                 "v2.5.7 `Preferences/Export/seqNumberWidth`, число DWORD, за замовчуванням <b>1</b>, ширина числа, що підставляється замість макросу %seq_number%, відсутні розряди доповнюються нулями зліва.",
                 "v2.6.0 `Preferences/Export/readFolder`, строка - папка, у якій будуть зберігатися файли для поточної програми-читалки.",
                 "v2.6.0 `Preferences/MinimizeToTray`, строка (true | false), за замовчуванням false - якщо встановити значення `true`, програма замість мінімізації ховається в системний трей.",
@@ -760,8 +759,7 @@
                 "v2.6.2 `Preferences/Interaction/Book/OnRecentSelect`, строка (Read | ExtractAsFb2 | ExtractAsZip | FindWithAuthors | FindWithSeries | FindWithGenres | FindWithPublishYear | FindWithKeywords | FindWithUpdates | FindWithArchives | FindWithLanguages | FindWithGroups | FindWithAllBooks), за замовчуванням Read, визначає дію, при виборі запису зі списку «Недавні книги»",
                 "v2.6.2 `Preferences/saveKeyboardLayout`, строка (true | false), за замовчуванням false - якщо встановлено значення `true`, програма збереже розкладку клавіатури між перезапусками.",
                 "v2.6.3 `Preferences/AlternatingRowColors`, строка (true | false), за замовчуванням false - встановлення значення `true` увімкне чередування забарвлення рядків у таблицях",
-                "v2.6.6 `Preferences/Export/readFileNameTemplate`, строка - шаблон для назви файлу, за якою його буде збережено для програми-читалки. Набір макросів аналогічний тим, що використовуються для експорту або скриптів.",
-                "v2.7.0 `Preferences/ShowAllSettingsMenuItem`, строка (true | false), за замовчуванням false - встановлення значення `true` увімкне відображення пункту меню «Усі налаштування...» для доступу до інженерного меню налаштувань."
+                "v2.6.6 `Preferences/Export/readFileNameTemplate`, строка - шаблон для назви файлу, за якою його буде збережено для програми-читалки. Набір макросів аналогічний тим, що використовуються для експорту або скриптів."
             ],
             "x": [
                 {
