@@ -768,7 +768,8 @@
                 "v2.6.3 `Preferences/AlternatingRowColors`, строка (true | false) по умолчанию false - установка в `true` включает чередующуюся раскраску строк в таблицах",
                 "v2.6.6 `Preferences/Export/readFileNameTemplate`, строка - шаблон имени файла, сохраняемого для читалки. Набор макросов аналогичен используемым для экспорта или скриптов.",
                 "v2.7.1 `Preferences/Books/KeepCheck`, строка (true | false) по умолчанию false, при установка в `true` галки на книгах перестанут сбрасываться после экспорта.",
-                "v2.7.1 `Preferences/Books/KeepHistory`, строка (true | false) по умолчанию false, при установка в `true` история переходов по книгам будет переживать перезапуск программы."
+                "v2.7.1 `Preferences/Books/KeepHistory`, строка (true | false) по умолчанию false, при установка в `true` история переходов по книгам будет переживать перезапуск программы.",
+                "v2.7.1 `Preferences/Books/SeparatedViewModeByNavigation, строка (true | false) по умолчанию false, при установка в `true` режим показа книг Список/Дерево будет запоминаться для разделов навигации раздельно."
             ],
             "x": [
                 {
