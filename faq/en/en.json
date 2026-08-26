@@ -769,7 +769,8 @@
                 "v2.6.6 `Preferences/Export/readFileNameTemplate`, string – a template for the filename saved for the reader. The set of macros is similar to those used for export or scripts.",
                 "v2.7.1 `Preferences/Books/KeepCheck`, a string (true | false) with a default value of false. If set to `true`, checkmarks on books will no longer be reset after export.",
                 "v2.7.1 `Preferences/Books/KeepHistory`, a string (true | false) with a default value of false. If set to `true`, the book navigation history will persist after the program is restarted.",
-                "v2.7.1 `Preferences/Books/SeparatedViewModeByNavigation`, a string (true | false) with a default of false. When set to `true`, the List/Tree book view mode will be saved separately for each navigation section."
+                "v2.7.1 `Preferences/Books/SeparatedViewModeByNavigation`, a string (true | false) with a default of false. When set to `true`, the List/Tree book view mode will be saved separately for each navigation section.",
+                "v2.7.1 `Preferences/ToolbarWithMainMenu`, a string (true | false) with a default of false. If set to `true`, the control panel will appear in the main menu bar."
             ],
             "x": [
                 {
