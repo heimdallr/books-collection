@@ -31,6 +31,7 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 210108, 'Екатерина', NULL, 'Насута');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 51954, 'Екатерина', NULL, 'Насута');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 289624, 'Роман', NULL, 'Романович');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 22302, 'Гоар', 'Карлосовна', 'Маркосян-Каспер');
 
 -- Таблица: AuthorList
 CREATE TABLE AuthorList (
@@ -48,6 +49,8 @@ CREATE TABLE AuthorList (
 
 INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (1, 224205, 759158, '1');
 INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (1, 334099, 759158, '2');
+INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (2, 22302, 516888, 'a');
+INSERT INTO AuthorList (LibraryId, Id, BookId, Additional) VALUES (2, 22302, 516889, 'a');
 
 -- Таблица: Library
 CREATE TABLE Library (
@@ -77,6 +80,38 @@ INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 26721, 'Ревізі�
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 66739, 'Ребенок от босса [Чайлд]');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 63684, 'Истории попаданок [Воронцова]');
 INSERT INTO Series (LibraryId, SeriesId, Title) VALUES (2, 89942, 'А.Маринина. Больше чем детектив');
+
+-- Таблица: Book
+CREATE TABLE Book (
+    LibraryId INTEGER       REFERENCES Library (Id) ON DELETE CASCADE
+                            NOT NULL,
+    BookId  INTEGER       NOT NULL,
+    Title     VARCHAR (128),
+    PRIMARY KEY (
+        LibraryId,
+        BookId
+    )
+);
+
+INSERT INTO Book (LibraryId, BookId, Title) VALUES (2, 516888, 'Все зависит от тебя');
+INSERT INTO Book (LibraryId, BookId, Title) VALUES (2, 516889, 'Вторая Гаммы');
+
+-- Таблица: SeriesList
+CREATE TABLE SeriesList (
+    LibraryId  INTEGER      REFERENCES Library (Id) ON DELETE CASCADE
+                            NOT NULL,
+    Id         INTEGER      NOT NULL,
+    BookId     INTEGER      NOT NULL,
+    SeqNumber  INTEGER,
+    Additional VARCHAR (64),
+    UNIQUE (
+        LibraryId,
+        Id,
+        BookId
+    )
+);
+
+INSERT INTO SeriesList (LibraryId, Id, BookId, SeqNumber, Additional) VALUES (2, 50795, 516889, 6, NULL);
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
