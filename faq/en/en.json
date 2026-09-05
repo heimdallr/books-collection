@@ -368,20 +368,13 @@
         },
         {
             "id": "12",
-            "q": "How do I reset the previously selected e-reader?",
-            "t": [
-                "Launch the program to read the book while holding down the Shift, Ctrl, or Alt key"
-            ]
-        },
-        {
-            "id": "13",
             "q": "How to find out if the book I need is available?",
             "t": [
                 "There are several options:"
             ],
             "x": [
                 {
-                    "id": "13/0",
+                    "id": "12/0",
                     "q": "with cataloguizer (recommended)",
                     "t": [
                         "Download the index file *.inpx and one of the FLibrary installers, according to your preference",
@@ -391,7 +384,7 @@
                     ]
                 },
                 {
-                    "id": "13/1",
+                    "id": "12/1",
                     "q": "with the contents file",
                     "t": [
                         "Download the file contents.7z. The archive contains text files in csv format, one file per language. Each line of the file describes one book. Format: author, title, series (number in the series), archive, file. The separator is a tab.",
@@ -399,12 +392,77 @@
                     ]
                 },
                 {
-                    "id": "13/2",
+                    "id": "12/2",
                     "q": "with an index file (for experienced users)",
                     "t": [
                         "Download the index file *.inpx. It is a regular zip archive containing text files *.inp, where each line describes one book in the distribution. The line is csv, the separator is a byte with code 04. List of fields: AUTHOR; GENRE; TITLE; SERIES; SERNO; FILE; SIZE; LIBID; DEL; EXT; DATE; LANG; LIBRATE; KEYWORDS; YEAR; SOURCELIB",
                         "You can search the files for text using your favourite text viewer. I recommend the one built into Far Manager.",
                         "This method is useful if you are satisfied with a book without a cover and illustrations. Otherwise, you will still have to download and install the categorizer."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "q": "How to get the book you need without downloading the entire distribution?",
+            "t": [
+                "Let's find out if the book you need is available. <a href=\"#offlink5\">See the instructions above.</a>",
+                "Find out the name of the archive where the book is located",
+                "Download this archive, put it under FLibrary",
+                "Extract the book file",
+                "...",
+                "PROFIT!!!!",
+                "Now the book can be exported from FLibrary."
+            ],
+            "x": [
+                {
+                    "id": "13/0",
+                    "q": "You don't even need to download the archive",
+                    "t": [
+                        ", instead, you can configure the script to download the book you want directly from the Flibusta website. You will also need a console application for downloading files from the Internet (e.g. curl), which you will need to download and install. If you have the standard version of FLibrary installed by the installer, you can use a registry key to configure the script"
+                    ],
+                    "x": [
+                        {
+                            "id": "13/0/0",
+                            "q": "Here it is",
+                            "t": [
+                                "Windows Registry Editor Version 5.00",
+                                "[HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f]",
+                                "\"Name\"=\"Download from Flibusta\"",
+                                "\"Number\"=dword:00000001",
+                                "\"Type\"=\"ExportToDevice\"",
+                                "[HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\b2206572-8ef6-4a69-8f97-71bcb151505d]",
+                                "\"Command\"=\"mkdir\"",
+                                "\"Arguments\"=\"\\\"c:/books/%author%/[%series%]\\\"\"",
+                                "\"Number\"=dword:00000001",
+                                "\"Type\"=\"System\"",
+                                "[HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\d27e10fd-3816-41b1-af5b-a9a17043ad12]",
+                                "\"Command\"=\"D:\\\\programs\\\\curl\\\\bin\\\\curl.exe\"",
+                                "\"Arguments\"=\"-o \\\"c:/books/%author%/[%series%/[%seq_number%-]]%title%.zip\\\" -L \\\"http://x.flibusta.is/b/%lib_id%/download\\\"\"",
+                                "\"Number\"=dword:00000002",
+                                "\"Type\"=\"LaunchApp\"",
+                                "<b>(⊙_⊙) CAUTION!</b> The path to curl in the script must match where you installed it. If you are downloading with a programme other than curl, you must change the command line parameters according to its syntax. Also, adjust the path where the books will be downloaded to your liking. In the suggested registry file, this is c:/books.",
+                                "If you prefer the portable version of FLibrary, then you are most likely an experienced user and will easily configure everything yourself. But if you encounter any difficulties, please ask, I will be happy to help.",
+                                "<b>(⊙_⊙) CAUTION!</b> It will only work for books from Flibusta. Librusec probably offers this option too, but the link will be different. If you know what it is, let me know and we'll add it here."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13/1",
+                    "q": "You can even do without external tools",
+                    "t": [
+                        ", but you will still have to configure the script. However, now you don't need curl, and one command built into FLibrary is enough:",
+                        "Add the script",
+                        "We call it something like \"Download from Flibusta\"",
+                        "Add the command",
+                        "Select the \"Embedded command\" type from the drop-down menu",
+                        "Select the \"Download\" command",
+                        "Set the command parameters (where to put, where to download from). To download from Flibusta to the t:/ftp folder, specify",
+                        "-o \"t:/ftp/%author%/[%series%/[%seq_number%-]]%title%.zip\" \"http://x.flibusta.is/b/%lib_id%/download\"",
+                        "In your case, specify any valid path, such as c:\\books. It is up to you, as long as the drive is in the system and you have write permissions. You can also change the path template. In the context menu of the argument input line, there is a context menu with available macros.",
+                        "Save the result",
+                        "After these simple steps, the menu item ‘Download from Flibusta’ will appear in the context menu of the books, and the book will be downloaded when you select it. If your firewall and internet service provider don't mind, of course."
                     ]
                 }
             ]
@@ -432,67 +490,9 @@
         },
         {
             "id": "15",
-            "q": "How to get the book you need without downloading the entire distribution?",
+            "q": "How do I reset the previously selected e-reader?",
             "t": [
-                "Let's find out if the book you need is available. <a href=\"#offlink5\">See the instructions above.</a>",
-                "Find out the name of the archive where the book is located",
-                "Download this archive, put it under FLibrary",
-                "Extract the book file",
-                "...",
-                "PROFIT!!!!",
-                "Now the book can be exported from FLibrary."
-            ],
-            "x": [
-                {
-                    "id": "15/0",
-                    "q": "You don't even need to download the archive",
-                    "t": [
-                        ", instead, you can configure the script to download the book you want directly from the Flibusta website. You will also need a console application for downloading files from the Internet (e.g. curl), which you will need to download and install. If you have the standard version of FLibrary installed by the installer, you can use a registry key to configure the script"
-                    ],
-                    "x": [
-                        {
-                            "id": "15/0/0",
-                            "q": "Here it is",
-                            "t": [
-                                "Windows Registry Editor Version 5.00",
-                                "[HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f]",
-                                "\"Name\"=\"Download from Flibusta\"",
-                                "\"Number\"=dword:00000001",
-                                "\"Type\"=\"ExportToDevice\"",
-                                "[HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\b2206572-8ef6-4a69-8f97-71bcb151505d]",
-                                "\"Command\"=\"mkdir\"",
-                                "\"Arguments\"=\"\\\"c:/books/%author%/[%series%]\\\"\"",
-                                "\"Number\"=dword:00000001",
-                                "\"Type\"=\"System\"",
-                                "[HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary\\Scripts\\933c6488-b061-44d6-82fa-6257a6144f0f\\d27e10fd-3816-41b1-af5b-a9a17043ad12]",
-                                "\"Command\"=\"D:\\\\programs\\\\curl\\\\bin\\\\curl.exe\"",
-                                "\"Arguments\"=\"-o \\\"c:/books/%author%/[%series%/[%seq_number%-]]%title%.zip\\\" -L \\\"http://x.flibusta.is/b/%lib_id%/download\\\"\"",
-                                "\"Number\"=dword:00000002",
-                                "\"Type\"=\"LaunchApp\"",
-                                "<b>(⊙_⊙) CAUTION!</b> The path to curl in the script must match where you installed it. If you are downloading with a programme other than curl, you must change the command line parameters according to its syntax. Also, adjust the path where the books will be downloaded to your liking. In the suggested registry file, this is c:/books.",
-                                "If you prefer the portable version of FLibrary, then you are most likely an experienced user and will easily configure everything yourself. But if you encounter any difficulties, please ask, I will be happy to help.",
-                                "<b>(⊙_⊙) CAUTION!</b> It will only work for books from Flibusta. Librusec probably offers this option too, but the link will be different. If you know what it is, let me know and we'll add it here."
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "15/1",
-                    "q": "You can even do without external tools",
-                    "t": [
-                        ", but you will still have to configure the script. However, now you don't need curl, and one command built into FLibrary is enough:",
-                        "Add the script",
-                        "We call it something like \"Download from Flibusta\"",
-                        "Add the command",
-                        "Select the \"Embedded command\" type from the drop-down menu",
-                        "Select the \"Download\" command",
-                        "Set the command parameters (where to put, where to download from). To download from Flibusta to the t:/ftp folder, specify",
-                        "-o \"t:/ftp/%author%/[%series%/[%seq_number%-]]%title%.zip\" \"http://x.flibusta.is/b/%lib_id%/download\"",
-                        "In your case, specify any valid path, such as c:\\books. It is up to you, as long as the drive is in the system and you have write permissions. You can also change the path template. In the context menu of the argument input line, there is a context menu with available macros.",
-                        "Save the result",
-                        "After these simple steps, the menu item ‘Download from Flibusta’ will appear in the context menu of the books, and the book will be downloaded when you select it. If your firewall and internet service provider don't mind, of course."
-                    ]
-                }
+                "Launch the program to read the book while holding down the Shift, Ctrl, or Alt key"
             ]
         },
         {
@@ -553,13 +553,20 @@
         },
         {
             "id": "17",
+            "q": "Is it possible to transfer the list of books I've read from MHL to FLibrary?",
+            "t": [
+                "Yes. We save user data from MHL and import it into FLibrary. Go to the \"File / User Data / Load...\" menu; in the file selection dialog that appears, change the filter to \"MyHomeLib Export Files\" or \"All Files,\" select the file saved from MHL, and voilà."
+            ]
+        },
+        {
+            "id": "18",
             "q": "What's with all the mess with authors and series?",
             "t": [
                 "This is the result of merging Flibusta and Librusec into a single distribution. Indeed, the inconsistency in the naming of authors and series on Flibusta and Librusec is a serious problem. Plus, libraries have different approaches to resolving conflicts between authors with the same name. Because of this, some names here may either “split” or “collapse,” resulting in books by the same author in a distribution being “linked” to different authors, and vice versa, books by different authors being attributed to the same author. The same applies to series."
             ],
             "x": [
                 {
-                    "id": "17/0",
+                    "id": "18/0",
                     "q": "So, there's nothing we can do about it?",
                     "t": [
                         "Unfortunately, it is unlikely that we will be able to coordinate this distribution at the level of network libraries that are sources of books. We can only make minor corrections. If you notice that any author or series has been “split” or “merged,” please let me know. I will make a local edit, and the next monthly update will correct the situation."
@@ -568,7 +575,7 @@
             ]
         },
         {
-            "id": "18",
+            "id": "19",
             "q": "Is it okay that my antivirus software is complaining about the distribution?",
             "t": [
                 "It is ok. Currently, there are several known reasons why antivirus software may trigger alerts for this distribution.",
@@ -583,7 +590,7 @@
             ]
         },
         {
-            "id": "19",
+            "id": "20",
             "q": "I found a bug in the program, what should I do?",
             "t": [
                 "Ensure that the bug is present in the latest release of FLibrary. This is especially true for typos, many of which were found and fixed while writing these instructions.",
@@ -592,7 +599,7 @@
             ]
         },
         {
-            "id": "20",
+            "id": "21",
             "q": "They promise fast FLibrary performance, but in reality it's slow. Are they lying?",
             "t": [
                 "At least one user experienced interference with the program from Microsoft Defender, which manifested itself in slow performance and increased RAM consumption. Configuring Defender helped.",
@@ -604,21 +611,21 @@
             ]
         },
         {
-            "id": "21",
+            "id": "22",
             "q": "There are some ‘entertainment’ options in the menu. I checked all the boxes, what next?",
             "t": [
                 "Entertainment content is displayed instead of an empty annotation when no books are selected in the books window."
             ],
             "x": [
                 {
-                    "id": "21/0",
+                    "id": "22/0",
                     "q": "For example",
                     "t": [
                         " "
                     ]
                 },
                 {
-                    "id": "21/1",
+                    "id": "22/1",
                     "q": "I see an empty annotation, where are the jokes?",
                     "t": [
                         "For this to work, you need access to a) the internet, and b) services that provide content. Keep in mind that some services may stop working. And some are not accessible from your location without a VPN.",
@@ -626,7 +633,7 @@
                     ]
                 },
                 {
-                    "id": "21/2",
+                    "id": "22/2",
                     "q": "Why is everything in English?",
                     "t": [
                         "If you find (or set up your own) a similar public service (without registration or SMS) in another language, let me know and I'll add it."
@@ -635,7 +642,7 @@
             ]
         },
         {
-            "id": "22",
+            "id": "23",
             "q": "Why are there so many FLibrary installers in the distribution?",
             "t": [
                 "Three Rings for the Elven-kings under the sky",
@@ -644,7 +651,7 @@
             ],
             "x": [
                 {
-                    "id": "22/0",
+                    "id": "23/0",
                     "q": "I FLibrary_setup.exe",
                     "t": [
                         "Generated by InnoSetup. The main installer, the most convenient and functional. Allows you to",
@@ -655,7 +662,7 @@
                     ]
                 },
                 {
-                    "id": "22/1",
+                    "id": "23/1",
                     "q": "II FLibrary_setup.msi",
                     "t": [
                         "Microsoft Windows Installer. Most likely, I just don't know how to cook it, but",
@@ -666,14 +673,14 @@
                     ]
                 },
                 {
-                    "id": "22/2",
+                    "id": "23/2",
                     "q": "III FLibrary_portable.7z",
                     "t": [
                         "This is not an installer at all, but simply an archive with binaries. You will have to unpack and configure the launch shortcuts yourself, manually. A program installed in this way does not store its settings in the registry, but in a nearby ini file, like a portable one. Therefore, you need to unpack it where you have write access."
                     ]
                 },
                 {
-                    "id": "22/3",
+                    "id": "23/3",
                     "q": "So which one should I choose?",
                     "t": [
                         "The contents of all installers are identical, so you can choose any one based on your preferences and experience. However, I recommend the first option, as that is the one I use myself. The other two are tested rarely."
@@ -682,14 +689,14 @@
             ]
         },
         {
-            "id": "23",
+            "id": "24",
             "q": "Where does the program store ...?",
             "t": [
                 " "
             ],
             "x": [
                 {
-                    "id": "23/0",
+                    "id": "24/0",
                     "q": "settings",
                     "t": [
                         "Standard version (installed by the installer) - registry branch HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary",
@@ -697,7 +704,7 @@
                     ]
                 },
                 {
-                    "id": "23/1",
+                    "id": "24/1",
                     "q": "work log",
                     "t": [
                         "File %TEMP%\\HomeCompa.FLibrary.log",
@@ -707,7 +714,7 @@
             ]
         },
         {
-            "id": "24",
+            "id": "25",
             "q": "Can I have a complete list of FLibrary's hidden settings?",
             "t": [
                 "This section describes features that few people need, so they are not included in the interface in order to avoid clutter.",
@@ -774,14 +781,14 @@
             ],
             "x": [
                 {
-                    "id": "24/0",
+                    "id": "25/0",
                     "q": "I read the FAQ about hidden settings. “I didn't understand anything, but it was interesting ©”",
                     "t": [
                         "That's strange, no one has complained before you. Well, let me explain. You wanted to replace the rate star symbol..."
                     ],
                     "x": [
                         {
-                            "id": "24/0/0",
+                            "id": "25/0/0",
                             "q": "If you have the portable version of FLibrary, then:",
                             "t": [
                                 "Close FLibrary",
@@ -793,7 +800,7 @@
                             ]
                         },
                         {
-                            "id": "24/0/1",
+                            "id": "25/0/1",
                             "q": "If your version of FLibrary was installed using the installer, then:",
                             "t": [
                                 "Close FLibrary",
