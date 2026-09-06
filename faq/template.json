@@ -186,107 +186,14 @@
             "q": "main",
             "t": [
                 "<p>%1</p>",
-                "[q0]",
-                "[q1]",
-                "[q2]",
-                "[q3]",
-                ""
-            ],
-            "x": [
-                {
-                    "id": "2/0",
-                    "q": "subtitle",
-                    "t": [
-                        "[p subtitle]%1</p>",
-                        "[p subtitle]%2</p>",
-                        ""
-                    ]
-                },
-                {
-                    "id": "2/1",
-                    "q": "subtitle",
-                    "t": [
-                        "[p subtitle]%1</p>",
-                        ""
-                    ]
-                },
-                {
-                    "id": "2/2",
-                    "q": "subtitle",
-                    "t": [
-                        "[ul top10]",
-                        "<li>%1</li>",
-                        "<li>%2</li>",
-                        "</ul>",
-                        "[p subtitle]%3</p>",
-                        ""
-                    ]
-                },
-                {
-                    "id": "2/3",
-                    "q": "subtitle",
-                    "t": [
-                        "<p>%1</p>",
-                        "[q0]",
-                        "[q1]",
-                        "[q3]",
-                        "<p>%2</p>",
-                        "<ul>",
-                        "<li>%3</li>",
-                        "<li>%4</li>",
-                        "<li>%5</li>",
-                        "[q2]",
-                        "</ul>",
-                        ""
-                    ],
-                    "x": [
-                        {
-                            "id": "2/3/0",
-                            "q": "subtitle",
-                            "t": [
-                                "[p sub_subtitle]%1</p>",
-                                ""
-                            ]
-                        },
-                        {
-                            "id": "2/3/1",
-                            "q": "subtitle",
-                            "t": [
-                                "[p sub_subtitle]%1</p>",
-                                "[q0]",
-                                ""
-                            ],
-                            "x": [
-                                {
-                                    "id": "2/3/1/0",
-                                    "q": "sub_subtitle",
-                                    "t": [
-                                        "[p sub_subtitle]%1</p>",
-                                        ""
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "id": "2/3/2",
-                            "q": "sub_subtitle",
-                            "t": [
-                                "[ul none_dot]",
-                                "<li>%1</li>",
-                                "<li>%2</li>",
-                                "<li>%3</li>",
-                                "</ul>"
-                            ]
-                        },
-                        {
-                            "id": "2/3/3",
-                            "q": "subtitle",
-                            "t": [
-                                "[p sub_subtitle]%1</p>"
-                            ]
-                        }
-                    ]
-                }
+                "<ul>",
+                "<li>%2</li>",
+                "<ul>",
+                "<li>%3 <a href=\"https://github.com/AlekPet/inpx-web\"  target=\"_blank\">AlekPet</a></li>",
+                "<li>%3 <a href=\"https://github.com/AceAsket/inpx-web\" target=\"_blank\">AceAsket</a></li>",
+                "</ul>",
+                "<li>%4 <a href=\"https://github.com/Dicur3x/MyHomeLib\" target=\"_blank\">Dicur3x</a></li>",
+                "</ul>"
             ]
         },
         {

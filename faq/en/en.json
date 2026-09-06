@@ -85,85 +85,10 @@
             "id": "2",
             "q": "Will my favorite cataloger work with this distribution?",
             "t": [
-                "No, it won't."
-            ],
-            "x": [
-                {
-                    "id": "2/0",
-                    "q": "And MyHomeLib won't?",
-                    "t": [
-                        "And MyHomeLib won't.",
-                        "At least, not to the extent that it should be. Yes, the *.inpx index file in the distribution is compatible with MHL, meaning you can create a collection. But why? You won't be able to export books from it. And the collection itself won't be correct, because MHL doesn't support multi-series books, so it will create multiple copies of books that are part of several series. In short, it's useless."
-                    ]
-                },
-                {
-                    "id": "2/1",
-                    "q": "What about xxxLib for yyyOS?",
-                    "t": [
-                        "I have neither the opportunity nor the desire to check all the catalogizers available on the Internet for compatibility with the storage format I have invented. But I am almost certain that it will not work. Check it yourself and let the public know. I will add the result of your check here, with a link to you, of course."
-                    ]
-                },
-                {
-                    "id": "2/2",
-                    "q": "But why?",
-                    "t": [
-                        "7z",
-                        "Images separated from fb2",
-                        "Well, catalogers that support 7z archives may work, but with one limitation: the books they extract will be without pictures."
-                    ]
-                },
-                {
-                    "id": "2/3",
-                    "q": "What should I do?",
-                    "t": [
-                        "Use FLibrary",
-                        "You could also try",
-                        "<a href=https://github.com/AlekPet/inpx-web>Fork of inpx-web</a> with support for the distribution format",
-                        "<a href=https://github.com/devenrgy/flbs>Command-line utility</a> for searching for and exporting books",
-                        "Console <a href=\"https://codeberg.org/aku4wb/flbs\" target=\"_blank\">script</a> for Linux, working with this distribution, from the respected razobit"
-                    ],
-                    "x": [
-                        {
-                            "id": "2/3/0",
-                            "q": "I can't, I have Mac",
-                            "t": [
-                                "Click <a href=\"https://github.com/heimdallr/books/releases\" target=\"_blank\">here</a>"
-                            ]
-                        },
-                        {
-                            "id": "2/3/1",
-                            "q": "I can't, I have Windows 7",
-                            "t": [
-                                "Click <a href=\"https://drive.google.com/drive/folders/170DKcd3saPqmr2v--BYpOiTT97i6QsF3?usp=drive_link\" target=\"_blank\">here</a>"
-                            ],
-                            "x": [
-                                {
-                                    "id": "2/3/1/0",
-                                    "q": "people write to us",
-                                    "t": [
-                                        "For Windows 7/2008R2 users, <a href=\"https://github.com/YuZhouRen86/VxKex-NEXT\" target=\"_blank\">VxKek</a> can be used on Windows 7. The most important thing is that the machine is completely isolated from the network or in a completely closed network circuit. © HedgehogInTheCPP"
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "id": "2/3/2",
-                            "q": "what it can do",
-                            "t": [
-                                "search by author",
-                                "search by book title",
-                                "extracting a book with images in fb2 format"
-                            ]
-                        },
-                        {
-                            "id": "2/3/3",
-                            "q": "I can't, I have Linux",
-                            "t": [
-                                "Click <a href=\"https://github.com/heimdallr/books/releases\" target=\"_blank\">here</a>"
-                            ]
-                        }
-                    ]
-                }
+                "So far, the following tools are known to support the format of this release:",
+                "Forks of inpx-web",
+                "By a respected",
+                "Fork of MyHomeLib by a respected"
             ]
         },
         {
