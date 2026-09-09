@@ -6,3 +6,4 @@
 *.log
 
 !common/replace.sql
+!common/hash.sql
