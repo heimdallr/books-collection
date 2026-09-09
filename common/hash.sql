@@ -1,8 +1,3 @@
---
--- Файл сгенерирован с помощью SQLiteStudio v3.2.1 в Ср сен 9 18:40:18 2026
---
--- Использованная кодировка текста: UTF-8
---
 PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
 
@@ -114,8 +109,16 @@ CREATE TABLE SourceLibrary (
                                  UNIQUE
 );
 
-INSERT INTO SourceLibrary (SourceLibraryId, Name) VALUES (1, 'flibusta');
-INSERT INTO SourceLibrary (SourceLibraryId, Name) VALUES (2, 'librusec');
+INSERT INTO SourceLibrary (Name) VALUES ('flibusta');
+INSERT INTO SourceLibrary (Name) VALUES ('librusec');
+
+-- Индекс: IS_File_OriginId
+DROP INDEX IF EXISTS IS_File_OriginId;
+
+CREATE INDEX IS_File_OriginId ON File (
+    OriginId
+);
+
 
 -- Индекс: IX_FK_File_FolderId
 DROP INDEX IF EXISTS IX_FK_File_FolderId;
@@ -162,6 +165,14 @@ DROP INDEX IF EXISTS IX_Image_Md5;
 
 CREATE INDEX IX_Image_Md5 ON Image (
     Md5
+);
+
+
+-- Индекс: IX_Section_ParentSectionId
+DROP INDEX IF EXISTS IX_Section_ParentSectionId;
+
+CREATE INDEX IX_Section_ParentSectionId ON Section (
+    ParentSectionId
 );
 
 
