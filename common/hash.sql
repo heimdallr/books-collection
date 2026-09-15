@@ -23,6 +23,39 @@ CREATE TABLE File (
 );
 
 
+-- Таблица: FileCustom
+CREATE TABLE FileCustom (
+    FileId      INTEGER         PRIMARY KEY
+                                REFERENCES File (FileId) ON DELETE CASCADE
+                                NOT NULL,
+    Author      VARCHAR (1024),
+    Title       VARCHAR (1024),
+    Genre       VARCHAR (64),
+    Updated     DATE,
+    Lang        VARCHAR (3),
+    Series      VARCHAR (1024),
+    Annotation  VARCHAR (10240),
+    Keywords    VARCHAR (1024),
+    PublishYear VARCHAR (16) 
+);
+
+
+-- Таблица: FileCustomImport
+CREATE TABLE FileCustomImport (
+    Folder      VARCHAR (64)    NOT NULL,
+    File        VARCHAR (64)    NOT NULL,
+    Author      VARCHAR (1024),
+    Title       VARCHAR (1024),
+    Genre       VARCHAR (64),
+    Updated     DATE,
+    Lang        VARCHAR (3),
+    Series      VARCHAR (1024),
+    Annotation  VARCHAR (10240),
+    Keywords    VARCHAR (1024),
+    PublishYear VARCHAR (16) 
+);
+
+
 -- Таблица: Folder
 CREATE TABLE Folder (
     FolderId        INTEGER      PRIMARY KEY AUTOINCREMENT
@@ -161,6 +194,26 @@ CREATE INDEX IX_Folder_SourceLibraryId ON Folder (
 CREATE INDEX IX_Image_Md5 ON Image (
     Md5
 );
+
+
+-- Представление: CurrentFileCustom
+CREATE VIEW CurrentFileCustom AS
+    SELECT d.Name AS Folder,
+           f.Name AS File,
+           c.Author,
+           c.Title,
+           c.Genre,
+           c.Updated,
+           c.Lang,
+           c.Series,
+           c.Annotation,
+           c.Keywords,
+           c.PublishYear
+      FROM FileCustom c
+           JOIN
+           File f ON f.FileId = c.FileId
+           JOIN
+           Folder d ON d.FolderId = f.FolderId;
 
 
 -- Представление: CurrentReplacement
