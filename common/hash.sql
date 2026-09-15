@@ -25,16 +25,15 @@ CREATE TABLE File (
 
 -- Таблица: FileCustom
 CREATE TABLE FileCustom (
-    FileId      INTEGER         PRIMARY KEY
-                                REFERENCES File (FileId) ON DELETE CASCADE
-                                NOT NULL,
+    FileId      INTEGER        PRIMARY KEY
+                               REFERENCES File (FileId) ON DELETE CASCADE
+                               NOT NULL,
     Author      VARCHAR (1024),
     Title       VARCHAR (1024),
     Genre       VARCHAR (64),
     Updated     DATE,
     Lang        VARCHAR (3),
     Series      VARCHAR (1024),
-    Annotation  VARCHAR (10240),
     Keywords    VARCHAR (1024),
     PublishYear VARCHAR (16) 
 );
@@ -42,15 +41,14 @@ CREATE TABLE FileCustom (
 
 -- Таблица: FileCustomImport
 CREATE TABLE FileCustomImport (
-    Folder      VARCHAR (64)    NOT NULL,
-    File        VARCHAR (64)    NOT NULL,
+    Folder      VARCHAR (64)   NOT NULL,
+    File        VARCHAR (64)   NOT NULL,
     Author      VARCHAR (1024),
     Title       VARCHAR (1024),
     Genre       VARCHAR (64),
     Updated     DATE,
     Lang        VARCHAR (3),
     Series      VARCHAR (1024),
-    Annotation  VARCHAR (10240),
     Keywords    VARCHAR (1024),
     PublishYear VARCHAR (16) 
 );
@@ -206,7 +204,6 @@ CREATE VIEW CurrentFileCustom AS
            c.Updated,
            c.Lang,
            c.Series,
-           c.Annotation,
            c.Keywords,
            c.PublishYear
       FROM FileCustom c
