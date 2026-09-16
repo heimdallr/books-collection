@@ -15,7 +15,7 @@ CREATE TABLE File (
     SimHash     CHAR (16)       NOT NULL,
     Title       VARCHAR (1024),
     Annotation  VARCHAR (10240),
-    OriginId    INTEGER         REFERENCES File (FileId),
+    OriginId    INTEGER         REFERENCES File (FileId) ON DELETE SET NULL,
     UNIQUE (
         FolderId,
         Name
@@ -117,15 +117,11 @@ CREATE TABLE Section (
                               NOT NULL,
     FileId          INTEGER   REFERENCES File (FileId) ON DELETE CASCADE
                               NOT NULL,
-    ParentSectionId INTEGER,
+    ParentSectionId INTEGER   REFERENCES Section (SectionId) ON DELETE SET NULL,
     WordCount       INTEGER   NOT NULL,
     SymbolCount     INTEGER   NOT NULL,
     SimHash         CHAR (16) NOT NULL,
-    Hash            CHAR (32) NOT NULL,
-    FOREIGN KEY (
-        ParentSectionId
-    )
-    REFERENCES Section (SectionId) ON DELETE CASCADE
+    Hash            CHAR (32) NOT NULL
 );
 
 
