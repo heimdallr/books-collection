@@ -3,19 +3,20 @@ BEGIN TRANSACTION;
 
 -- Таблица: File
 CREATE TABLE File (
-    FileId      INTEGER         PRIMARY KEY AUTOINCREMENT
-                                NOT NULL,
-    FolderId    INTEGER         REFERENCES Folder (FolderId) ON DELETE CASCADE
-                                NOT NULL,
-    Name        VARCHAR (256)   NOT NULL,
-    Md5         CHAR (32)       NOT NULL,
-    Hash        CHAR (32)       NOT NULL,
-    WordCount   INTEGER         NOT NULL,
-    SymbolCount INTEGER         NOT NULL,
-    SimHash     CHAR (16)       NOT NULL,
-    Title       VARCHAR (1024),
-    Annotation  VARCHAR (10240),
-    OriginId    INTEGER         REFERENCES File (FileId) ON DELETE SET NULL,
+    FileId       INTEGER         PRIMARY KEY AUTOINCREMENT
+                                 NOT NULL,
+    FolderId     INTEGER         REFERENCES Folder (FolderId) ON DELETE CASCADE
+                                 NOT NULL,
+    Name         VARCHAR (256)   NOT NULL,
+    Md5          CHAR (32)       NOT NULL,
+    Hash         CHAR (32)       NOT NULL,
+    WordCount    INTEGER         NOT NULL,
+    SymbolCount  INTEGER         NOT NULL,
+    SimHash      CHAR (16)       NOT NULL,
+    Title        VARCHAR (1024),
+    Annotation   VARCHAR (10240),
+    OriginId     INTEGER         REFERENCES File (FileId) ON DELETE SET NULL,
+    NextOriginId INTEGER         REFERENCES File (FileId) ON DELETE SET NULL,
     UNIQUE (
         FolderId,
         Name
@@ -145,6 +146,12 @@ CREATE INDEX IX_File_Hash ON File (
 -- Индекс: IX_FK_File_FolderId
 CREATE INDEX IX_FK_File_FolderId ON File (
     FolderId
+);
+
+
+-- Индекс: IX_FK_File_NextOriginId
+CREATE INDEX IX_FK_File_NextOriginId ON File (
+    NextOriginId
 );
 
 
