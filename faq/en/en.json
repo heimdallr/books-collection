@@ -478,20 +478,27 @@
         },
         {
             "id": "17",
+            "q": "I want to set up the collection on my home server. Is it possible to run FLibrary in non-GUI mode?",
+            "t": [
+                "That's not necessary. FLibrary does not include an HTTP server, it is implemented by a separate utility called opds, which can be found in the program's installation folder. You need to configure opds to start automatically on your server."
+            ]
+        },
+        {
+            "id": "18",
             "q": "Is it possible to transfer the list of books I've read from MHL to FLibrary?",
             "t": [
                 "Yes. We save user data from MHL and import it into FLibrary. Go to the \"File / User Data / Load...\" menu; in the file selection dialog that appears, change the filter to \"MyHomeLib Export Files\" or \"All Files,\" select the file saved from MHL, and voilà."
             ]
         },
         {
-            "id": "18",
+            "id": "19",
             "q": "What's with all the mess with authors and series?",
             "t": [
                 "This is the result of merging Flibusta and Librusec into a single distribution. Indeed, the inconsistency in the naming of authors and series on Flibusta and Librusec is a serious problem. Plus, libraries have different approaches to resolving conflicts between authors with the same name. Because of this, some names here may either “split” or “collapse,” resulting in books by the same author in a distribution being “linked” to different authors, and vice versa, books by different authors being attributed to the same author. The same applies to series."
             ],
             "x": [
                 {
-                    "id": "18/0",
+                    "id": "19/0",
                     "q": "So, there's nothing we can do about it?",
                     "t": [
                         "Unfortunately, it is unlikely that we will be able to coordinate this distribution at the level of network libraries that are sources of books. We can only make minor corrections. If you notice that any author or series has been “split” or “merged,” please let me know. I will make a local edit, and the next monthly update will correct the situation."
@@ -500,7 +507,7 @@
             ]
         },
         {
-            "id": "19",
+            "id": "20",
             "q": "Is it okay that my antivirus software is complaining about the distribution?",
             "t": [
                 "It is ok. Currently, there are several known reasons why antivirus software may trigger alerts for this distribution.",
@@ -515,7 +522,7 @@
             ]
         },
         {
-            "id": "20",
+            "id": "21",
             "q": "I found a bug in the program, what should I do?",
             "t": [
                 "Ensure that the bug is present in the latest release of FLibrary. This is especially true for typos, many of which were found and fixed while writing these instructions.",
@@ -524,7 +531,7 @@
             ]
         },
         {
-            "id": "21",
+            "id": "22",
             "q": "They promise fast FLibrary performance, but in reality it's slow. Are they lying?",
             "t": [
                 "At least one user experienced interference with the program from Microsoft Defender, which manifested itself in slow performance and increased RAM consumption. Configuring Defender helped.",
@@ -536,21 +543,21 @@
             ]
         },
         {
-            "id": "22",
+            "id": "23",
             "q": "There are some ‘entertainment’ options in the menu. I checked all the boxes, what next?",
             "t": [
                 "Entertainment content is displayed instead of an empty annotation when no books are selected in the books window."
             ],
             "x": [
                 {
-                    "id": "22/0",
+                    "id": "23/0",
                     "q": "For example",
                     "t": [
                         " "
                     ]
                 },
                 {
-                    "id": "22/1",
+                    "id": "23/1",
                     "q": "I see an empty annotation, where are the jokes?",
                     "t": [
                         "For this to work, you need access to a) the internet, and b) services that provide content. Keep in mind that some services may stop working. And some are not accessible from your location without a VPN.",
@@ -558,7 +565,7 @@
                     ]
                 },
                 {
-                    "id": "22/2",
+                    "id": "23/2",
                     "q": "Why is everything in English?",
                     "t": [
                         "If you find (or set up your own) a similar public service (without registration or SMS) in another language, let me know and I'll add it."
@@ -567,7 +574,7 @@
             ]
         },
         {
-            "id": "23",
+            "id": "24",
             "q": "Why are there so many FLibrary installers in the distribution?",
             "t": [
                 "Three Rings for the Elven-kings under the sky",
@@ -576,7 +583,7 @@
             ],
             "x": [
                 {
-                    "id": "23/0",
+                    "id": "24/0",
                     "q": "I FLibrary_setup.exe",
                     "t": [
                         "Generated by InnoSetup. The main installer, the most convenient and functional. Allows you to",
@@ -587,7 +594,7 @@
                     ]
                 },
                 {
-                    "id": "23/1",
+                    "id": "24/1",
                     "q": "II FLibrary_setup.msi",
                     "t": [
                         "Microsoft Windows Installer. Most likely, I just don't know how to cook it, but",
@@ -598,14 +605,14 @@
                     ]
                 },
                 {
-                    "id": "23/2",
+                    "id": "24/2",
                     "q": "III FLibrary_portable.7z",
                     "t": [
                         "This is not an installer at all, but simply an archive with binaries. You will have to unpack and configure the launch shortcuts yourself, manually. A program installed in this way does not store its settings in the registry, but in a nearby ini file, like a portable one. Therefore, you need to unpack it where you have write access."
                     ]
                 },
                 {
-                    "id": "23/3",
+                    "id": "24/3",
                     "q": "So which one should I choose?",
                     "t": [
                         "The contents of all installers are identical, so you can choose any one based on your preferences and experience. However, I recommend the first option, as that is the one I use myself. The other two are tested rarely."
@@ -614,14 +621,14 @@
             ]
         },
         {
-            "id": "24",
+            "id": "25",
             "q": "Where does the program store ...?",
             "t": [
                 " "
             ],
             "x": [
                 {
-                    "id": "24/0",
+                    "id": "25/0",
                     "q": "settings",
                     "t": [
                         "Standard version (installed by the installer) - registry branch HKEY_CURRENT_USER\\SOFTWARE\\HomeCompa\\Flibrary",
@@ -629,7 +636,7 @@
                     ]
                 },
                 {
-                    "id": "24/1",
+                    "id": "25/1",
                     "q": "work log",
                     "t": [
                         "File %TEMP%\\HomeCompa.FLibrary.log",
@@ -639,7 +646,7 @@
             ]
         },
         {
-            "id": "25",
+            "id": "26",
             "q": "Can I have a complete list of FLibrary's hidden settings?",
             "t": [
                 "This section describes features that few people need, so they are not included in the interface in order to avoid clutter.",
@@ -707,14 +714,14 @@
             ],
             "x": [
                 {
-                    "id": "25/0",
+                    "id": "26/0",
                     "q": "I read the FAQ about hidden settings. “I didn't understand anything, but it was interesting ©”",
                     "t": [
                         "That's strange, no one has complained before you. Well, let me explain. You wanted to replace the rate star symbol..."
                     ],
                     "x": [
                         {
-                            "id": "25/0/0",
+                            "id": "26/0/0",
                             "q": "If you have the portable version of FLibrary, then:",
                             "t": [
                                 "Close FLibrary",
@@ -726,7 +733,7 @@
                             ]
                         },
                         {
-                            "id": "25/0/1",
+                            "id": "26/0/1",
                             "q": "If your version of FLibrary was installed using the installer, then:",
                             "t": [
                                 "Close FLibrary",
