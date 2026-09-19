@@ -710,7 +710,8 @@
                 "v2.7.1 `Preferences/Books/KeepCheck`, строка (true | false) по умолчанию false, при установка в `true` галки на книгах перестанут сбрасываться после экспорта.",
                 "v2.7.1 `Preferences/Books/KeepHistory`, строка (true | false) по умолчанию false, при установка в `true` история переходов по книгам будет переживать перезапуск программы.",
                 "v2.7.1 `Preferences/Books/SeparatedViewModeByNavigation, строка (true | false) по умолчанию false, при установка в `true` режим показа книг Список/Дерево будет запоминаться для разделов навигации раздельно.",
-                "v2.7.1 `Preferences/ToolbarWithMainMenu, строка (true | false) по умолчанию false, при установка в `true` панель управления будет показываться в строке главного меню."
+                "v2.7.1 `Preferences/ToolbarWithMainMenu, строка (true | false) по умолчанию false, при установка в `true` панель управления будет показываться в строке главного меню.",
+                "v2.7.2 `Preferences/Books/JoinBooksWithSameTitles`, строка (true | false) по умолчанию true, установка в `false` отключает группировку одноимённых книг в режиме дерева."
             ],
             "x": [
                 {
