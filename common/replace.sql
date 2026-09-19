@@ -24,6 +24,7 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 36085, 'Сергей', NULL, 'Лукьяненко');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 72206, 'Константин', 'Георгиевич', 'Калбазов');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 142441, 'Константин', 'Георгиевич', 'Калбазов');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 321888, 'Александр', 'Сергеевич', 'Пушкин');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 204458, 'Коллектив авторов', '--', 'Составитель С. Лукьяненко');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 316127, 'Патрик', 'Дж.', 'Холл');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 346366, 'Гоблин', NULL, 'MeXXanik');
