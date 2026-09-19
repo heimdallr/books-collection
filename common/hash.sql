@@ -93,6 +93,7 @@ CREATE TABLE Image (
     Width       INTEGER       NOT NULL,
     Height      INTEGER       NOT NULL,
     PHash       CHAR (16)     NOT NULL,
+    PHash2      CHAR (16)     NOT NULL,
     Md5         CHAR (32)     NOT NULL,
     Linked      BOOLEAN       NOT NULL,
     HasAlpha    BOOLEAN       NOT NULL,
@@ -237,3 +238,4 @@ CREATE VIEW CurrentReplacement AS
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
+PRAGMA journal_mode = WAL;
