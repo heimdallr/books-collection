@@ -25,7 +25,8 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 72206, 'Константин', 'Георгиевич', 'Калбазов');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 142441, 'Константин', 'Георгиевич', 'Калбазов');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 321888, 'Александр', 'Сергеевич', 'Пушкин');
-INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 204458, 'Коллектив авторов', '--', 'Составитель С. Лукьяненко');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (1, 340886, NULL, NULL, 'Автор Неизвестен -- Народные сказки');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 204458, NULL, NULL, 'Коллектив авторов -- Составитель С. Лукьяненко');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 316127, 'Патрик', 'Дж.', 'Холл');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 346366, 'Гоблин', NULL, 'MeXXanik');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 342321, 'Гоблин', NULL, 'MeXXanik');
@@ -33,6 +34,7 @@ INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 51954, 'Екатерина', NULL, 'Насута');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 289624, 'Роман', NULL, 'Романович');
 INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 22302, 'Гоар', 'Карлосовна', 'Маркосян-Каспер');
+INSERT INTO Author (LibraryId, AuthorId, FirstName, MiddleName, LastName) VALUES (2, 27899, NULL, NULL, 'Автор Неизвестен -- Мифы. Легенды. Эпос. Сказания');
 
 -- Таблица: AuthorList
 CREATE TABLE AuthorList (
