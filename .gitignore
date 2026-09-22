@@ -1,9 +1,5 @@
-*.zip
-*.sql
-*.7z
-*.tmp
-*.xml
+*/download/*.zip
+*/sql/*.sql
+*/sql/*.zip
+/faq/*/*.html
 *.log
-
-!common/replace.sql
-!common/hash.sql
