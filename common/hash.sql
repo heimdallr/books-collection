@@ -13,6 +13,7 @@ CREATE TABLE File (
     WordCount    INTEGER         NOT NULL,
     SymbolCount  INTEGER         NOT NULL,
     SimHash      CHAR (16)       NOT NULL,
+    Isbn         VARCHAR (32),
     Title        VARCHAR (1024),
     Annotation   VARCHAR (10240),
     OriginId     INTEGER         REFERENCES File (FileId) ON DELETE SET NULL,
