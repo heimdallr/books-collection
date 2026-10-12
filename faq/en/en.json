@@ -717,7 +717,8 @@
                 "read - for books retrieved by a reader application opened from FLibrary",
                 "export - for books exported from FLibrary for reading on external devices",
                 "inpx - for books saved from FLibrary as an inpx collection",
-                "web - for books exported via the web-interface"
+                "web - for books exported via the web-interface",
+                "v2.7.3 `Preferences/MenuCustomization/ThemeSeparated`, a string (true | false) with default of true. Setting it to `false` disables the separation of custom icons by color scheme."
             ],
             "x": [
                 {
