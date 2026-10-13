@@ -718,6 +718,9 @@
                 "export - for books exported from FLibrary for reading on external devices",
                 "inpx - for books saved from FLibrary as an inpx collection",
                 "web - for books exported via the web-interface",
+                "v2.7.3 `Preferences/StatusBar/Font`, section for configuring the status bar font:",
+                "family - font family, default is Segoe UI",
+                "size - font size, default is 6",
                 "v2.7.3 `Preferences/MenuCustomization/ThemeSeparated`, a string (true | false) with default of true. Setting it to `false` disables the separation of custom icons by color scheme."
             ],
             "x": [
