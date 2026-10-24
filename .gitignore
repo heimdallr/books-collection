@@ -4,3 +4,4 @@
 /faq/*/*.html
 /recoded/*
 *.log
+*.tmp
