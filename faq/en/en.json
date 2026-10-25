@@ -677,6 +677,7 @@
                 "v2.5.4 `Preferences/RelativePaths', string (true | false) false by default - when set to `true`, the program will save relative paths (reader, scripts, etc.) in the settings.",
                 "v2.5.5 `Preferences/ReadMark - section for configuring the mark for read books. Parameters:",
                 "color - color of mark for books read - DWORD number, corresponding to the color in the AABBGGRR format, where AA is the transparency value, and BBGGRR are the values for each of the RGB colors (note the color sequence => B-G-R!). It is also worth considering that AA is inverted, i.e. with a transparency value of FF (100% opaque), the color will become completely transparent and will not be visible.",
+                "backgroundColor - the background color of a row representing a book that has been read in the table/tree.",
                 "width - DWORD number, `0` by default - width of the read books label. A value of ‘0’ disables the label. ",
                 "position - DWORD number, the position of the label relative to the beginning of the line. If not set, the label will be in the position determined by the system. It doesn't look very good in tree mode, so it's better to set it to 0, for example.",
                 "escalateUpward - string (true | false), default is false. If set to `true` in tree mode, all items marked in a book branch will mark the parent branch.",
