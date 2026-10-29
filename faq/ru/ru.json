@@ -722,7 +722,9 @@
                 "family - семейство шрифтов, по умолчанию Segoe UI",
                 "size - размер шрифта, по умолчанию 6",
                 "v2.7.3 `Preferences/MenuCustomization/ThemeSeparated`, строка (true | false) по умолчанию true, установка в `false` отключает разделение кастомных иконок по цветовым схемам.",
-                "v2.7.3 `Preferences/ToolbarPosition`, строка (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), указывает размещение кастомизируемой панели управления."
+                "v2.7.3 `Preferences/ToolbarPosition`, строка (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), указывает размещение кастомизируемой панели управления.",
+                "v2.7.3 `Preferences/Export/AutoRateOnExport`, число (0-5), автоматическая оценка книги при экспорте, 0 - пометка книги как прочитанной, без оценки.",
+                "v2.7.3 `Preferences/Export/AutoRateOnRead`, число (0-5), автоматическая оценка книги при вызове читалки, 0 - пометка книги как прочитанной, без оценки."
             ],
             "x": [
                 {

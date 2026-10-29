@@ -722,7 +722,9 @@
                 "family - font family, default is Segoe UI",
                 "size - font size, default is 6",
                 "v2.7.3 `Preferences/MenuCustomization/ThemeSeparated`, a string (true | false) with default of true. Setting it to `false` disables the separation of custom icons by color scheme.",
-                "v2.7.3 `Preferences/ToolbarPosition`, string (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), specifies the location of the customizable control bar."
+                "v2.7.3 `Preferences/ToolbarPosition`, string (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), specifies the location of the customizable control bar.",
+                "v2.7.3 `Preferences/Export/AutoRateOnExport`, number (0–5), automatically rate a book upon export; 0 - mark the book as read, without a rating.",
+                "v2.7.3 `Preferences/Export/AutoRateOnRead`, number (0–5), automatically rate the book when opening the e-reader; 0 – mark the book as read, without a rating."
             ],
             "x": [
                 {

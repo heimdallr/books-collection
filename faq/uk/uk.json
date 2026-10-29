@@ -722,7 +722,9 @@
                 "family — сімейство шрифтів, за замовчуванням Segoe UI",
                 "size — розмір шрифту, за замовчуванням 6",
                 "v2.7.3 `Preferences/MenuCustomization/ThemeSeparated`, строка (true | false), за замовчуванням true. Встановлення значення `false` вимикає поділ користувацьких піктограм за колірними схемами.",
-                "v2.7.3 `Preferences/ToolbarPosition`, строка (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), визначає розташування панелі керування, яку можна налаштувати."
+                "v2.7.3 `Preferences/ToolbarPosition`, строка (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), визначає розташування панелі керування, яку можна налаштувати.",
+                "v2.7.3 `Preferences/Export/AutoRateOnExport`, число (0–5), автоматична оцінка книги під час експорту, 0 - позначення книги як прочитаної, без оцінки.",
+                "v2.7.3 `Preferences/Export/AutoRateOnRead`, число (0–5), автоматична оцінка книги під час запуску читалки, 0 - позначення книги як прочитаної, без оцінки."
             ],
             "x": [
                 {
