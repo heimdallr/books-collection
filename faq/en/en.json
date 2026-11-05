@@ -656,7 +656,6 @@
                 "v2.1.2 `Preferences/hideScrollBars`, string (true | false) true by default - controls the visibility of scrollbars. If set to ‘false’, scrollbars will not be hidden.",
                 "v2.1.4 `Preferences/GenresSortMode`, string (SortByCode | SortByName | SortByChildCount | SortByCodeDesc | SortByNameDesc | SortByChildCountDesc), SortByCode by default - genre sorting mode",
                 "v2.1.4 `Preferences/opds/BookEntryLimit`, DWORD number, 25 y default - limit on the number of books returned by a single list via http.",
-                "v2.2.0 Not a setting, but a hidden feature. Pressing Alt+Shift+Q will bring up a window where you can run SQL queries on the collection database. The results of the queries are recorded in the logs.",
                 "v2.2.1 `Preferences/opds/transliterate`, string (true | false), false by default - transliteration of the name of a file downloaded via http.",
                 "v2.2.1 `Preferences/LibRate/precision`, DWORD number, -1 by default - replaces the book rating stars in the library with a number with the precision specified by this parameter. For a true average rating on Flibusta, you will need the reviews\\additional.zip file. If this setting is missing or set to -1, stars are displayed.",
                 "v2.2.1 `Preferences/LibRate/colors/2.0`, `ui/Books/LibRate/colors/3.0`, `ui/Books/LibRate/colors/4.5`и т.п. DWORD number, corresponding to the color in RRGGBB format. For gradient coloring of the rating digits from the previous point.",
@@ -724,7 +723,8 @@
                 "v2.7.3 `Preferences/MenuCustomization/ThemeSeparated`, a string (true | false) with default of true. Setting it to `false` disables the separation of custom icons by color scheme.",
                 "v2.7.3 `Preferences/ToolbarPosition`, string (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), specifies the location of the customizable control bar.",
                 "v2.7.3 `Preferences/Export/AutoRateOnExport`, number (0–5), automatically rate a book upon export; 0 - mark the book as read, without a rating.",
-                "v2.7.3 `Preferences/Export/AutoRateOnRead`, number (0–5), automatically rate the book when opening the e-reader; 0 – mark the book as read, without a rating."
+                "v2.7.3 `Preferences/Export/AutoRateOnRead`, number (0–5), automatically rate the book when opening the e-reader; 0 – mark the book as read, without a rating.",
+                "v2.7.4 `Preferences/UiCustomizationEnabled`, string (true | false), the default is false. Setting this to `true` enables UI customization; see below for options for advanced users."
             ],
             "x": [
                 {
@@ -760,6 +760,31 @@
                                 " * Instead of the number 9734, choose one that suits your taste, for example <a href=\"https://www.w3schools.com/charsets/ref_utf_symbols.asp\" target=\"_blank\"><b>from here</b></a>"
                             ]
                         }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "q": "Are there any other hidden features for advanced users?",
+            "t": [
+                "Of course",
+                "v2.2.0 Pressing Alt+Shift+Q opens a window where you can execute SQL queries against the collection's database. The results of the queries are recorded in the logs.",
+                "v2.7.4 Pressing Alt+Shift+L will save the states of all layouts and frames in the main window to the UiCustomization section; these can be edited and will be loaded the next time the program is launched."
+            ],
+            "x": [
+                {
+                    "id": "27/0",
+                    "q": "Details",
+                    "t": [
+                        "Layout settings affect the indents and spacing between controls. They are stored using the `layout` key as a string of five numbers separated by commas: left indent, right indent, top indent, bottom indent, and spacing between.",
+                        "Frame settings affect how borders are displayed (see <a href=\"https://doc.qt.io/qt-6/qframe.html\" target=\"_blank\">Qt documentation</a>):",
+                        "lineWidth - a number, the line width",
+                        "midLineWidth - a number, the line width in the middle",
+                        "frameShape - a string (NoFrame | Box | Panel | StyledPanel | WinPanel)",
+                        "frameShadow - a string (Plain | Raised | Sunken)",
+                        "I’m too lazy to go into detail - read the documentation from the framework authors or just experiment.",
+                        "<b>(⊙_⊙) WARNING!!!</b> If you’re using the portable version of FLibrary, it’s recommended that you remove all lines from this section that you haven’t modified. The configuration file is often overwritten by the program, so minimizing it will improve performance."
                     ]
                 }
             ]
