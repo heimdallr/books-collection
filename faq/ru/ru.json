@@ -724,7 +724,11 @@
                 "v2.7.3 `Preferences/ToolbarPosition`, строка (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), указывает размещение кастомизируемой панели управления.",
                 "v2.7.3 `Preferences/Export/AutoRateOnExport`, число (0-5), автоматическая оценка книги при экспорте, 0 - пометка книги как прочитанной, без оценки.",
                 "v2.7.3 `Preferences/Export/AutoRateOnRead`, число (0-5), автоматическая оценка книги при вызове читалки, 0 - пометка книги как прочитанной, без оценки.",
-                "v2.7.4 `Preferences/UiCustomizationEnabled`, строка (true | false) по умолчанию false, при установка в `true` включит возможность кастомизации UI, см. ниже про возможности для продвинутых пользователей."
+                "v2.7.4 `Preferences/UiCustomizationEnabled`, строка (true | false) по умолчанию false, при установка в `true` включит возможность кастомизации UI, см. ниже про возможности для продвинутых пользователей.",
+                "v2.7.4 `Preferences/Removed/Background/color`, число DWORD, соответствующее цвету в формате AABBGGRR (AA инвертировано, т.е. FF - полностью прозрачный), цвет фона для \"удалённых\" книг.",
+                "v2.7.4 `Preferences/Removed/Font`, раздел для настройки шрифта \"удалённых\" книг, можно указать следующие ключи:",
+                "`color`, число DWORD, соответствующее цвету в формате AABBGGRR (AA инвертировано, т.е. FF - полностью прозрачный), цвет шрифта.",
+                "`setBold`, `setCapitalization`, `setFamily`, `setFixedPitch`, `setHintingPreference`, `setItalic`, `setKerning`, `setOverline`, `setPixelSize`, `setPointSize`, `setStretch`, `setStrikeOut`, `setStyle`, `setStyleName`, `setStyleStrategy`, `setUnderline`, `setWeight`, `setWordSpacing` - устанавливают соответствующие свойства шрифта для удалённой книги, подробности см. в документации. Типы настроек - там же. Булевы значения задаём строковым параметром с значением trueили false, для значений - перечислений используем их целочисленные представления."
             ],
             "x": [
                 {

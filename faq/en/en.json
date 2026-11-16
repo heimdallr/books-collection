@@ -724,7 +724,11 @@
                 "v2.7.3 `Preferences/ToolbarPosition`, string (MainMenu | BooksSearchFilterBar | NavigationSearchFilterBar), specifies the location of the customizable control bar.",
                 "v2.7.3 `Preferences/Export/AutoRateOnExport`, number (0–5), automatically rate a book upon export; 0 - mark the book as read, without a rating.",
                 "v2.7.3 `Preferences/Export/AutoRateOnRead`, number (0–5), automatically rate the book when opening the e-reader; 0 – mark the book as read, without a rating.",
-                "v2.7.4 `Preferences/UiCustomizationEnabled`, string (true | false), the default is false. Setting this to `true` enables UI customization; see below for options for advanced users."
+                "v2.7.4 `Preferences/UiCustomizationEnabled`, string (true | false), the default is false. Setting this to `true` enables UI customization; see below for options for advanced users.",
+                "v2.7.4 `Preferences/Removed/Background/color`, a DWORD value corresponding to a color in the AABBGGRR format (AA is inverted, i.e., FF is completely transparent), the background color for “removed” books.",
+                "v2.7.4 `Preferences/Removed/Font`, a section for configuring the font of \"removed\" books; the following keys can be specified:",
+                "`color`, a DWORD value corresponding to a color in the AABBGGRR format (AA is inverted, i.e., FF is completely transparent), the font color.",
+                "`setBold`, `setCapitalization`, `setFamily`, `setFixedPitch`, `setHintingPreference`, `setItalic`, `setKerning`, `setOverline`, `setPixelSize`, `setPointSize`, `setStretch`, `setStrikeOut`, `setStyle`, `setStyleName`, `setStyleStrategy`, `setUnderline`, `setWeight`, `setWordSpacing`—set the corresponding font properties for the remote book; see the documentation for details. The types of settings are listed there as well. Boolean values are specified using a string parameter with the value `true` or `false`; for enum values, use their integer representations."
             ],
             "x": [
                 {
